@@ -1,0 +1,5 @@
+drop table document;
+drop table rent;
+drop table lecture;
+drop table book;
+drop table user;
