@@ -14,4 +14,8 @@ public class User {
 	
 	String name;
 	
+	int grade;
+	
+	
+	
 }
