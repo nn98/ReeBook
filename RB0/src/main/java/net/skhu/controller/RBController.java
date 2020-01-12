@@ -72,6 +72,12 @@ public class RBController {
 		return "user/signIn";
 	}
 
+	
+	@RequestMapping("signInP")
+	public String signInP() {
+		return "user/signIn";
+	}
+
 	@RequestMapping("rents")
 	public List<Rent> rents(){
 		return rentRepository.findAll();
