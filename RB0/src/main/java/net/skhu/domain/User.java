@@ -2,6 +2,8 @@ package net.skhu.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
@@ -16,6 +18,8 @@ public class User {
 	
 	int grade;
 	
-	
+	@ManyToOne
+	@JoinColumn(name="id")
+	Department department;
 	
 }
