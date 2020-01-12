@@ -69,13 +69,13 @@ public class RBController {
 	
 	@RequestMapping("signIn")
 	public String signIn() {
-		return "user/signIn";
+		return "user/signin";
 	}
 
 	
 	@RequestMapping("signInP")
 	public String signInP() {
-		return "user/signIn";
+		return "user/signinp";
 	}
 
 	@RequestMapping("rents")
