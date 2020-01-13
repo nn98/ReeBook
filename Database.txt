@@ -1,0 +1,61 @@
+create database RB;
+
+create table book(
+id int unsigned primary key,
+title char(20),
+author char(10),
+publisher char(20)
+);
+
+create table user(
+sn int unsigned primary key,
+name char(10)
+);
+	//did int foreign key reference id from department
+
+create table rent(
+id int unsigned primary key,
+usn int unsigned,
+foreign key(usn) references user(sn),
+bid int unsigned,
+foreign key(bid) references book(id),
+rent_date date,
+return_date date
+);
+
+create table Docs(
+bid int unsigned,
+foreign key(bid) references book(id),
+lid int unsigned,
+foreign key(lid) references lecture(id),
+kind char(10)
+);
+
+
+create table Docs(
+bid int unsigned,
+foreign key(bid) references book(id),
+lid int unsigned,
+foreign key(lid) references lecture(id),
+kind char(10)
+);
+	create table Docs(
+	bid int unsigned foreign key(bid) references book(id),
+	lid int unsigned foreign key(lid) references lecture(id),
+	kind char(10)
+	);
+
+
+create table lecture(
+id int unsigned primary key,
+professor char(10)
+);
+	//id int(10) foreign key reference id from book
+
+---
+
+drop table book;
+drop table user;
+drop table docs;
+drop table rent;
+drop table lecture;

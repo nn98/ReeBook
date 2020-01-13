@@ -1,0 +1,41 @@
+create database RB;
+
+use RB;
+
+---
+
+create table book(
+id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title char(40),
+author char(10),
+publisher char(20)
+);
+
+create table user(
+sn int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name char(10)
+);
+
+create table rent(
+id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+usn int unsigned,
+foreign key(usn) references user(sn),
+bid int unsigned,
+foreign key(bid) references book(id),
+rentDate date,
+returnDate date
+);
+
+create table lecture(
+id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+professor char(10)
+);
+
+create table document(
+bid int unsigned,
+foreign key(bid) references book(id),
+lid int unsigned,
+foreign key(lid) references lecture(id),
+kind char(10),
+primary key(bid,lid)
+);

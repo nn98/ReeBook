@@ -1,0 +1,36 @@
+insert into book(title,author,publisher) values ('','','');
+insert into user(sn,name) values (,'');
+insert into rent(usn,bid,rentdate,returndate) values (,,date'//',date'//');
+insert into lecture(professor) value ('');
+insert into document values (,,'');
+>insert into rent(usn,bid,rentdate,returndate) values (,,to_date('//','YYYY/MM/DD'),to_date('//','YYYY/MM/DD'));
+
+insert into book(title,author,publisher) values ('윤성우의 열혈 C 프로그래밍','윤성우','오렌지미디어');
+insert into book(title,author,publisher) values ('왕초보! 파이썬 배워 크롤러 DIY 하다!','서진수,최경우','더알음');
+insert into book(title,author,publisher) values ('명품JAVA Programming','황기태,김효수','생능출판사');
+insert into book(title,author,publisher) values ('자바로 배우는 쉬운 자료구조','이지영','한빛아카데미');
+insert into book(title,author,publisher) values ('Do it! 안드로이드 앱 프로그래밍','정재곤','이지스퍼블리싱');
+
+insert into user(sn,name) values (201732009,'김윤서');
+insert into user(sn,name) values (201732016,'박현렬');
+insert into user(sn,name) values (201732001,'자퇴생');
+insert into user(sn,name) values (201532009,'김우진');
+insert into user(sn,name) values (201932009,'김수현');
+
+insert into rent(usn,bid,rentdate,returndate) values (201732009,1,date'2020/03/02',date'2020/06/25');
+insert into rent(usn,bid,rentdate,returndate) values (201732016,2,date'2020/03/03',date'2020/06/25');
+insert into rent(usn,bid,rentdate,returndate) values (201732001,3,date'2020/03/04',date'2020/06/25');
+insert into rent(usn,bid,rentdate,returndate) values (201532009,4,date'2020/03/05',date'2020/06/25');
+insert into rent(usn,bid,rentdate,returndate) values (201932009,5,date'2020/03/06',date'2020/06/25');
+
+insert into lecture(professor) value ('홍은지');
+insert into lecture(professor) value ('노은하');
+insert into lecture(professor) value ('이승진');
+insert into lecture(professor) value ('유상신');
+insert into lecture(professor) value ('임형');
+
+insert into document values (1,1,'강의자료');
+insert into document values (2,2,'과제');
+insert into document values (3,3,'퀴즈');
+insert into document values (4,4,'시험');
+insert into document values (5,5,'기출');
