@@ -15,6 +15,7 @@ import net.skhu.domain.Rent;
 import net.skhu.domain.User;
 import net.skhu.model.Pagination;
 import net.skhu.repository.BookRepository;
+import net.skhu.repository.DepartmentRepository;
 import net.skhu.repository.DocumentRepository;
 import net.skhu.repository.LectureRepository;
 import net.skhu.repository.RentRepository;
@@ -34,6 +35,7 @@ public class RBController {
 	@Autowired RentRepository rentRepository;
 	@Autowired LectureRepository lectureRepository;
 	@Autowired DocumentRepository documetRepository;
+	@Autowired DepartmentRepository departmentRepository;
 
 	@RequestMapping("books")
 	public List<Book> books(){
@@ -59,21 +61,27 @@ public class RBController {
 	public List<User> users(){
 		return userRepository.findAll();
 	}
-	
+
 	@RequestMapping(value="usersJ",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<User> usersJ(){
 		System.out.println(userRepository.findAll().toString());
 		return userRepository.findAll();
 	}
-	
-	@RequestMapping("signIn")
+
+	@RequestMapping(value="signin",method=RequestMethod.GET)
+	public String signIn(Model model) {
+		model.addAttribute("deptList", departmentRepository.findAll());
+		return "user/signin";
+	}
+
+
+	@RequestMapping(value="signin",method=RequestMethod.POST)
 	public String signIn() {
 		return "user/signin";
 	}
 
-	
-	@RequestMapping("signInP")
+	@RequestMapping("signinp")
 	public String signInP() {
 		return "user/signinp";
 	}
