@@ -21,6 +21,8 @@ import net.skhu.repository.LectureRepository;
 import net.skhu.repository.RentRepository;
 import net.skhu.repository.UserRepository;
 
+//으아ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ아당러ㅑㅐㄴㄷㄱ
+
 @Controller
 //@RequestMapping("rb")
 public class RBController {
