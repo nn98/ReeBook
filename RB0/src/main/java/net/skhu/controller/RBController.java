@@ -22,7 +22,7 @@ import net.skhu.repository.RentRepository;
 import net.skhu.repository.UserRepository;
 
 @Controller
-@RequestMapping("rb")
+//@RequestMapping("rb")
 public class RBController {
 
 	@RequestMapping("/")
@@ -37,67 +37,86 @@ public class RBController {
 	@Autowired DocumentRepository documetRepository;
 	@Autowired DepartmentRepository departmentRepository;
 
-	@RequestMapping("books")
-	public List<Book> books(){
-		System.out.println(bookRepository.findAll().toString());
-		return bookRepository.findAll();
-	}
+//	@RequestMapping("books")
+//	public List<Book> books(){
+//		System.out.println(bookRepository.findAll().toString());
+//		return bookRepository.findAll();
+//	}
 
-	@RequestMapping(value="booksJ",produces="application/json",method=RequestMethod.GET)
+	@RequestMapping(value="booksj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<Book> booksJ(){
 		System.out.println(bookRepository.findAll().toString());
 		return bookRepository.findAll();
 	}
 
-	@RequestMapping("booksL")
+	@RequestMapping("booksl")
 	public String list(Pagination pagination, Model model) {
 		List<Book> list = bookRepository.findAll(pagination);
 		model.addAttribute("list", list);
 		return "book/books";
 	}
 
-	@RequestMapping("users")
-	public List<User> users(){
-		return userRepository.findAll();
-	}
+//	@RequestMapping("users")
+//	public List<User> users(){
+//		return userRepository.findAll();
+//	}
 
-	@RequestMapping(value="usersJ",produces="application/json",method=RequestMethod.GET)
+	@RequestMapping(value="usersj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<User> usersJ(){
 		System.out.println(userRepository.findAll().toString());
 		return userRepository.findAll();
 	}
 
-	@RequestMapping(value="signin",method=RequestMethod.GET)
-	public String signIn(Model model) {
+	@RequestMapping(value="signup",method=RequestMethod.GET)
+	public String signUp(Model model) {
 		model.addAttribute("deptList", departmentRepository.findAll());
-		return "user/signin";
+		return "user/signup";
 	}
 
 
-	@RequestMapping(value="signin",method=RequestMethod.POST)
-	public String signIn() {
-		return "user/signin";
+	@RequestMapping(value="signup",method=RequestMethod.POST)
+	public String signUp() {
+		return "user/signup";
 	}
 
-	@RequestMapping("signinp")
+	@RequestMapping("signupp")
 	public String signInP() {
-		return "user/signinp";
+		return "user/signupp";
 	}
 
-	@RequestMapping("rents")
-	public List<Rent> rents(){
+//	@RequestMapping("rents")
+//	public List<Rent> rents(){
+//		return rentRepository.findAll();
+//	}
+	
+	@RequestMapping(value="rentsj",produces="application/json",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Rent> rentsJ(){
+		System.out.println(55);
 		return rentRepository.findAll();
 	}
+	
+//	@RequestMapping("lectures")
+//	public List<Lecture> lectures(){
+//		return lectureRepository.findAll();
+//	}
 
-	@RequestMapping("lectures")
-	public List<Lecture> lectures(){
+	@RequestMapping(value="lecturesj",produces="application/json",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Lecture> lecturesJ(){
 		return lectureRepository.findAll();
 	}
 
-	@RequestMapping("documents")
-	public List<Document> documents(){
+//	@RequestMapping("documents")
+//	public List<Document> documents(){
+//		return documetRepository.findAll();
+//	}
+
+	@RequestMapping(value="documentsj",produces="application/json",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Document> documentsJ(){
 		return documetRepository.findAll();
 	}
 
