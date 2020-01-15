@@ -1,5 +1,6 @@
 package net.skhu.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -18,8 +19,12 @@ public class User {
 	
 	int grade;
 	
-	@ManyToOne
-	@JoinColumn(name="id")
-	Department department;
+//	@ManyToOne(cascade= {CascadeType.ALL})
+//	@JoinColumn(name="id")
+//	Department department;
 	
+//	ManyToOne의 JoinColumn에선 name이 이 테이블의 컬럼명?
+	@ManyToOne(cascade= {CascadeType.ALL})
+	@JoinColumn(name="departmentId")
+	Department department;
 }

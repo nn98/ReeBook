@@ -8,6 +8,7 @@ import lombok.Data;
 @Data
 @Entity
 public class Department {
+	
 	@Id
 	int id;
 	

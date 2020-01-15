@@ -22,14 +22,14 @@ public class Rent {
 	int id;
 	
 	@OneToOne
-	@JoinColumn(name="sn")
+	@JoinColumn(name="usn")
 	User user;
 	
 	@OneToOne
 	@JoinColumn(name="id")
 	Book book;
 	
-	private DateFormat format = new SimpleDateFormat("YYYY-MM-dd");
+//	private DateFormat format = new SimpleDateFormat("YYYY-MM-dd");
 	
 	Date rentDate;
 	
