@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>ÇÐ»ý µî·Ï</title>
+<title>í•™ìƒ ë“±ë¡</title>
 <style>
 <!--
 https: //coding-factory.tistory.com /187-->
@@ -35,8 +35,8 @@ https: //coding-factory.tistory.com /187-->
 
 #box4 {
 	background-color: yellow;
-	margin: 10px 10px 10px 10px; /* À§ÂÊ ¿À¸¥ÂÊ ¾Æ·¡ÂÊ ¿ÞÂÊ ¸¶Áø¼Ó¼º ÇÑ¹ø¿¡ ÁÖ±â */
-	padding: 10px 10px 10px 10px; /* À§ ¿À¸¥ÂÊ ¾Æ·¡ÂÊ ¿ÞÂÊ ÆÐµù¼Ó¼º ÇÑ¹ø¿¡ ÁÖ±â */
+	margin: 10px 10px 10px 10px; /* ìœ„ìª½ ì˜¤ë¥¸ìª½ ì•„ëž˜ìª½ ì™¼ìª½ ë§ˆì§„ì†ì„± í•œë²ˆì— ì£¼ê¸° */
+	padding: 10px 10px 10px 10px; /* ìœ„ ì˜¤ë¥¸ìª½ ì•„ëž˜ìª½ ì™¼ìª½ íŒ¨ë”©ì†ì„± í•œë²ˆì— ì£¼ê¸° */
 }
 
 #tb_id {
@@ -51,7 +51,7 @@ https: //coding-factory.tistory.com /187-->
 <body style="background:#eee">
 	<div class="container">
 		<br />
-		<h3 style="color: #777">ÇÐ»ý µî·Ï</h3>
+		<h3 style="color: #777">í•™ìƒ ë“±ë¡</h3>
 		<br />
 		<form method="get">
 			<!-- <div  class="form-group" style="background-color:#ccc;padding:20;"ccf> -->
@@ -65,44 +65,43 @@ https: //coding-factory.tistory.com /187-->
 					</colgroup>
 					<tbody>
 						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">»ç¿ëÀÚ
-								ID</td>
+							<td id="box2" class="dv_fieldheader" style="color: #fff">ì‚¬ìš©ìž ID</td>
 							<td id="box3"><input type="text" name="user_id"
 								autocomplete="off" size="15" maxlength="10"></td>
-							<td id="box3"><font color="#f66">¹Ýµå½Ã ÇÐ¹øÀ» ÀÔ·ÂÇÏ¼¼¿ä ¿¹) 201732009</font></td>
+							<td id="box3"><font color="#f66">ë°˜ë“œì‹œ í•™ë²ˆì„ ìž…ë ¥í•˜ì„¸ìš” ì˜ˆ) 201732009</font></td>
 						</tr>
 						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">ÀÌ¸§</td>
-							<td id="box3"><input type="text" name="user_id"
+							<td id="box2" class="dv_fieldheader" style="color: #fff">ì´ë¦„</td>
+							<td id="box3"><input type="text" name="user_name"
 								autocomplete="off" size="15" maxlength="10"></td>
-							<td id="box3"><font color="#f66">½Ã½ºÅÛ¿¡ ÀúÀåµÈ ÀÌ¸§°ú µ¿ÀÏÇØ¾ß ÇÕ´Ï´Ù</font></td>
+							<td id="box3"><font color="#f66">ì‹œìŠ¤í…œì— ì €ìž¥ëœ ì´ë¦„ê³¼ ë™ì¼í•´ì•¼ í•©ë‹ˆë‹¤</font></td>
 						</tr>
 						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">¾ÏÈ£</td>
-							<td id="box3"><input type="text" name="user_id"
+							<td id="box2" class="dv_fieldheader" style="color: #fff">ì•”í˜¸</td>
+							<td id="box3"><input type="password" name="user_pw"
 								autocomplete="off" size="15" maxlength="10"></td>
 							<td id="box3"><font color="#f66"></font></td>
 						</tr>
 						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">¾ÏÈ£ È®ÀÎ</td>
-							<td id="box3"><input type="text" name="user_id"
+							<td id="box2" class="dv_fieldheader" style="color: #fff">ì•”í˜¸ í™•ì¸</td>
+							<td id="box3"><input type="password" name="user_pwc"
 								autocomplete="off" size="15" maxlength="10"></td>
 							<td id="box3" name="pwc_e"><font color="#f66"></font></td>
 						</tr>
 						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">ÇÐ³â</td>
+							<td id="box2" class="dv_fieldheader" style="color: #fff">í•™ë…„</td>
 							<td id="box3">
-								<input type="radio" name="year" value="1" class="none"> 1 &nbsp;
-								<input type="radio" name="year" value="2" class="none"> 2 &nbsp;
-								<input type="radio" name="year" value="3" class="none"> 3 &nbsp;
-								<input type="radio" name="year" value="4" class="none"> 4 &nbsp;
+								<input type="radio" name="user_grade" value="1" class="none"> 1 &nbsp;
+								<input type="radio" name="user_grade" value="2" class="none"> 2 &nbsp;
+								<input type="radio" name="user_grade" value="3" class="none"> 3 &nbsp;
+								<input type="radio" name="user_grade" value="4" class="none"> 4 &nbsp;
 							<td id="box3"><font color="#f66"></font></td>
 						</tr>
 						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">¼Ò¼Ó</td>
+							<td id="box2" class="dv_fieldheader" style="color: #fff">ì†Œì†</td>
 							<td id="box3">
-								<select name="depart_no" size="1.9" class="form-control">
-									<% int i=0; %>
+								<select name="user_depart" size="1.9" class="form-control">
+									<% int i=1; %>
 									<c:forEach items="${deptList}" var="dept">
 									<option value="<%=i++%>">${dept.name}</option>
 									</c:forEach>
@@ -113,33 +112,34 @@ https: //coding-factory.tistory.com /187-->
 						<tr id="tr_id">
 							<td id="box2" class="dv_fieldheader" style="color:#777">
 								<br/>
-								<button type="submit">È¸¿ø°¡ÀÔ</button>
+								<button type="submit" formmethod="post">íšŒì›ê°€ìž…</button>
 							</td>
 							<td id="box3" style="color:#f66">
-							°³ÀÎÁ¤º¸ ¼öÁý ¹× ÀÌ¿ë µ¿ÀÇ
+							ê°œì¸ì •ë³´ ìˆ˜ì§‘ ë° ì´ìš© ë™ì˜
 							</td>
 							<td id="box3" style="color:#f66">
-								<input type="radio" name="yes"> ¿¹ &nbsp; &nbsp;
-								<input type="radio" name="no"> ¾Æ´Ï¿À
+								<input type="radio" name="user_agree" value="1"> ì˜ˆ &nbsp; &nbsp;
+								<input type="radio" name="user_agree" value="0"> ì•„ë‹ˆì˜¤
 							</td>
 						</tr>
 					</tbody>
 				</table>
+				<button type="submit">GíšŒì›ê°€ìž…</button>
 				<!--
-				<p style="color: #555">ÇÐ¹ø</p>
+				<p style="color: #555">í•™ë²ˆ</p>
 				<input type="text" name="sn"></input>
-				<p>¾ÏÈ£</p>
+				<p>ì•”í˜¸</p>
 				<input type="password" name="pw"></input>
-				<p>¾ÏÈ£ È®ÀÎ</p>
+				<p>ì•”í˜¸ í™•ì¸</p>
 				<input type="password" name="pwc"></input>
-				<p>ÀÌ¸§</p>
+				<p>ì´ë¦„</p>
 				<input type="text" name="name"></input>
-				<p>ÇÐ³â</p>
+				<p>í•™ë…„</p>
 				<input type="radio" name="year" value="1" class="none"> 1 <input
 					type="radio" name="year" value="2" class="none"> 2 <input
 					type="radio" name="year" value="3" class="none"> 3 <input
 					type="radio" name="year" value="4" class="none"> 4
-				<p>¼Ò¼Ó</p>
+				<p>ì†Œì†</p>
 				<select name="depart_no" size="1.9" class="form-control">
 					<% i=0; %>
 					<c:forEach items="${deptList}" var="dept">
@@ -147,7 +147,7 @@ https: //coding-factory.tistory.com /187-->
 					</c:forEach>
 				</select>
 				<br/>
-				<button type="submit">È¸¿ø°¡ÀÔ</button>
+				<button type="submit">íšŒì›ê°€ìž…</button>
 				-->
 			</div>
 
