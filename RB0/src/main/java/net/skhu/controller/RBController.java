@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import net.skhu.domain.Book;
@@ -72,14 +73,25 @@ public class RBController {
 	}
 
 	@RequestMapping(value="signup",method=RequestMethod.GET)
-	public String signUp(Model model) {
+	public String signUpG(Model model) {
 		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
 	}
 
 
-	@RequestMapping(value="signup",method=RequestMethod.POST)
-	public String signUp() {
+	@RequestMapping(value="signup",method=RequestMethod.POST,produces="text/plain;charset=UTF-8")
+	public String signUpP(Model model,@RequestParam(value="user_id")int id,
+			@RequestParam(value="user_name")String name,@RequestParam(value="user_pw")String pw,
+			@RequestParam(value="user_pwc")String pwc,@RequestParam(value="user_grade")int grade,
+			@RequestParam(value="user_depart")int dept,@RequestParam(value="user_agree")int agree) {
+		System.out.println("id: "+id);
+		System.out.println("name: "+name);
+		System.out.println("pw: "+pw);
+		System.out.println("pwc: "+pwc);
+		System.out.println("grade: "+grade);
+		System.out.println("dept: "+dept);
+		System.out.println("agree: "+(agree==1));
+		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
 	}
 
