@@ -130,6 +130,7 @@ https: //coding-factory.tistory.com /187-->
 				</table>
 				<button type="submit">G회원가입</button>
 				<!--
+				으악 뭘해야되냐
 				<p style="color: #555">학번</p>
 				<input type="text" name="sn"></input>
 				<p>암호</p>
