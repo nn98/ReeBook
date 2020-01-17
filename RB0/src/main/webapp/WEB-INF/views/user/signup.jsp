@@ -46,6 +46,10 @@ https: //coding-factory.tistory.com /187-->
 #tr_id {
 	border: 1px dotted #bbb;
 }
+
+#hr_bottom{
+	boder: 10px solid #555;
+}
 </style>
 </head>
 <body style="background:#eee">
@@ -150,8 +154,8 @@ https: //coding-factory.tistory.com /187-->
 				<button type="submit">회원가입</button>
 				-->
 			</div>
-
 		</form>
 	</div>
+	<hr style="border: solid 0.5px #aaa; width:90%;">
 </body>
 </html>
