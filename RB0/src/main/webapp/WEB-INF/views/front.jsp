@@ -15,7 +15,7 @@
 <body>
 	<p>실행 테스트1</p>
 	<p>실행 테스트2</p>
-	<a href="booksL">교재 목록</a>
-	<a href="signIn">로그인</a>
+	<a href="booksl">교재 목록</a>
+	<a href="signup">로그인</a>
 </body>
 </html>
