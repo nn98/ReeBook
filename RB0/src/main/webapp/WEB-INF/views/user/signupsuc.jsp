@@ -104,6 +104,7 @@
 		<tr>
 		<td id="td0"><input type="hidden" name="password" value=${user.password}><strong>확인</strong></td>
 		<td>
+		<input type="hidden" name="agree" value=${user.agree}>
 		<button type="submit" name="confirm" value="1" formmethod="post">예</button>
 		<button type="submit" name="confirm" value="0" formmethod="post">아니오</button>
 		</td>
