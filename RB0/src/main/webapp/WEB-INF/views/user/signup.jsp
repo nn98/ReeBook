@@ -101,9 +101,9 @@ https: //coding-factory.tistory.com /187-->
 							<td id="box2" class="dv_fieldheader" style="color: #fff">소속</td>
 							<td id="box3">
 								<select name="user_depart" size="1.9" class="form-control">
-									<% int i=1; pageContext.setAttribute("i",i); %>
+									<% int i=1; pageContext.setAttribute("index",i); %>
 									<c:forEach items="${deptList}" var="dept">
-									<option value=<%=i++%> >${dept.name}</option>
+									<option value=<%=i++%> ${dept.id==user.department.id?"selected":""}>${dept.name}</option>
 									</c:forEach>
 								</select>
 							</td>
