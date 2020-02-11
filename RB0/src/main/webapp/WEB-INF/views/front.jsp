@@ -13,7 +13,7 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Test_0101</title>
+<title>Test_0101_0212</title>
 <style>
 <!--
 https: //coding-factory.tistory.com /187-->
@@ -86,6 +86,7 @@ https: //coding-factory.tistory.com /187-->
 			</tr>
 			<tr id="tr_id">
 				<td id="box1" class="dv_fieldheader" style="color: #fff">LIST</td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="booksl">BookList</a></td>
 				<!-- 
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="usersj">User</a></td>
