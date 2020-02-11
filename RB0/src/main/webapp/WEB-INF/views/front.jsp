@@ -83,7 +83,8 @@ https: //coding-factory.tistory.com /187-->
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="lecturesj">Lecture</a></td>
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="documentsj">Document</a></td>
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="departmentsj">Department</a></td>
-			</tr><tr id="tr_id">
+			</tr>
+			<tr id="tr_id">
 				<td id="box1" class="dv_fieldheader" style="color: #fff">LIST</td>
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="booksl">BookList</a></td>
 				<!-- 
@@ -96,9 +97,11 @@ https: //coding-factory.tistory.com /187-->
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="departmentsj">Department</a></td>
 				 -->
 			</tr>
+			<tr id="tr_id">
+				<td id="box3" class="dv_fieldheader" style="color: #fff"><a href="signup">로그인</a></td>
+			</tr>
 		</tbody>
 	</table>
 	
-	<a href="signup">로그인</a>
 </body>
 </html>
