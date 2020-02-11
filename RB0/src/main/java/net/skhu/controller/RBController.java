@@ -71,8 +71,9 @@ public class RBController {
 	@RequestMapping(value="usersj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<User> usersJ(){
-		System.out.println(userRepository.findAll().toString());
-		return userRepository.findAll();
+//		System.out.println(userRepository.findAll().toString());
+//		return userRepository.findAll();
+		return userRepository.findAllWithoutPW();
 	}
 
 	@RequestMapping(value="signup",method=RequestMethod.GET)
@@ -95,7 +96,7 @@ public class RBController {
 		System.out.println("dept: "+dept);
 		System.out.println("agree: "+(agree==1));
 		User user=new User();
-		user.setSn(id);
+		user.setId(id);
 		user.setName(name);
 		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
