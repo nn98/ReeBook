@@ -1,6 +1,7 @@
 package net.skhu.domain;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -10,6 +11,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@Convert(converter = BooleanToYNConverter.class, attributeName = "agree")
 public class User {
 
 	@Id
@@ -29,5 +31,7 @@ public class User {
 	@ManyToOne(cascade= {CascadeType.ALL})
 	@JoinColumn(name="departmentId")
 	Department department;
+	
+	boolean agree;
 	
 }
