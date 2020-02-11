@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import net.skhu.domain.Book;
+import net.skhu.domain.Defect;
 import net.skhu.domain.Document;
 import net.skhu.domain.Lecture;
 import net.skhu.domain.Rent;
 import net.skhu.domain.User;
 import net.skhu.model.Pagination;
 import net.skhu.repository.BookRepository;
+import net.skhu.repository.DefectRepository;
 import net.skhu.repository.DepartmentRepository;
 import net.skhu.repository.DocumentRepository;
 import net.skhu.repository.LectureRepository;
@@ -39,6 +41,7 @@ public class RBController {
 	@Autowired LectureRepository lectureRepository;
 	@Autowired DocumentRepository documentRepository;
 	@Autowired DepartmentRepository departmentRepository;
+	@Autowired DefectRepository defectRepository;
 
 //	@RequestMapping("books")
 //	public List<Book> books(){
@@ -137,4 +140,9 @@ public class RBController {
 		return documentRepository.findAll();
 	}
 
+	@RequestMapping(value="defectsj",produces="application/json",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Defect> defectsJ(){
+		return defectRepository.findAll();
+	}
 }
