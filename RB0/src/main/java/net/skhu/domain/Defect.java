@@ -1,19 +1,23 @@
 package net.skhu.domain;
 
+import java.io.Serializable;
+
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
 @Data
 @Entity
-public class Defect {
+public class Defect implements Serializable {
 	
-	@ManyToOne
-	@JoinColumn(name="id")
-	Book book;
+	@EmbeddedId
+	DefPK PK;
 	
-	String contents;
+//	@ManyToOne
+//	@JoinColumn(name="id")
+//	Book book;
+//	
+//	String contents;
 	
 }
