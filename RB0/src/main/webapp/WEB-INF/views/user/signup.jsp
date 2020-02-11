@@ -122,7 +122,6 @@ https: //coding-factory.tistory.com /187-->
 								<input type="radio" name="user_agree" value="0" ${ user.agree?"":"checked" }> 아니오
 							</td>
 						</tr>
-						
 					</tbody>
 				</table>
 				<button type="submit">G회원가입</button>
