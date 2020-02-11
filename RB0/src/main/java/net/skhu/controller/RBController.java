@@ -37,7 +37,7 @@ public class RBController {
 	@Autowired UserRepository userRepository;
 	@Autowired RentRepository rentRepository;
 	@Autowired LectureRepository lectureRepository;
-	@Autowired DocumentRepository documetRepository;
+	@Autowired DocumentRepository documentRepository;
 	@Autowired DepartmentRepository departmentRepository;
 
 //	@RequestMapping("books")
@@ -131,7 +131,7 @@ public class RBController {
 	@RequestMapping(value="documentsj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<Document> documentsJ(){
-		return documetRepository.findAll();
+		return documentRepository.findAll();
 	}
 
 }
