@@ -93,7 +93,7 @@ public class RBController {
 			@RequestParam(value="user_grade", required = false, defaultValue = "0")int grade,
 			@RequestParam(value="user_depart", required = false, defaultValue = "0")int dept,
 			@RequestParam(value="user_agree", required = false, defaultValue = "0")int agree) {
-		System.out.println("id:t"+id);
+		System.out.println("id:\t"+id);
 		System.out.println("name:\t"+name);
 		System.out.println("pw:\t"+pw);
 		System.out.println("pc:\t"+pwc);
