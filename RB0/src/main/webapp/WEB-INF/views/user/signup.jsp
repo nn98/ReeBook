@@ -124,10 +124,10 @@ https: //coding-factory.tistory.com /187-->
 						</tr>
 					</tbody>
 				</table>
-				<button type="submit">G회원가입</button>
+				<!-- <button type="submit">G회원가입</button> -->
 			</div>
 		</form:form>
 	</div>
-	<hr style="border: solid 0.5px #aaa; width:90%;">
+	<hr style="border: solid 0.5px #aaa; width:85%;">
 </body>
 </html>
