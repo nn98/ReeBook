@@ -12,7 +12,7 @@ import lombok.Data;
 public class Document implements Serializable {
 	
 	@EmbeddedId
-	DocPK PK;
+	DocPK PKset_Book_Lecture;
 	
 //	@Id
 //	@ManyToOne
