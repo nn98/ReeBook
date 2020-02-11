@@ -12,12 +12,12 @@ import lombok.Data;
 public class Defect implements Serializable {
 	
 	@EmbeddedId
-	DefPK PK;
+	DefPK PKset_Book_Content;
 	
 //	@ManyToOne
 //	@JoinColumn(name="id")
 //	Book book;
 //	
-//	String contents;
+	String contents;
 	
 }
