@@ -79,26 +79,27 @@ public class RBController {
 
 	@RequestMapping(value="signup",method=RequestMethod.GET)
 	public String signUpG(Model model) {
+//		model.addAttribute("user",new User());
 		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
 	}
 
 
 	@RequestMapping(value="signup",method=RequestMethod.POST,produces="text/plain;charset=UTF-8")
-	public String signUpP(Model model,@RequestParam(value="user_id", required = false, defaultValue = "202020200")int id,
-			@RequestParam(value="user_name", required = false, defaultValue = "Dname")String name,
-			@RequestParam(value="user_pw", required = false, defaultValue = "Dpw")String pw,
-			@RequestParam(value="user_pwc", required = false, defaultValue = "Dpc")String pwc,
-			@RequestParam(value="user_grade", required = false, defaultValue = "1")int grade,
-			@RequestParam(value="user_depart", required = false, defaultValue = "1")int dept,
+	public String signUpP(Model model,@RequestParam(value="user_id", required = false, defaultValue = "0")int id,
+			@RequestParam(value="user_name", required = false, defaultValue = "D")String name,
+			@RequestParam(value="user_pw", required = false, defaultValue = "D")String pw,
+			@RequestParam(value="user_pwc", required = false, defaultValue = "D")String pwc,
+			@RequestParam(value="user_grade", required = false, defaultValue = "0")int grade,
+			@RequestParam(value="user_depart", required = false, defaultValue = "0")int dept,
 			@RequestParam(value="user_agree", required = false, defaultValue = "0")int agree) {
 		System.out.println("id:t"+id);
 		System.out.println("name:\t"+name);
 		System.out.println("pw:\t"+pw);
-		System.out.println("pwc:\t"+pwc);
+		System.out.println("pc:\t"+pwc);
 		System.out.println("pw c:\t"+pw.equals(pwc));
 		System.out.println("grade:\t"+grade);
-		System.out.println("dept:\t"+dept);
+		System.out.println("dept:\t"+dept+"\t"+departmentRepository.findById(dept).get().getName());
 		System.out.println("agree:\t"+(agree==1));
 		User user=new User();
 		user.setId(id);
@@ -106,6 +107,7 @@ public class RBController {
 		if(pw.equals(pwc))user.setPassword(pw);
 		user.setGrade(grade);
 		user.setDepartment(departmentRepository.getOne(dept));
+		user.setAgree(agree==1);
 		model.addAttribute("deptList", departmentRepository.findAll());
 		model.addAttribute(user);
 		return "user/signup";
