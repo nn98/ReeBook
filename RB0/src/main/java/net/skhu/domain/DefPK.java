@@ -11,8 +11,7 @@ import lombok.Data;
 public class DefPK implements Serializable {
 	
 	@ManyToOne
-	@JoinColumn(name="id")
+	@JoinColumn(name="bid")
 	Book book;
 	
-	String contents;
 }
