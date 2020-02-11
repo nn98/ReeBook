@@ -13,9 +13,11 @@ import lombok.Data;
 public class User {
 
 	@Id
-	int sn;
+	int id;
 	
 	String name;
+	
+	String password;
 	
 	int grade;
 	
@@ -27,4 +29,5 @@ public class User {
 	@ManyToOne(cascade= {CascadeType.ALL})
 	@JoinColumn(name="departmentId")
 	Department department;
+	
 }
