@@ -1,18 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	rel="stylesheet" media="screen">
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+ rel="stylesheet" media="screen">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>학생 등록</title>
 <style>
 <!--
@@ -57,7 +53,7 @@ https: //coding-factory.tistory.com /187-->
 		<br />
 		<h3 style="color: #777">학생 등록</h3>
 		<br />
-		<form method="get">
+		<form:form method="post" modelAttribute="user">
 			<!-- <div  class="form-group" style="background-color:#ccc;padding:20;"ccf> -->
 			<div id="box1">
 				<!-- <table id="tbl_detailsview2" border="1" bordercolor="white"> -->
@@ -71,13 +67,72 @@ https: //coding-factory.tistory.com /187-->
 						<tr id="tr_id">
 							<td id="box2" class="dv_fieldheader" style="color: #fff">사용자 ID</td>
 							<td id="box3"><input type="text" name="user_id"
-								autocomplete="off" size="15" maxlength="10"></td>
+								autocomplete="off" size="15" maxlength="10" value=${ user.id==0?"":user.id }></td>
 							<td id="box3"><font color="#f66">반드시 학번을 입력하세요 예) 201732009</font></td>
 						</tr>
 						<tr id="tr_id">
 							<td id="box2" class="dv_fieldheader" style="color: #fff">이름</td>
 							<td id="box3"><input type="text" name="user_name"
+								autocomplete="off" size="15" maxlength="10" value=${ user.name.equals("D")?"":user.name }></td>
+							<td id="box3"><font color="#f66">시스템에 저장된 이름과 동일해야 합니다</font></td>
+						</tr>
+						<tr id="tr_id">
+							<td id="box2" class="dv_fieldheader" style="color: #fff">암호</td>
+							<td id="box3"><input type="password" name="user_pw"
 								autocomplete="off" size="15" maxlength="10"></td>
+							<td id="box3"><font color="#f66"></font></td>
+						</tr>
+						<tr id="tr_id">
+							<td id="box2" class="dv_fieldheader" style="color: #fff">암호 확인</td>
+							<td id="box3"><input type="password" name="user_pwc"
+								autocomplete="off" size="15" maxlength="10"></td>
+							<td id="box3"><font color="#f66"></font></td>
+						</tr>
+						<tr id="tr_id">
+							<td id="box2" class="dv_fieldheader" style="color: #fff">학년</td>
+							<td id="box3">
+								<input type="radio" name="user_grade" value="1" class="none"> 1 &nbsp;
+								<input type="radio" name="user_grade" value="2" class="none"> 2 &nbsp;
+								<input type="radio" name="user_grade" value="3" class="none"> 3 &nbsp;
+								<input type="radio" name="user_grade" value="4" class="none"> 4 &nbsp;
+							<td id="box3"><font color="#f66"></font></td>
+						</tr>
+						<tr id="tr_id">
+							<td id="box2" class="dv_fieldheader" style="color: #fff">소속</td>
+							<td id="box3">
+								<select name="user_depart" size="1.9" class="form-control">
+									<% int i=1; pageContext.setAttribute("i",i); %>
+									<c:forEach items="${deptList}" var="dept">
+									<option value=<%=i++%> >${dept.name}</option>
+									</c:forEach>
+								</select>
+							</td>
+							<td id="box3"><font color="#f66"></font></td>
+						</tr>
+						<tr id="tr_id">
+							<td id="box2" class="dv_fieldheader" style="color:#777">
+								<br/>
+								<button type="submit" formmethod="post">회원가입</button>
+							</td>
+							<td id="box3" style="color:#f66">
+							개인정보 수집 및 이용 동의
+							</td>
+							<td id="box3" style="color:#f66">
+								<input type="radio" name="user_agree" value="1" ${ user.agree?"checked":"" }> 예 &nbsp; &nbsp;
+								<input type="radio" name="user_agree" value="0" ${ user.agree?"":"checked" }> 아니오
+							</td>
+						</tr>
+						<!-- 
+						<tr id="tr_id">
+							<td id="box2" class="dv_fieldheader" style="color: #fff">사용자 ID</td>
+							<td id="box3"><input type="text" name="user_id"
+								autocomplete="off" size="15" maxlength="10" value=${ user.id }></td>
+							<td id="box3"><font color="#f66">반드시 학번을 입력하세요 예) 201732009</font></td>
+						</tr>
+						<tr id="tr_id">
+							<td id="box2" class="dv_fieldheader" style="color: #fff">이름</td>
+							<td id="box3"><input type="text" name="user_name"
+								autocomplete="off" size="15" maxlength="10" value=${ user.name }></td>
 							<td id="box3"><font color="#f66">시스템에 저장된 이름과 동일해야 합니다</font></td>
 						</tr>
 						<tr id="tr_id">
@@ -105,9 +160,9 @@ https: //coding-factory.tistory.com /187-->
 							<td id="box2" class="dv_fieldheader" style="color: #fff">소속</td>
 							<td id="box3">
 								<select name="user_depart" size="1.9" class="form-control">
-									<% int i=1; %>
+									<%// int i=1; %>
 									<c:forEach items="${deptList}" var="dept">
-									<option value="<%=i++%>">${dept.name}</option>
+									<option value="<%//=i++%>">${dept.name}</option>
 									</c:forEach>
 								</select>
 							</td>
@@ -126,36 +181,12 @@ https: //coding-factory.tistory.com /187-->
 								<input type="radio" name="user_agree" value="0"> 아니오
 							</td>
 						</tr>
+						 -->
 					</tbody>
 				</table>
 				<button type="submit">G회원가입</button>
-				<!--
-				으악 뭘해야되냐
-				<p style="color: #555">학번</p>
-				<input type="text" name="sn"></input>
-				<p>암호</p>
-				<input type="password" name="pw"></input>
-				<p>암호 확인</p>
-				<input type="password" name="pwc"></input>
-				<p>이름</p>
-				<input type="text" name="name"></input>
-				<p>학년</p>
-				<input type="radio" name="year" value="1" class="none"> 1 <input
-					type="radio" name="year" value="2" class="none"> 2 <input
-					type="radio" name="year" value="3" class="none"> 3 <input
-					type="radio" name="year" value="4" class="none"> 4
-				<p>소속</p>
-				<select name="depart_no" size="1.9" class="form-control">
-					<% i=0; %>
-					<c:forEach items="${deptList}" var="dept">
-						<option value="<%=i++%>">${dept.name}</option>
-					</c:forEach>
-				</select>
-				<br/>
-				<button type="submit">회원가입</button>
-				-->
 			</div>
-		</form>
+		</form:form>
 	</div>
 	<hr style="border: solid 0.5px #aaa; width:90%;">
 </body>
