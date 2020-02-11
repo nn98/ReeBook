@@ -99,7 +99,7 @@ https: //coding-factory.tistory.com /187-->
 				 -->
 			</tr>
 			<tr id="tr_id">
-				<td id="box3" class="dv_fieldheader" style="color: #fff"><a href="signup">·Î±×ÀÎ</a></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"><a href="signup">Sign Up</a></td>
 			</tr>
 		</tbody>
 	</table>
