@@ -122,66 +122,7 @@ https: //coding-factory.tistory.com /187-->
 								<input type="radio" name="user_agree" value="0" ${ user.agree?"":"checked" }> 아니오
 							</td>
 						</tr>
-						<!-- 
-						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">사용자 ID</td>
-							<td id="box3"><input type="text" name="user_id"
-								autocomplete="off" size="15" maxlength="10" value=${ user.id }></td>
-							<td id="box3"><font color="#f66">반드시 학번을 입력하세요 예) 201732009</font></td>
-						</tr>
-						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">이름</td>
-							<td id="box3"><input type="text" name="user_name"
-								autocomplete="off" size="15" maxlength="10" value=${ user.name }></td>
-							<td id="box3"><font color="#f66">시스템에 저장된 이름과 동일해야 합니다</font></td>
-						</tr>
-						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">암호</td>
-							<td id="box3"><input type="password" name="user_pw"
-								autocomplete="off" size="15" maxlength="10"></td>
-							<td id="box3"><font color="#f66"></font></td>
-						</tr>
-						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">암호 확인</td>
-							<td id="box3"><input type="password" name="user_pwc"
-								autocomplete="off" size="15" maxlength="10"></td>
-							<td id="box3" name="pwc_e"><font color="#f66"></font></td>
-						</tr>
-						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">학년</td>
-							<td id="box3">
-								<input type="radio" name="user_grade" value="1" class="none"> 1 &nbsp;
-								<input type="radio" name="user_grade" value="2" class="none"> 2 &nbsp;
-								<input type="radio" name="user_grade" value="3" class="none"> 3 &nbsp;
-								<input type="radio" name="user_grade" value="4" class="none"> 4 &nbsp;
-							<td id="box3"><font color="#f66"></font></td>
-						</tr>
-						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color: #fff">소속</td>
-							<td id="box3">
-								<select name="user_depart" size="1.9" class="form-control">
-									<%// int i=1; %>
-									<c:forEach items="${deptList}" var="dept">
-									<option value="<%//=i++%>">${dept.name}</option>
-									</c:forEach>
-								</select>
-							</td>
-							<td id="box3"><font color="#f66"></font></td>
-						</tr>
-						<tr id="tr_id">
-							<td id="box2" class="dv_fieldheader" style="color:#777">
-								<br/>
-								<button type="submit" formmethod="post">회원가입</button>
-							</td>
-							<td id="box3" style="color:#f66">
-							개인정보 수집 및 이용 동의
-							</td>
-							<td id="box3" style="color:#f66">
-								<input type="radio" name="user_agree" value="1"> 예 &nbsp; &nbsp;
-								<input type="radio" name="user_agree" value="0"> 아니오
-							</td>
-						</tr>
-						 -->
+						
 					</tbody>
 				</table>
 				<button type="submit">G회원가입</button>
