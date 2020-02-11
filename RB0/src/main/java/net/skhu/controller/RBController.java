@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import net.skhu.domain.Book;
 import net.skhu.domain.Defect;
+import net.skhu.domain.Department;
 import net.skhu.domain.Document;
 import net.skhu.domain.Lecture;
 import net.skhu.domain.Rent;
@@ -146,4 +147,11 @@ public class RBController {
 	public List<Defect> defectsJ(){
 		return defectRepository.findAll();
 	}
+	
+	@RequestMapping(value="departmentsj",produces="application/json",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Department> departmentsJ(){
+		return departmentRepository.findAll();
+	}
+	
 }
