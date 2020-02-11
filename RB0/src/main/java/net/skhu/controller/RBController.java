@@ -91,6 +91,9 @@ public class RBController {
 		System.out.println("grade: "+grade);
 		System.out.println("dept: "+dept);
 		System.out.println("agree: "+(agree==1));
+		User user=new User();
+		user.setSn(id);
+		user.setName(name);
 		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
 	}
