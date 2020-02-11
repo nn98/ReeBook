@@ -22,7 +22,7 @@ public class Rent {
 	int id;
 	
 	@OneToOne
-	@JoinColumn(name="usn")
+	@JoinColumn(name="id")
 	User user;
 	
 	@OneToOne
