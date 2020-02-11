@@ -164,7 +164,13 @@ public class RBController {
 		//		model.addAttribute("user",userRepository.getOne(201732009));
 		user.setDepartment(departmentRepository.getOne(dId));
 		System.out.println(user);
-		return c?"front":"redirect:signup";
+		if(c) {
+			userRepository.save(user);
+			return "front";
+		}
+		else {
+			return "signup";
+		}
 	}
 
 	//	@RequestMapping("rents")
