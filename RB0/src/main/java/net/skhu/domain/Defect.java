@@ -15,4 +15,5 @@ public class Defect {
 	Book book;
 	
 	String contents;
+	
 }
