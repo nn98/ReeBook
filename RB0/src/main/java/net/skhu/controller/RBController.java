@@ -1,6 +1,8 @@
 package net.skhu.controller;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import net.skhu.domain.Book;
 import net.skhu.domain.Defect;
@@ -36,6 +39,11 @@ public class RBController {
 		return "front";
 	}
 
+	@RequestMapping("/fuck")
+	public String fTest(Model model) {
+		return "";
+	}
+
 	@Autowired BookRepository bookRepository;
 	@Autowired UserRepository userRepository;
 	@Autowired RentRepository rentRepository;
@@ -44,11 +52,11 @@ public class RBController {
 	@Autowired DepartmentRepository departmentRepository;
 	@Autowired DefectRepository defectRepository;
 
-//	@RequestMapping("books")
-//	public List<Book> books(){
-//		System.out.println(bookRepository.findAll().toString());
-//		return bookRepository.findAll();
-//	}
+	//	@RequestMapping("books")
+	//	public List<Book> books(){
+	//		System.out.println(bookRepository.findAll().toString());
+	//		return bookRepository.findAll();
+	//	}
 
 	@RequestMapping(value="booksj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
@@ -64,53 +72,73 @@ public class RBController {
 		return "book/books";
 	}
 
-//	@RequestMapping("users")
-//	public List<User> users(){
-//		return userRepository.findAll();
-//	}
+	//	@RequestMapping("users")
+	//	public List<User> users(){
+	//		return userRepository.findAll();
+	//	}
 
 	@RequestMapping(value="usersj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<User> usersJ(){
-//		System.out.println(userRepository.findAll().toString());
-//		return userRepository.findAll();
+		//		System.out.println(userRepository.findAll().toString());
+		//		return userRepository.findAll();
 		return userRepository.findAllWithoutPW();
 	}
 
 	@RequestMapping(value="signup",method=RequestMethod.GET)
 	public String signUpG(Model model) {
-//		model.addAttribute("user",new User());
+		//		model.addAttribute("user",new User());
 		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
 	}
 
 
 	@RequestMapping(value="signup",method=RequestMethod.POST,produces="text/plain;charset=UTF-8")
-	public String signUpP(Model model,@RequestParam(value="user_id", required = false, defaultValue = "0")int id,
+	public String signUpP(Model model,RedirectAttributes redirectAttributes,
+			@RequestParam(value="user_id", required = false, defaultValue = "0")int id,
 			@RequestParam(value="user_name", required = false, defaultValue = "D")String name,
 			@RequestParam(value="user_pw", required = false, defaultValue = "D")String pw,
-			@RequestParam(value="user_pwc", required = false, defaultValue = "D")String pwc,
+			@RequestParam(value="user_pwc", required = false, defaultValue = "D")String pc,
 			@RequestParam(value="user_grade", required = false, defaultValue = "0")int grade,
-			@RequestParam(value="user_depart", required = false, defaultValue = "0")int dept,
-			@RequestParam(value="user_agree", required = false, defaultValue = "0")int agree) {
+			@RequestParam(value="user_depart", required = false, defaultValue = "0")int dId,
+			@RequestParam(value="user_agree", required = false, defaultValue = "false")boolean agree) 
+					throws Exception{
+
+		Department department=departmentRepository.getOne(dId);
+		boolean pwc=pw.equals(pc);
+
 		System.out.println("id:\t"+id);
 		System.out.println("name:\t"+name);
 		System.out.println("pw:\t"+pw);
-		System.out.println("pc:\t"+pwc);
-		System.out.println("pw c:\t"+pw.equals(pwc));
+		System.out.println("pc:\t"+pc);
+		System.out.println("pw c:\t"+pwc);
 		System.out.println("grade:\t"+grade);
-		System.out.println("dept:\t"+dept+"\t"+departmentRepository.findById(dept).get().getName());
-		System.out.println("agree:\t"+(agree==1));
+		System.out.println("dept:\t"+dId+"\t"+department.getName());
+		System.out.println("agree:\t"+agree);
+		System.out.println("signup:\t"+(pwc&&agree));
+
 		User user=new User();
 		user.setId(id);
 		user.setName(name);
-		if(pw.equals(pwc))user.setPassword(pw);
+		if(pwc)user.setPassword(pw);
 		user.setGrade(grade);
-		user.setDepartment(departmentRepository.getOne(dept));
-		user.setAgree(agree==1);
-		model.addAttribute("deptList", departmentRepository.findAll());
-		model.addAttribute(user);
-		return "user/signup";
+		user.setDepartment(department);
+		user.setAgree(agree);
+
+		if(pwc&&agree) {
+			System.out.println("시발 뭔데");
+			model.addAttribute("user",user);
+			redirectAttributes.addFlashAttribute("user",user);
+			redirectAttributes.addAttribute("user",user);
+			//			return "redirect:./signups";
+			//			return "user/signupsuc";
+			return "redirect:signups";
+		}
+		else {
+			model.addAttribute("deptList", departmentRepository.findAll());
+			model.addAttribute(user);
+			return "user/signup";
+		}
 	}
 
 	@RequestMapping("signupp")
@@ -118,22 +146,43 @@ public class RBController {
 		return "user/signupp";
 	}
 
-//	@RequestMapping("rents")
-//	public List<Rent> rents(){
-//		return rentRepository.findAll();
-//	}
-	
+	@RequestMapping(value="signups",method=RequestMethod.GET)
+	public String signupSG(Model model,@RequestParam("user")User user) {
+		//		model.addAttribute(userRepository.getOne(201732009));
+		System.out.println("SucG");
+		System.out.println(user);
+		//		User user=(User) model.getAttribute("user");
+		return "user/signupsuc";
+	}
+
+	@RequestMapping(value="signups",method=RequestMethod.POST)
+	public String signupSP(Model model, User user, 
+			@RequestParam("departmentId")int dId,
+			@RequestParam("confirm")boolean c) {
+		System.out.println("SucP");
+		//		userRepository.save(user);
+		//		model.addAttribute("user",userRepository.getOne(201732009));
+		user.setDepartment(departmentRepository.getOne(dId));
+		System.out.println(user);
+		return c?"front":"redirect:signup";
+	}
+
+	//	@RequestMapping("rents")
+	//	public List<Rent> rents(){
+	//		return rentRepository.findAll();
+	//	}
+
 	@RequestMapping(value="rentsj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<Rent> rentsJ(){
 		System.out.println(55);
 		return rentRepository.findAll();
 	}
-	
-//	@RequestMapping("lectures")
-//	public List<Lecture> lectures(){
-//		return lectureRepository.findAll();
-//	}
+
+	//	@RequestMapping("lectures")
+	//	public List<Lecture> lectures(){
+	//		return lectureRepository.findAll();
+	//	}
 
 	@RequestMapping(value="lecturesj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
@@ -141,10 +190,10 @@ public class RBController {
 		return lectureRepository.findAll();
 	}
 
-//	@RequestMapping("documents")
-//	public List<Document> documents(){
-//		return documetRepository.findAll();
-//	}
+	//	@RequestMapping("documents")
+	//	public List<Document> documents(){
+	//		return documetRepository.findAll();
+	//	}
 
 	@RequestMapping(value="documentsj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
@@ -157,11 +206,11 @@ public class RBController {
 	public List<Defect> defectsJ(){
 		return defectRepository.findAll();
 	}
-	
+
 	@RequestMapping(value="departmentsj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<Department> departmentsJ(){
 		return departmentRepository.findAll();
 	}
-	
+
 }
