@@ -48,7 +48,7 @@
   	background:#888;
     border-bottom: 1px dotted #444444;
     border-right: 1px solid #aaa;
-  padding: 10px 30px 10px 10px;
+  	padding: 10px 30px 10px 0px;
   }
   title {
   margin-right:auto;
@@ -65,7 +65,7 @@
   }
   #btn0{
   align:right;
-  	color: #ccc;
+  	color: #777;
   margin-left:auto;
   margin-right:auto;
   }
