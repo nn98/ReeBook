@@ -3,13 +3,11 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,7 +22,6 @@ import net.skhu.domain.Lecture;
 import net.skhu.domain.Rent;
 import net.skhu.domain.User;
 import net.skhu.model.Pagination;
-import net.skhu.model.UserRegistrationModel;
 import net.skhu.repository.BookRepository;
 import net.skhu.repository.DefectRepository;
 import net.skhu.repository.DepartmentRepository;
@@ -95,42 +92,11 @@ public class RBController {
 	@RequestMapping(value="signup",method=RequestMethod.GET)
 	public String signUpG(Model model) {
 		//		model.addAttribute("user",new User());
-		model.addAttribute("userRegistrationModel", new UserRegistrationModel());
 		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
 	}
 
 
-	@RequestMapping(value="signup",method=RequestMethod.POST,produces="text/plain;charset=UTF-8")
-	public String signUpP(@Valid UserRegistrationModel userModel, RedirectAttributes redirectAttributes,
-			BindingResult bindingResult, Model model) throws Exception{
-		
-		System.out.println(userModel);
-		
-		if(bindingResult.hasErrors()) {
-			model.addAttribute("deptList", departmentRepository.findAll());
-			model.addAttribute("userRegistrationModel", userModel);
-			return "user/signup";
-		}
-		
-		userModel.setPwc(userModel.getPw().equals(userModel.getPc()));
-		
-		if(userModel.getAgree()&&userModel.getPwc()) {
-			model.addAttribute("user",userModel);
-			redirectAttributes.addFlashAttribute("user",userModel);
-			redirectAttributes.addAttribute("user",userModel);
-			//			return "redirect:./signups";
-			//			return "user/signupsuc";
-			return "redirect:signups";
-		}
-		else {
-			model.addAttribute("deptList", departmentRepository.findAll());
-			model.addAttribute(userModel);
-			return "user/signup";
-		}
-	}
-	
-	/*
 	@RequestMapping(value="signup",method=RequestMethod.POST,produces="text/plain;charset=UTF-8")
 	public String signUpP(Model model,RedirectAttributes redirectAttributes,
 			@RequestParam(value="user_id", required = false, defaultValue = "0")int id,
@@ -184,7 +150,6 @@ public class RBController {
 			return "user/signup";
 		}
 	}
-	 */
 
 	@RequestMapping("signupp")
 	public String signInP() {
