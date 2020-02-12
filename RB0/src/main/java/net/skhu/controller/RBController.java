@@ -162,7 +162,6 @@ public class RBController {
 	public String signupSG(Model model,@RequestParam("user")User user) {
 		//		model.addAttribute(userRepository.getOne(201732009));
 		System.out.println("SucG reciv:\t"+user);
-		System.out.println(user);
 		//		User user=(User) model.getAttribute("user");
 		return "user/signupsuc";
 	}
