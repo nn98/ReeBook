@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 
 @Data
@@ -19,7 +21,12 @@ public class User {
 	
 	String name;
 	
+	@JsonIgnore
 	String password;
+	
+	String email;
+	
+	String hp;
 	
 	int grade;
 	
@@ -28,6 +35,7 @@ public class User {
 //	Department department;
 	
 //	ManyToOne의 JoinColumn에선 name이 이 테이블의 컬럼명?
+//	@JsonIgnore
 	@ManyToOne(cascade= {CascadeType.ALL})
 	@JoinColumn(name="departmentId")
 	Department department;
