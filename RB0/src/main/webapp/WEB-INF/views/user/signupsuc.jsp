@@ -94,6 +94,14 @@
 		<td><input type="hidden" name="name" value=${user.name}>${user.name}</td>
 		</tr>
 		<tr>
+		<td id="td0"><strong>이메일</strong></td>
+		<td><input type="hidden" name="email" value=${user.email}>${user.email}</td>
+		</tr>
+		<tr>
+		<td id="td0"><strong>연락처</strong></td>
+		<td><input type="hidden" name="hp" value=${user.hp}>${user.hp}</td>
+		</tr>
+		<tr>
 		<td id="td0"><strong>학년</strong></td>
 		<td><input type="hidden" name="grade" value=${user.grade}>${user.grade}</td>
 		</tr>
@@ -105,8 +113,8 @@
 		<td id="td0"><input type="hidden" name="password" value=${user.password}><strong>확인</strong></td>
 		<td>
 		<input type="hidden" name="agree" value=${user.agree}>
-		<button type="submit" name="confirm" value="1" formmethod="post">예</button>
-		<button type="submit" name="confirm" value="0" formmethod="post">아니오</button>
+		<button type="submit" name="confirm" value="1" formmethod="post" style="color:#777">예</button>
+		<button type="submit" name="confirm" value="0" formmethod="post" style="color:#777">아니오</button>
 		</td>
 		</tr>
 		</tbody>
