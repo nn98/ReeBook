@@ -134,9 +134,11 @@ public class RBController {
 		user.setAgree(agree);
 		user.setEmail(email);
 		user.setHp(hp);
+		
+//		System.out.println(user);
 
 		if(pwc&&agree) {
-			System.out.println("시발 뭔데");
+			System.out.println("To suc:\t"+user);
 			model.addAttribute("user",user);
 			redirectAttributes.addFlashAttribute("user",user);
 			redirectAttributes.addAttribute("user",user);
@@ -159,7 +161,7 @@ public class RBController {
 	@RequestMapping(value="signups",method=RequestMethod.GET)
 	public String signupSG(Model model,@RequestParam("user")User user) {
 		//		model.addAttribute(userRepository.getOne(201732009));
-		System.out.println("SucG");
+		System.out.println("SucG reciv:\t"+user);
 		System.out.println(user);
 		//		User user=(User) model.getAttribute("user");
 		return "user/signupsuc";
