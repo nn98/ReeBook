@@ -1,5 +1,6 @@
 package net.skhu.domain;
 
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,6 +10,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@Convert(converter = BooleanToYNConverter.class, attributeName = "agree")
 public class Book {
 	
 	@Id
@@ -20,5 +22,7 @@ public class Book {
 	String author;
 	
 	String publisher;
+	
+	boolean available;
 	
 }
