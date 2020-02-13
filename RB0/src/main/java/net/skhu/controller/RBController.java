@@ -134,7 +134,6 @@ public class RBController {
 		user.setAgree(agree);
 		user.setEmail(email);
 		user.setHp(hp);
-		
 //		System.out.println(user);
 
 		if(pwc&&agree) {
