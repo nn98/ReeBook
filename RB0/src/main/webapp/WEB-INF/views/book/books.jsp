@@ -69,8 +69,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<my:pagination pageSize="${ pagination.sz }"
-			recordCount="${ pagination.recordCount }" queryStringName="pg" />
+		<my:pagination pageSize="${ pagination.sz }" recordCount="${ pagination.recordCount }" queryStringName="pg" />
 	</div>
 </body>
 </html>
