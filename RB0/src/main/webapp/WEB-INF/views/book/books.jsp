@@ -55,6 +55,7 @@
 					<th id="th0"><span style="color: #fff">제목</span></th>
 					<th id="th0"><span style="color: #fff">저자</span></th>
 					<th id="th0"><span style="color: #fff">출판사</span></th>
+					<th id="th0"><span style="color: #fff">대여 가능</span></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -64,7 +65,8 @@
 						<td id="td0"><span id="span0">${book.title}</span></td>
 						<td id="td0"><span id="span0">${book.author}</span></td>
 						<td id="td0"><span id="span0">${book.publisher}</span></td>
-
+						<td id="td0"><span id="span0">${book.available}</span></td>
+						<td id="td0"><c:out value="${book.available?book.available:\"<p>test</p>\"}"></c:out></td>
 					</tr>
 				</c:forEach>
 			</tbody>
