@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page import="net.skhu.domain.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="my"%>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@
 					<th id="th0"><span style="color: #fff">제목</span></th>
 					<th id="th0"><span style="color: #fff">저자</span></th>
 					<th id="th0"><span style="color: #fff">출판사</span></th>
-					<th id="th0"><span style="color: #fff">대여 가능</span></th>
+					<th id="th0"><span style="color: #fff">대여</span></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -65,12 +65,13 @@
 						<td id="td0"><span id="span0">${book.title}</span></td>
 						<td id="td0"><span id="span0">${book.author}</span></td>
 						<td id="td0"><span id="span0">${book.publisher}</span></td>
-						<td id="td0"><span id="span0">${book.available}</span></td>
+						<!-- <td id="td0"><span id="span0">${book.available}</span></td> -->
 						<td id="td0">
-						<% if((boolean)pageContext.getAttribute("book.available")) {%>
-						istrue?
+						<% Book book=(Book)pageContext.getAttribute("book"); %>
+						<% if(book.isAvailable()) {%>
+						<input type="submit" value="신청">
 						<% } else { %>
-						isfalse?
+						<span style="color:#f00">불가</span>
 						<% } %>
 						</td>
 						<!-- <td id="td0"><c:out value="${book.available?book.available:\"<p>test</p>\"}"></c:out></td> -->
