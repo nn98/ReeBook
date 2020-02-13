@@ -66,7 +66,14 @@
 						<td id="td0"><span id="span0">${book.author}</span></td>
 						<td id="td0"><span id="span0">${book.publisher}</span></td>
 						<td id="td0"><span id="span0">${book.available}</span></td>
-						<td id="td0"><c:out value="${book.available?book.available:\"<p>test</p>\"}"></c:out></td>
+						<td id="td0">
+						<% if((boolean)pageContext.getAttribute("book.available")) {%>
+						istrue?
+						<% } else { %>
+						isfalse?
+						<% } %>
+						</td>
+						<!-- <td id="td0"><c:out value="${book.available?book.available:\"<p>test</p>\"}"></c:out></td> -->
 					</tr>
 				</c:forEach>
 			</tbody>
