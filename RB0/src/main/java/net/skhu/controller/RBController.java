@@ -239,7 +239,7 @@ public class RBController {
 
 	@RequestMapping(value="login", method=RequestMethod.POST)
 	public String logInS(@ModelAttribute("user")User user ,Model m) {
-		User db=userRepository.getOne(user.getId());
+		User db=userRepository.findById(user.getId()).orElse(null);
 		System.out.println("recive user:\t"+user);
 		System.out.println("db user:\t"+db);
 		if(db!=null) {
@@ -255,6 +255,8 @@ public class RBController {
 //			System.out.println(user.getId()+" "+db.getId()+" "+(user.getId()==db.getId()));
 //			System.out.println(user.getPassword()+" "+db.getPassword()+" "+user.getPassword().equals(db.getPassword()));
 		}
+		System.out.println("fail");
+		m.addAttribute("fail",true);
 		return "login";
 	}
 
