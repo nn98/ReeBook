@@ -14,6 +14,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap');
 #h10 {
 	font-family: 휴먼모음T;
 	margin-left: 50px;
@@ -24,6 +25,10 @@
 	border: 3px solid #444;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#tr0{
+	padding: 3px 3px 0px 0px;
 }
 
 #th0 {
@@ -37,7 +42,20 @@
 }
 
 #span0 {
+	font-family: 'Noto Serif KR', serif;
+	font-size: 13pt;
+	padding-left:5px;
 	color: #fff;
+}
+
+#span1{
+	padding-left:5px;
+	color:#f00;
+}
+
+#span2{
+	padding-left:5px;
+	color:#fff;
 }
 
 #pg0 {
@@ -50,12 +68,12 @@
 		<h1 id="h10">교재 목록</h1>
 		<table id="table0" class="table table-bordered">
 			<thead>
-				<tr>
-					<th id="th0"><span style="color: #fff">ID</span></th>
-					<th id="th0"><span style="color: #fff">제목</span></th>
-					<th id="th0"><span style="color: #fff">저자</span></th>
-					<th id="th0"><span style="color: #fff">출판사</span></th>
-					<th id="th0"><span style="color: #fff">대여</span></th>
+				<tr id="tr0">
+					<th id="th0"><span id="span2">ID</span></th>
+					<th id="th0"><span id="span2">제목</span></th>
+					<th id="th0"><span id="span2">저자</span></th>
+					<th id="th0"><span id="span2">출판사</span></th>
+					<th id="th0"><span id="span2">대여</span></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -71,7 +89,7 @@
 						<% if(book.isAvailable()) {%>
 						<input type="submit" value="신청">
 						<% } else { %>
-						<span style="color:#f00">불가</span>
+						<span id="span1">불가</span>
 						<% } %>
 						</td>
 						<!-- <td id="td0"><c:out value="${book.available?book.available:\"<p>test</p>\"}"></c:out></td> -->
