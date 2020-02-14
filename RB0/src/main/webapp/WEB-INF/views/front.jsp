@@ -34,15 +34,15 @@ https: //coding-factory.tistory.com /187-->
 }
 
 #box3 {
-	border: 1px solid
+	border: 1px solid;
 	background-color: #ddd;
 	padding: 5px 10px 5px 10px;
 }
 
 #box4 {
-	background-color: yellow;
-	margin: 10px 10px 10px 10px; /* 위쪽 오른쪽 아래쪽 왼쪽 마진속성 한번에 주기 */
-	padding: 10px 10px 10px 10px; /* 위 오른쪽 아래쪽 왼쪽 패딩속성 한번에 주기 */
+	padding: 5px 10px 5px 10px;
+	border: 2px solid #fff;
+	background-color: #aaf;
 }
 
 #a0{
@@ -94,6 +94,11 @@ https: //coding-factory.tistory.com /187-->
 				<td id="box1" class="dv_fieldheader" style="color: #fff">LIST</td>
 				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="booksl">BookList</a></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
 				<!-- 
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="usersj">User</a></td>
 				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="booksj">Book</a></td>
@@ -111,8 +116,8 @@ https: //coding-factory.tistory.com /187-->
 				<td id="box1"></td>
 				<td id="box1"></td>
 				<td id="box1"></td>
-				<td id="box3" style="margin-right:2px"><a id="a0" href="login">Log In</a></td>
-				<td id="box3" class="dv_fieldheader" style="color: #fff"><a id="a0" href="signup">Sign Up</a></td>
+				<td id="box4" style="margin-right:2px"><a id="a0" href="login">Log In</a></td>
+				<td id="box4" class="dv_fieldheader" style="color: #fff"><a id="a0" href="signup">Sign Up</a></td>
 			</tr>
 		</tbody>
 	</table>
