@@ -9,6 +9,12 @@
  rel="stylesheet" media="screen">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript">
+           if(${fail})
+        	   alert("로그인 정보가 일치하지 않습니다.");
+           else
+        	   alert("로그인 시작");
+        </script>
 <title >Insert title here</title>
 <title>Insert title here</title>
 <style>
