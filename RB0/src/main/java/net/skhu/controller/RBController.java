@@ -37,13 +37,13 @@ import net.skhu.repository.UserRepository;
 //@RequestMapping("rb")
 public class RBController {
 
-	@RequestMapping("login")
+	@RequestMapping("/")
 	public String logIn() {
 		return "login";
 	}
 
 	@RequestMapping(value="login", method=RequestMethod.POST)
-	public String logInS(@ModelAttribute("user")User user ,Model m) {
+	public String logInS(@ModelAttribute("user")User user , RedirectAttributes redirectAttributes, Model m) {
 		User db=userRepository.findById(user.getId()).orElse(null);
 		System.out.println("recive user:\t"+user);
 		System.out.println("db user:\t"+db);
@@ -55,7 +55,9 @@ public class RBController {
 			System.out.println(uPw+"\t"+dPw);
 			System.out.println("id:\t"+id+"\tpw:\t"+pw+"\tresult:\t"+result);
 			if(result) {
-				return "front";
+//				return "front";
+				redirectAttributes.addFlashAttribute("user",db);
+				return "redirect:front";
 			}
 //			System.out.println(user.getId()+" "+db.getId()+" "+(user.getId()==db.getId()));
 //			System.out.println(user.getPassword()+" "+db.getPassword()+" "+user.getPassword().equals(db.getPassword()));
@@ -65,8 +67,17 @@ public class RBController {
 		return "login";
 	}
 
-	@RequestMapping("/")
-	public String front(Model model) {
+	@RequestMapping(value="/front", method=RequestMethod.POST)
+	public String frontP(Model model) {
+		User user=(User) model.getAttribute("user");
+		System.out.println("frontP:\t"+user);
+		return "front";
+	}
+	
+	@RequestMapping(value="/front", method=RequestMethod.GET)
+	public String frontG(Model model) {
+		User user=(User) model.getAttribute("user");
+		System.out.println("frontG:\t"+user);
 		return "front";
 	}
 
