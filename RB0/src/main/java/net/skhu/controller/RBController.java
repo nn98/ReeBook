@@ -85,6 +85,7 @@ public class RBController {
 //		User receive suc, all action -> redirect?
 		System.out.println("frontG:\t"+user);
 		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
+		System.out.println("\tLogInUser:\t"+logInUser);
 		return "front";
 	}
 
@@ -118,6 +119,8 @@ public class RBController {
 
 	@RequestMapping("booksl")
 	public String list(Pagination pagination, Model model) {
+		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
+		System.out.println("\tLogInUser:\t"+logInUser);
 		List<Book> list = bookRepository.findAll(pagination);
 		model.addAttribute("list", list);
 		return "book/books";
