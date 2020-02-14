@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -230,9 +231,30 @@ public class RBController {
 		System.out.println(55);
 		return rentRepository.findAll();
 	}
-	
+
 	@RequestMapping("login")
 	public String logIn() {
+		return "login";
+	}
+
+	@RequestMapping(value="login", method=RequestMethod.POST)
+	public String logInS(@ModelAttribute("user")User user ,Model m) {
+		User db=userRepository.getOne(user.getId());
+		System.out.println("recive user:\t"+user);
+		System.out.println("db user:\t"+db);
+		if(db!=null) {
+			int uId=user.getId(),dId=db.getId();
+			String uPw=user.getPassword(),dPw=db.getPassword();
+			boolean id=uId==dId,pw=uPw.equals(dPw),result=id&&pw;
+			System.out.println(uId+"\t"+dId);
+			System.out.println(uPw+"\t"+dPw);
+			System.out.println("id:\t"+id+"\tpw:\t"+pw+"\tresult:\t"+result);
+			if(result) {
+				return "front";
+			}
+//			System.out.println(user.getId()+" "+db.getId()+" "+(user.getId()==db.getId()));
+//			System.out.println(user.getPassword()+" "+db.getPassword()+" "+user.getPassword().equals(db.getPassword()));
+		}
 		return "login";
 	}
 
