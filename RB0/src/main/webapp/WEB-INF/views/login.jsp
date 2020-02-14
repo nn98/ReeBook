@@ -44,7 +44,9 @@ td {
 				<tbody>
 					<tr>
 						<td>ID</td>
-						<td><input type="text"></td>
+						<td><input name="id" type="text"></td>
+						<td>PW</td>
+						<td><input name="pw" type="text"></td>
 					</tr>
 				</tbody>
 			</table>
