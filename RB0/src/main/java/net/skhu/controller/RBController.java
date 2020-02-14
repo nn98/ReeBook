@@ -230,6 +230,11 @@ public class RBController {
 		System.out.println(55);
 		return rentRepository.findAll();
 	}
+	
+	@RequestMapping("login")
+	public String logIn() {
+		return "login";
+	}
 
 	//	@RequestMapping("lectures")
 	//	public List<Lecture> lectures(){
