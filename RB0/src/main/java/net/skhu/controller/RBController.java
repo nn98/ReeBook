@@ -36,6 +36,8 @@ import net.skhu.repository.UserRepository;
 @Controller
 //@RequestMapping("rb")
 public class RBController {
+	
+	static User logInUser=null;
 
 	@RequestMapping("/")
 	public String logIn() {
@@ -57,6 +59,7 @@ public class RBController {
 			if(result) {
 //				return "front";
 				redirectAttributes.addFlashAttribute("user",db);
+				logInUser=db;
 				return "redirect:front";
 			}
 //			System.out.println(user.getId()+" "+db.getId()+" "+(user.getId()==db.getId()));
@@ -68,16 +71,20 @@ public class RBController {
 	}
 
 	@RequestMapping(value="/front", method=RequestMethod.POST)
+//	unUse?
 	public String frontP(Model model) {
 		User user=(User) model.getAttribute("user");
 		System.out.println("frontP:\t"+user);
+		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
 		return "front";
 	}
 	
 	@RequestMapping(value="/front", method=RequestMethod.GET)
 	public String frontG(Model model) {
 		User user=(User) model.getAttribute("user");
+//		User receive suc, all action -> redirect?
 		System.out.println("frontG:\t"+user);
+		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
 		return "front";
 	}
 
