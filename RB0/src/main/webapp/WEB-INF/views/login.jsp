@@ -8,8 +8,10 @@
 <style>
 #div0 {
 	padding: 20px;
-	width: 30%;
-	height: 25%; margin : auto;
+	width: 35%;
+	height: auto;
+	overflow:hidden;
+	margin : auto;
 	background: #888;
 	margin: auto;
 }
@@ -30,26 +32,42 @@
 	float: left;
 }
 
+tr {
+	border: 1px dotted #bbb;
+}
+
 td {
+	margin: 2px;
+	border: 1px solid #fff;
 	padding: 10px; background : #555;
 	color: #fff;
 	background: #555;
 }
+
+#button0 {
+	width:20%;
+	border: 5px solid #999;
+	float:right;
+}
+
 </style>
 </head>
 <body>
 	<form action="logins" method="post">
 		<div id="div0">
-			<table>
+			<table style="margin-top:20px; border: 5px solid #999; width:100%; ">
 				<tbody>
 					<tr>
 						<td>ID</td>
 						<td><input name="id" type="text"></td>
+					</tr>
+					<tr>
 						<td>PW</td>
 						<td><input name="pw" type="text"></td>
 					</tr>
 				</tbody>
 			</table>
+			<button type="submit" id="button0">LogIn</button>
 		</div>
 	</form>
 </body>
