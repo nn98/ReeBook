@@ -36,6 +36,36 @@ import net.skhu.repository.UserRepository;
 @Controller
 //@RequestMapping("rb")
 public class RBController {
+	
+
+	@RequestMapping("login")
+	public String logIn() {
+		return "login";
+	}
+
+	@RequestMapping(value="login", method=RequestMethod.POST)
+	public String logInS(@ModelAttribute("user")User user ,Model m) {
+		User db=userRepository.findById(user.getId()).orElse(null);
+		System.out.println("recive user:\t"+user);
+		System.out.println("db user:\t"+db);
+		if(db!=null) {
+			int uId=user.getId(),dId=db.getId();
+			String uPw=user.getPassword(),dPw=db.getPassword();
+			boolean id=uId==dId,pw=uPw.equals(dPw),result=id&&pw;
+			System.out.println(uId+"\t"+dId);
+			System.out.println(uPw+"\t"+dPw);
+			System.out.println("id:\t"+id+"\tpw:\t"+pw+"\tresult:\t"+result);
+			if(result) {
+				return "front";
+			}
+//			System.out.println(user.getId()+" "+db.getId()+" "+(user.getId()==db.getId()));
+//			System.out.println(user.getPassword()+" "+db.getPassword()+" "+user.getPassword().equals(db.getPassword()));
+		}
+		System.out.println("fail");
+		m.addAttribute("fail",true);
+		return "login";
+	}
+
 
 	@RequestMapping("/")
 	public String front(Model model) {
@@ -230,34 +260,6 @@ public class RBController {
 	public List<Rent> rentsJ(){
 		System.out.println(55);
 		return rentRepository.findAll();
-	}
-
-	@RequestMapping("login")
-	public String logIn() {
-		return "login";
-	}
-
-	@RequestMapping(value="login", method=RequestMethod.POST)
-	public String logInS(@ModelAttribute("user")User user ,Model m) {
-		User db=userRepository.findById(user.getId()).orElse(null);
-		System.out.println("recive user:\t"+user);
-		System.out.println("db user:\t"+db);
-		if(db!=null) {
-			int uId=user.getId(),dId=db.getId();
-			String uPw=user.getPassword(),dPw=db.getPassword();
-			boolean id=uId==dId,pw=uPw.equals(dPw),result=id&&pw;
-			System.out.println(uId+"\t"+dId);
-			System.out.println(uPw+"\t"+dPw);
-			System.out.println("id:\t"+id+"\tpw:\t"+pw+"\tresult:\t"+result);
-			if(result) {
-				return "front";
-			}
-//			System.out.println(user.getId()+" "+db.getId()+" "+(user.getId()==db.getId()));
-//			System.out.println(user.getPassword()+" "+db.getPassword()+" "+user.getPassword().equals(db.getPassword()));
-		}
-		System.out.println("fail");
-		m.addAttribute("fail",true);
-		return "login";
 	}
 
 	//	@RequestMapping("lectures")
