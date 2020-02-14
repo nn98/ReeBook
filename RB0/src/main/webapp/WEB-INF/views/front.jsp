@@ -57,13 +57,32 @@ https: //coding-factory.tistory.com /187-->
 #hr_bottom {
 	boder: 10px solid #555;
 }
+
+#divd{
+	background: #444;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	overflow:hidden;
+}
+
+#pd{
+	font-family: 함초롬바탕;
+	float:right;
+	color: #fff;
+	padding-right: 20px;
+}
+
 </style>
 </head>
 <body>
-<form:form modelAttribute="user">
+<form:form modelAttribute="loginuser">
+	<div id="divd">
+	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name }</p>
+	</div>
 	<p>실행 테스트1</p>
 	<p>실행 테스트2</p>
-	<p>${ user.name }</p>
+	<p>${ loginuser.name }</p>
 	<table id="tb_id">
 		<colgroup>
 		</colgroup>
