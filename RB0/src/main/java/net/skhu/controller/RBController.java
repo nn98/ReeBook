@@ -36,7 +36,6 @@ import net.skhu.repository.UserRepository;
 @Controller
 //@RequestMapping("rb")
 public class RBController {
-	
 
 	@RequestMapping("login")
 	public String logIn() {
@@ -65,7 +64,6 @@ public class RBController {
 		m.addAttribute("fail",true);
 		return "login";
 	}
-
 
 	@RequestMapping("/")
 	public String front(Model model) {
