@@ -14,10 +14,11 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Serif+KR&display=swap');
 #h10 {
-	font-family: 휴먼모음T;
+	font-family: 함초롬바탕;
 	margin-left: 50px;
+	margin-bottom: 20px;
 }
 
 #table0 {
@@ -28,7 +29,6 @@
 }
 
 #tr0{
-	padding: 3px 3px 0px 0px;
 }
 
 #th0 {
@@ -42,30 +42,45 @@
 }
 
 #span0 {
-	font-family: 'Noto Serif KR', serif;
+	font-family: 함초롬바탕, cursive;
 	font-size: 13pt;
 	padding-left:5px;
 	color: #fff;
 }
 
 #span1{
+	font-family: 함초롬바탕, serif;
+	font-size: 15pt;
 	padding-left:5px;
 	color:#f00;
 }
 
 #span2{
-	padding-left:5px;
+	font-family: 함초롬바탕, serif;
+	font-size: 15pt;
+	padding: 0px 0px 0px 7px;
 	color:#fff;
+}
+
+#span3{
+	font-family: 함초롬바탕, serif;
+	font-size: 11pt;
 }
 
 #pg0 {
 	margin-left: 50px;
 }
+
+#button0{
+	margin-left:5px;
+}
+
 </style>
 </head>
 <body>
 	<div class="container">
 		<h1 id="h10">교재 목록</h1>
+		<form action="/">
 		<table id="table0" class="table table-bordered">
 			<thead>
 				<tr id="tr0">
@@ -79,7 +94,7 @@
 			<tbody>
 				<c:forEach var="book" items="${ list }">
 					<tr>
-						<td id="td0"><span style="color: #fff">${book.id}</span></td>
+						<td id="td0"><span id="span0">${book.id}</span></td>
 						<td id="td0"><span id="span0">${book.title}</span></td>
 						<td id="td0"><span id="span0">${book.author}</span></td>
 						<td id="td0"><span id="span0">${book.publisher}</span></td>
@@ -87,7 +102,7 @@
 						<td id="td0">
 						<% Book book=(Book)pageContext.getAttribute("book"); %>
 						<% if(book.isAvailable()) {%>
-						<input type="submit" value="신청">
+						<button id="button0" type="submit" name="bid" value=${ book.id }><span id="span3">신청</span></button>
 						<% } else { %>
 						<span id="span1">불가</span>
 						<% } %>
@@ -97,8 +112,10 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<my:pagination pageSize="${ pagination.sz }"
-			recordCount="${ pagination.recordCount }" queryStringName="pg" />
+		</form>
+		<div style="margin-left:50px">
+		<my:pagination pageSize="${ pagination.sz }" recordCount="${ pagination.recordCount }" queryStringName="pg" />
+		</div>
 	</div>
 </body>
 </html>
