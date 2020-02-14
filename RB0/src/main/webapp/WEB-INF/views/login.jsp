@@ -19,19 +19,27 @@
 <title>Insert title here</title>
 <style>
 #div0 {
-	padding: 20px;
-	width: 35%;
+	padding: 5px 20px 25px 20px;
+	width: 400px;
 	height: auto;
 	overflow:hidden;
-	margin : auto;
+	margin: 80px auto auto auto;
 	background: #888;
-	margin: auto;
 }
 
 #div1 {
 	padding: 10px; float : left;
 	background: #888;
 	float: left;
+}
+
+#div2 {
+	margin-top: 20px;
+	padding: 10px;
+	background: #777;
+	width: auto;
+	height: auto;
+	overflow:hidden;
 }
 
 #h60 {
@@ -50,6 +58,7 @@ tr {
 }
 
 td {
+	font-family: Times New Roman;
 	margin: 2px;
 	border: 1px solid #fff;
 	padding: 10px; background : #555;
@@ -58,17 +67,29 @@ td {
 }
 
 #button0 {
-	width:20%;
-	border: 5px solid #999;
+	margin-right: 38px;
+	width:auto;
+	border: 10px solid #777;
 	float:right;
+}
+
+h3{
+	border: 2px solid #fff;
+	padding: 20px 10px 20px 10px;
+	background: #555;
+	color: #fff;
+	font-family: 함초롬바탕, serif;
+	text-align: center;
 }
 
 </style>
 </head>
-<body>
+<body style="background: #333;">
 	<form:form method="post" modelAttribute="user" action="login">
 		<div id="div0">
-			<table style="margin-top:20px; border: 5px solid #999; width:100%; ">
+		<h3>성공회대학교 교재대여시스템</h3>
+			<div id="div2">
+			<table style="margin:20px auto 0px auto; border: 5px solid #999; width:auto; ">
 				<tbody>
 					<tr>
 						<td>ID</td>
@@ -81,6 +102,7 @@ td {
 				</tbody>
 			</table>
 			<button type="submit" id="button0">LogIn</button>
+			</div>
 		</div>
 	</form:form>
 </body>
