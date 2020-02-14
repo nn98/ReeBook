@@ -34,6 +34,7 @@ https: //coding-factory.tistory.com /187-->
 }
 
 #box3 {
+	border: 1px solid
 	background-color: #ddd;
 	padding: 5px 10px 5px 10px;
 }
@@ -42,6 +43,11 @@ https: //coding-factory.tistory.com /187-->
 	background-color: yellow;
 	margin: 10px 10px 10px 10px; /* 위쪽 오른쪽 아래쪽 왼쪽 마진속성 한번에 주기 */
 	padding: 10px 10px 10px 10px; /* 위 오른쪽 아래쪽 왼쪽 패딩속성 한번에 주기 */
+}
+
+#a0{
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #tb_id {
@@ -99,7 +105,14 @@ https: //coding-factory.tistory.com /187-->
 				 -->
 			</tr>
 			<tr id="tr_id">
-				<td id="box3" class="dv_fieldheader" style="color: #fff"><a href="signup">Sign Up</a></td>
+				<td id="box1"></td>
+				<td id="box1"></td>
+				<td id="box1"></td>
+				<td id="box1"></td>
+				<td id="box1"></td>
+				<td id="box1"></td>
+				<td id="box3" style="margin-right:2px"><a id="a0" href="login">Log In</a></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"><a id="a0" href="signup">Sign Up</a></td>
 			</tr>
 		</tbody>
 	</table>
