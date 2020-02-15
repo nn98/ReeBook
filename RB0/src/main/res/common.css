@@ -1,6 +1,8 @@
 @charset "EUC-KR";
+/*
 body { font-family: ±¼¸²Ã¼; }
 thead th { background-color: #eee; }
+*/
 tr:hover td { background-color: #ffe; cursor: pointer; }
 input.form-control.w100 { width: 100px; }
 input.form-control.w200 { width: 200px; }
