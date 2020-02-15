@@ -7,14 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
  rel="stylesheet" media="screen">
+ <link rel="stylesheet" href="common.css">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Test_0101_0212</title>
 <style>
-<!--
-https: //coding-factory.tistory.com /187-->
-        
-        #box1 {
+
+/*https: //coding-factory.tistory.com /187*/
+
+#box1 {
 	background-color: #ddd;
 	padding: 20px;
 }
@@ -80,6 +81,7 @@ https: //coding-factory.tistory.com /187-->
 	<div id="divd">
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name }</p>
 	</div>
+	<h1>css Test</h1>
 	<p>실행 테스트1</p>
 	<p>실행 테스트2</p>
 	<p>${ loginuser.name }</p>
