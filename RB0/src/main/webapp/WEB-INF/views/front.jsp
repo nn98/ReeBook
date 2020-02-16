@@ -48,6 +48,7 @@
 }
 
 #tb_id {
+	margin: 0px auto 0px auto;
 	border: 5px solid #888;
 }
 
