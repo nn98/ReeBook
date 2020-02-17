@@ -12,13 +12,12 @@
 <title >Insert title here</title>
 <style>
 	#div0{
-		width: 70%;
 		background:#222;
     margin-right:auto;
     margin-left:auto;
 	}
   table {
-    width: 50%;
+    width: 40%;
     border: 1px solid #fff;
     border-collapse: collapse;
   margin-top: 20%;
