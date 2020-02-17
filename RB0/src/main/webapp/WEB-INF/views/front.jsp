@@ -88,7 +88,7 @@
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
-	<button type="submit" formmethod="post" style="color:#aaf" name="logOut">Log Out</button></p>
+	<button type="submit" formmethod="post"  style="color:#aaf" name="logOut" formaction="logout">Log Out</button></p>
 	</div>
 	<h1>css Test</h1>
 	<p>실행 테스트1</p>

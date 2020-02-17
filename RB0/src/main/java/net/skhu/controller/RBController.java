@@ -88,7 +88,12 @@ public class RBController {
 		System.out.println("\tLogInUser:\t"+logInUser);
 		return "front";
 	}
-	
+
+	@RequestMapping("/logout")
+	public String logOut() {
+		logInUser=null;
+		return "login";
+	}
 
 	@RequestMapping("/fuck")
 	public String fTest(Model model) {
