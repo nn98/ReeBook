@@ -122,7 +122,7 @@
 								<td id="td0">
 									<% Book book=(Book)pageContext.getAttribute("book"); %> <% if(book.isAvailable()) {%>
 									<button id="button0" type="submit" name="bid"
-										value=${ book.id }>
+										value=${ book.id } formmethod="post" formaction="rent">
 										<span id="span3">신청</span>
 									</button> <% } else { %> <span id="span1">불가</span> <% } %>
 								</td>
