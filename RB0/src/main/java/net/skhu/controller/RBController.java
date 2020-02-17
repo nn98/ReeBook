@@ -43,6 +43,11 @@ public class RBController {
 	public String logIn() {
 		return "login";
 	}
+	
+	@RequestMapping(value="login", method=RequestMethod.GET)
+	public String logInG(Model model) {
+		return "login";
+	}
 
 	@RequestMapping(value="login", method=RequestMethod.POST)
 	public String logInS(@ModelAttribute("user")User user , RedirectAttributes redirectAttributes, Model m) {
@@ -219,9 +224,15 @@ public class RBController {
 	}
 
 	@RequestMapping(value="signups",method=RequestMethod.GET)
-	public String signupSG(Model model,@RequestParam("user")User user) {
+	public String signupSG(Model model) {
 		//		model.addAttribute(userRepository.getOne(201732009));
+		User user=(User)model.getAttribute("user");
 		System.out.println("SucG reciv:\t"+user);
+		if(user==null) {
+			model.addAttribute("deptList",departmentRepository.findAll());
+			return "user/signup";
+		}
+//		if(user==null)return "user/signup";
 		//		User user=(User) model.getAttribute("user");
 		return "user/signupsuc";
 	}
@@ -237,10 +248,10 @@ public class RBController {
 		System.out.println(user);
 		if(c) {
 			userRepository.save(user);
-			return "front";
+			return "login";
 		}
 		else {
-			return "signup";
+			return "redirect:signup";
 		}
 	}
 
