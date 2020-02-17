@@ -49,6 +49,9 @@
     border-right: 1px solid #aaa;
   	padding: 10px 30px 10px 0px;
   }
+  #td1 {
+  	border: 1px solid #fff;
+  }
   title {
   margin-right:auto;
     margin-left:auto;
@@ -81,8 +84,7 @@
 		<table>
 		<thead>
 		<tr>
-		<th></th>
-		<th><strong>정보</strong></th>
+		<th colspan="2"><strong>학생 정보</strong></th>
 		</tr>
 		</thead>
 		<tbody>
@@ -109,6 +111,9 @@
 		<tr>
 		<td id="td0"><strong>학부/학과</strong></td>
 		<td><input type="hidden" name="departmentId" value=${user.department.id}>${user.department.name}</td>
+		</tr>
+		<tr>
+		<td id="td1" colspan="2">위의 정보로 회원가입을 신청합니다</td>
 		</tr>
 		<tr>
 		<td id="td0"><input type="hidden" name="password" value=${user.password}><strong>확인</strong></td>
