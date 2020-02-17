@@ -13,7 +13,7 @@
 <style>
 	#div0{
 		width: 70%;
-		background:#444;
+		background:#222;
     margin-right:auto;
     margin-left:auto;
 	}
@@ -55,11 +55,13 @@
     margin-left:auto;
   }
   #h40 {
-  color:#fff; 
-  background:#333; 
-  width:60%;
+  color:#fff;
+  font-family: 함초롬바탕;
+  border: 1px solid #fff; 
+  background:#888;
+  width:80%;
   text-align: right;
-  padding: 10px 30px 10px 10px;
+  padding: 10px 30px 15px 10px;
   margin-left:auto;
   margin-right:auto;
   }
@@ -71,12 +73,12 @@
   }
 </style>
 </head>
-<body>
+<body style="background:#222">
 	<div class="container" id="div0">
 		<br />
-		<h4 id="h40"></h3>
 		<br />
 		<form:form method="post" modelAttribute="user">
+		<h4 id="h40">로그인 정보</h3>
 		<table>
 		<thead>
 		<tr>
