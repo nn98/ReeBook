@@ -144,7 +144,7 @@
 				<td id="box1"></td>
 				<td id="box1"></td>
 				<td id="box1"></td>
-				<td id="box4" style="margin-right:2px"><a id="a0" href="login">Log In</a></td>
+				<td id="box4" style="margin-right:2px"><a id="a0" href="login">Change ID</a></td>
 				<td id="box4" class="dv_fieldheader" style="color: #fff"><a id="a0" href="signup">Sign Up</a></td>
 			</tr>
 		</tbody>
