@@ -88,6 +88,7 @@ public class RBController {
 		System.out.println("\tLogInUser:\t"+logInUser);
 		return "front";
 	}
+	
 
 	@RequestMapping("/fuck")
 	public String fTest(Model model) {
