@@ -104,9 +104,14 @@ public class RBController {
 	public String fTest(Model model) {
 		return "";
 	}
-	
+
 	@RequestMapping("rent")
 	public String rent(Model m) {
+		return "rent/rent";
+	}
+
+	@RequestMapping(value="rent", method=RequestMethod.POST)
+	public String rentP(Model m) {
 		return "rent/rent";
 	}
 
