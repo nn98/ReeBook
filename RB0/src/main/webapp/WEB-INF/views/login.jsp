@@ -73,6 +73,12 @@ td {
 	float:right;
 }
 
+#button1 {
+	width:auto;
+	border: 10px solid #777;
+	float:right;
+}
+
 h3{
 	border: 2px solid #fff;
 	padding: 20px 10px 20px 10px;
@@ -102,6 +108,7 @@ h3{
 				</tbody>
 			</table>
 			<button type="submit" id="button0">LogIn</button>
+			<button type="submit" id="button1" formaction="signup" formmethod="get">SignUp</button>
 			</div>
 		</div>
 	</form:form>
