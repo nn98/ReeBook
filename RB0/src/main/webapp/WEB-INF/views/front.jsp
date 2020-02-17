@@ -74,12 +74,21 @@
 	padding-right: 20px;
 }
 
+#t0{
+	font-size: 10pt;
+	background:#ccc;
+	padding: 3px 10px 3px 10px;
+	color:fff;
+	float:right;
+}
+
 </style>
 </head>
 <body>
-<form:form modelAttribute="loginuser">
+<form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
-	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name }</p>
+	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
+	<button type="submit" formmethod="post" style="color:#aaf" name="logOut">Log Out</button></p>
 	</div>
 	<h1>css Test</h1>
 	<p>실행 테스트1</p>
