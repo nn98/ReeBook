@@ -15,5 +15,9 @@
 </head>
 <body>
 교재 대여
+<form:form modelAttribute="book">
+<table>
+</table>
+</form:form>
 </body>
 </html>
