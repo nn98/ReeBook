@@ -162,6 +162,8 @@ public class RBController {
 
 	@RequestMapping(value="signup",method=RequestMethod.GET)
 	public String signUpG(Model model) {
+		User user=(User)model.getAttribute("user");
+		System.out.println("SignUpG:\t"+user);
 		//		model.addAttribute("user",new User());
 		model.addAttribute("deptList", departmentRepository.findAll());
 		return "user/signup";
@@ -234,8 +236,9 @@ public class RBController {
 		User user=(User)model.getAttribute("user");
 		System.out.println("SucG reciv:\t"+user);
 		if(user==null) {
-			model.addAttribute("deptList",departmentRepository.findAll());
-			return "user/signup";
+			System.out.println("SignUp:\t user is null");
+//			model.addAttribute("deptList",departmentRepository.findAll());
+			return "login";
 		}
 //		if(user==null)return "user/signup";
 		//		User user=(User) model.getAttribute("user");
@@ -243,19 +246,21 @@ public class RBController {
 	}
 
 	@RequestMapping(value="signups",method=RequestMethod.POST)
-	public String signupSP(Model model, User user, 
+	public String signupSP(Model model, User user, RedirectAttributes rm,
 			@RequestParam("departmentId")int dId,
 			@RequestParam("confirm")boolean c) {
 		System.out.println("SucP");
 		//		userRepository.save(user);
 		//		model.addAttribute("user",userRepository.getOne(201732009));
 		user.setDepartment(departmentRepository.getOne(dId));
-		System.out.println(user);
+		System.out.println("SucP:\t"+user);
 		if(c) {
 			userRepository.save(user);
 			return "login";
 		}
 		else {
+			System.out.println("sent "+user+"to RD signup");
+			rm.addFlashAttribute("user", user);
 			return "redirect:signup";
 		}
 	}
