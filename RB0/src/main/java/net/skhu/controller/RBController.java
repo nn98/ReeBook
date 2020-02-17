@@ -93,6 +93,11 @@ public class RBController {
 	public String fTest(Model model) {
 		return "";
 	}
+	
+	@RequestMapping("rent")
+	public String rent(Model m) {
+		return "rent/rent";
+	}
 
 	@Autowired BookRepository bookRepository;
 	@Autowired UserRepository userRepository;
