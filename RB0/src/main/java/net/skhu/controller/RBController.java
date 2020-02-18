@@ -123,7 +123,17 @@ public class RBController {
 //		Book book=(Book)m.getAttribute("book");
 		Book book=bookRepository.getOne(bid);
 		System.out.println("RentS:\t"+book);
-		return "front";
+		System.out.println("IsAvailable:\t"+book.isAvailable());
+		if(book.isAvailable()) {
+			book.setAvailable(false);
+			bookRepository.save(book);
+			m.addAttribute("rentS",true);
+			return "front";
+		}else {
+			System.out.println("fail");
+			m.addAttribute("fail",true);
+			return "rent/rent";
+		}
 	}
 
 	@Autowired BookRepository bookRepository;
