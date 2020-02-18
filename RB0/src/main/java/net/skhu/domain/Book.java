@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Convert(converter = BooleanToYNConverter.class, attributeName = "agree")
+@Convert(converter = BooleanToYNConverter.class, attributeName = "available")
 public class Book {
 	
 	@Id
