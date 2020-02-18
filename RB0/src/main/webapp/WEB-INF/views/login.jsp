@@ -13,7 +13,7 @@
            if(${fail})
         	   alert("로그인 정보가 일치하지 않습니다.");
            else
-        	   //alert("로그인 시작");
+        	   alert("로그인 시작");
         </script>
 <title >Insert title here</title>
 <title>Insert title here</title>
