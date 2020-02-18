@@ -1,4 +1,5 @@
 package net.skhu.controller;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -127,6 +128,11 @@ public class RBController {
 		if(book.isAvailable()) {
 			book.setAvailable(false);
 			bookRepository.save(book);
+			Rent rent=new Rent();
+			rent.setBook(book);
+			rent.setRentDate(new Date());
+			rent.setReturnDate(new Date());
+			rent.setUser(logInUser);
 			m.addAttribute("rentS",true);
 			return "front";
 		}else {
