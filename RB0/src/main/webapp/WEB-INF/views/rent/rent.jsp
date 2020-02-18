@@ -9,6 +9,14 @@
  rel="stylesheet" media="screen">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+           if(${fail}) {
+        	   alert("대여 불가 상태의 교재입니다.");
+        	   window.location.href = 'front';
+           }
+           else
+        	   alert("로그인 시작");
+        </script>
 <title >Insert title here</title>
 <style>
 	#div0{
