@@ -9,6 +9,11 @@
  rel="stylesheet" media="screen">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript">
+           if(${rentS}) {
+        	   alert("교재 대여 신청이 완료되었습니다.");
+           }
+        </script>
 <title>Test_0101_0212</title>
 <style>
 
