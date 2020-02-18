@@ -1,4 +1,5 @@
 package net.skhu.controller;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -129,10 +130,18 @@ public class RBController {
 			book.setAvailable(false);
 			bookRepository.save(book);
 			Rent rent=new Rent();
-			rent.setBook(book);
-			rent.setRentDate(new Date());
-			rent.setReturnDate(new Date());
 			rent.setUser(logInUser);
+			rent.setUid(rent.getUser().getId());
+			rent.setBook(book);
+			rent.setBid(rent.getBook().getId());
+			System.out.println("rent date:\t"+new Date());
+			rent.setRentDate(new Date());
+			Calendar cal=Calendar.getInstance();
+			cal.set(2020,6,25);
+			System.out.println("return date:\t"+cal.getTime());
+			rent.setReturnDate(cal.getTime());
+			System.out.println("rent:\t"+rent);
+			rentRepository.save(rent);
 			m.addAttribute("rentS",true);
 			return "front";
 		}else {
