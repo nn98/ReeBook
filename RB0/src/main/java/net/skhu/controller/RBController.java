@@ -107,12 +107,23 @@ public class RBController {
 
 	@RequestMapping("rent")
 	public String rent(Model m) {
+		System.out.println("RentG:\t");
 		return "rent/rent";
 	}
 
 	@RequestMapping(value="rent", method=RequestMethod.POST)
-	public String rentP(Model m) {
+	public String rentP(Model m, @RequestParam("bid") int bid) {
+		System.out.println("RentP:\tbid:\t"+bid);
+		m.addAttribute("book",bookRepository.getOne(bid));
 		return "rent/rent";
+	}
+	
+	@RequestMapping(value="rents", method=RequestMethod.POST)
+	public String rnetS(Model m, @RequestParam("bid") int bid) {
+//		Book book=(Book)m.getAttribute("book");
+		Book book=bookRepository.getOne(bid);
+		System.out.println("RentS:\t"+book);
+		return "front";
 	}
 
 	@Autowired BookRepository bookRepository;
