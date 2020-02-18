@@ -1,9 +1,8 @@
 package net.skhu.domain;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,9 +24,13 @@ public class Rent {
 	@JoinColumn(name="id")
 	User user;
 	
+	int uid;
+	
 	@OneToOne
 	@JoinColumn(name="id")
 	Book book;
+
+	int bid;
 	
 //	private DateFormat format = new SimpleDateFormat("YYYY-MM-dd");
 	
