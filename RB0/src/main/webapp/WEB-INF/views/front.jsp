@@ -19,7 +19,13 @@
 
 /*https: //coding-factory.tistory.com /187*/
 
-#box1 {
+#box0{
+	border: 1px dotted #fff;
+	background-color: #888;
+	padding: 5px 10px 5px 10px;
+}
+
+#box11 {
 	background-color: #ddd;
 	padding: 20px;
 }
@@ -65,10 +71,16 @@
 }
 
 #divd{
-	background: #444;
+	background: #445;
 	width:100%;
 	height:auto;
 	padding: 10px;
+	overflow:hidden;
+}
+
+#div00{
+	background: #445;
+	width:100%;
 	overflow:hidden;
 }
 
@@ -87,13 +99,40 @@
 	float:right;
 }
 
+#tb00{
+	margin: 10px auto 0px auto;
+}
+
+#pd0{
+	margin-left:10px;
+	font-family: 함초롬바탕;
+	float:left;
+	color: #ccc;
+	font-size: 16pt;
+}
+
+#pd1{
+	text-align:center;
+	width:25%;
+	font-family: 함초롬바탕;
+	float:left;
+	color: #ccc;
+	padding: 5px;
+	font-size: 14pt;
+	border-right: 5px solid #aaa;
+}
+
 </style>
 </head>
 <body>
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
+	<p id="pd0">성공회대학교 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
-	<button type="submit" formmethod="post"  style="color:#aaf" name="logOut" formaction="logout">Log Out</button></p>
+	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
+	</div>
+	<div id="div00">
+	<p id="pd1">교재 대여</p>
 	</div>
 	<h1>css Test</h1>
 	<p>실행 테스트1</p>
@@ -104,14 +143,14 @@
 		</colgroup>
 		<tbody>
 			<tr id="tr_id">
-				<td id="box1" class="dv_fieldheader" style="color: #fff"></td>
-				<td id="box1" class="dv_fieldheader" style="color: #fff">USER</td>
-				<td id="box1" class="dv_fieldheader" style="color: #fff">BOOK</td>
-				<td id="box1" class="dv_fieldheader" style="color: #fff">RENT</td>
-				<td id="box1" class="dv_fieldheader" style="color: #fff">DEFECT</td>
-				<td id="box1" class="dv_fieldheader" style="color: #fff">LECTURE</td>
-				<td id="box1" class="dv_fieldheader" style="color: #fff">DOCUMENT</td>
-				<td id="box1" class="dv_fieldheader" style="color: #fff">DEPARTMENT</td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff">USER</td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff">BOOK</td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff">RENT</td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff">DEFECT</td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff">LECTURE</td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff">DOCUMENT</td>
+				<td id="box0" class="dv_fieldheader" style="color: #fff">DEPARTMENT</td>
 			</tr>
 			<tr id="tr_id">
 				<td id="box1" class="dv_fieldheader" style="color: #fff">JSON</td>
@@ -153,6 +192,13 @@
 				<td id="box4" class="dv_fieldheader" style="color: #fff"><a id="a0" href="signup">Sign Up</a></td>
 			</tr>
 		</tbody>
+	</table>
+	<table id="tb00">
+	<tbody>
+	<tr>
+	<td id="box11">test</td>
+	</tr>
+	</tbody>
 	</table>
 </form:form>
 </body>
