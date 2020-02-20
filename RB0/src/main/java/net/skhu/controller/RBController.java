@@ -137,7 +137,7 @@ public class RBController {
 			System.out.println("rent date:\t"+new Date());
 			rent.setRentDate(new Date());
 			Calendar cal=Calendar.getInstance();
-			cal.set(2020,6,26);
+			cal.set(2020,5,26);
 			System.out.println("return date:\t"+cal.getTime());
 			rent.setReturnDate(cal.getTime());
 			System.out.println("rent:\t"+rent);
