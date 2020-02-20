@@ -15,7 +15,7 @@
         	   window.location.href = 'front';
            }
            else
-        	   alert("로그인 시작");
+        	   alert("교재 대여 오류 발생");
         </script>
 <title >Insert title here</title>
 <style>
