@@ -88,11 +88,11 @@ public class RBController {
 	
 	@RequestMapping(value="/front", method=RequestMethod.GET)
 	public String frontG(Model model) {
-		User user=(User) model.getAttribute("user");
+//		User user=(User) model.getAttribute("user");
 //		User receive suc, all action -> redirect?
-		System.out.println("frontG:\t"+user);
+		System.out.println("frontG");
 		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
-		System.out.println("\tLogInUser:\t"+logInUser);
+		System.out.println("LogInUser:\t"+logInUser);
 		return "front";
 	}
 
