@@ -58,7 +58,7 @@
 }
 
 #tb_id {
-	margin: 0px auto 0px auto;
+	margin: 20px auto 0px auto;
 	border: 5px solid #888;
 }
 
@@ -71,7 +71,7 @@
 }
 
 #divd{
-	background: #445;
+	background: #334;
 	width:100%;
 	height:auto;
 	padding: 10px;
@@ -79,7 +79,7 @@
 }
 
 #div00{
-	background: #445;
+	background: #668;
 	width:100%;
 	overflow:hidden;
 }
@@ -112,14 +112,15 @@
 }
 
 #pd1{
+	background: #334;
 	text-align:center;
-	width:25%;
+	width:24.5%;
 	font-family: 함초롬바탕;
 	float:left;
 	color: #ccc;
-	padding: 5px;
+	padding: 5px 5px 13px 5px;
 	font-size: 14pt;
-	border-right: 5px solid #aaa;
+	margin-left:0.5%;
 }
 
 </style>
@@ -133,11 +134,10 @@
 	</div>
 	<div id="div00">
 	<p id="pd1">교재 대여</p>
+	<p id="pd1">교재 대여</p>
+	<p id="pd1">교재 대여</p>
+	<p id="pd1">교재 대여</p>
 	</div>
-	<h1>css Test</h1>
-	<p>실행 테스트1</p>
-	<p>실행 테스트2</p>
-	<p>${ loginuser.name }</p>
 	<table id="tb_id">
 		<colgroup>
 		</colgroup>
