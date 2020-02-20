@@ -109,31 +109,33 @@
 	float:left;
 	color: #ccc;
 	font-size: 16pt;
+	cursor: pointer
 }
 
 #pd1{
 	background: #334;
 	text-align:center;
-	width:24.5%;
+	width:24.7%;
 	font-family: 함초롬바탕;
 	float:left;
 	color: #ccc;
 	padding: 5px 5px 13px 5px;
 	font-size: 14pt;
-	margin-left:0.5%;
+	margin-left:0.3%;
+	cursor: pointer
 }
 
 </style>
 </head>
-<body>
+<body style="background:#668">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
-	<p id="pd0">성공회대학교 교재대여시스템</p>
+	<p id="pd0"  onclick="location.href='front'">성공회대학교 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
 	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
 	</div>
 	<div id="div00">
-	<p id="pd1">교재 대여</p>
+	<p id="pd1" onclick="location.href='booksl'">교재 대여</p>
 	<p id="pd1">교재 대여</p>
 	<p id="pd1">교재 대여</p>
 	<p id="pd1">교재 대여</p>
