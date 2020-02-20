@@ -141,9 +141,9 @@
 	</div>
 	<div id="div00">
 	<p id="pd1" onclick="location.href='booksl'">교재 대여</p>
-	<p id="pd1">교재 대여</p>
-	<p id="pd1">교재 대여</p>
-	<p id="pd1">교재 대여</p>
+	<p id="pd1">안</p>
+	<p id="pd1">만</p>
+	<p id="pd1">듬</p>
 	</div>
 	<table id="tb_id">
 		<colgroup>
