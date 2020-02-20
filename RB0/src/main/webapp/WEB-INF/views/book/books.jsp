@@ -20,6 +20,7 @@
 	font-family: 함초롬바탕;
 	margin-left: 50px;
 	margin-bottom: 20px;
+	font-size:20pt;
 }
 
 #table0 {
@@ -77,11 +78,20 @@
 }
 
 #divd{
-	background: #444;
+	background: #334;
 	width:100%;
 	height:auto;
 	padding: 10px;
 	overflow:hidden;
+}
+
+#pd0{
+	margin-left:10px;
+	font-family: 함초롬바탕;
+	float:left;
+	color: #ccc;
+	font-size: 16pt;
+	cursor: pointer
 }
 
 #pd{
@@ -96,8 +106,10 @@
 <body>
 	<form:form modelAttribute="loginuser">
 			<div id="divd">
-				<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name }</p>
-			</div>
+	<p id="pd0"  onclick="location.href='front'">성공회대학교 교재대여시스템</p>
+	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
+	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
+	</div>
 		<div class="container">
 			<h1 id="h10">교재 목록</h1>
 			<form action="/">
