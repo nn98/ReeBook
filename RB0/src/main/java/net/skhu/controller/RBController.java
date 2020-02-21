@@ -122,7 +122,6 @@ public class RBController {
 	
 	@RequestMapping(value="rents", method=RequestMethod.POST)
 	public String rnetS(Model m, @RequestParam("bid") int bid) {
-//		Book book=(Book)m.getAttribute("book");
 		Book book=bookRepository.getOne(bid);
 		System.out.println("RentS:\t"+book);
 		System.out.println("IsAvailable:\t"+book.isAvailable());
