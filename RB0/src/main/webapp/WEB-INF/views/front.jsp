@@ -203,7 +203,7 @@
 	<table id="tb00">
 	<tbody>
 	<tr>
-	<td id="box11">test</td>
+	<td id="box11">test table</td>
 	</tr>
 	</tbody>
 	</table>
