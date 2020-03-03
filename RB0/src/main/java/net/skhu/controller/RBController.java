@@ -17,19 +17,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import net.skhu.domain.Assign;
+import net.skhu.domain.AssignPK;
 import net.skhu.domain.Book;
 import net.skhu.domain.Defect;
 import net.skhu.domain.Department;
 import net.skhu.domain.Document;
 import net.skhu.domain.Lecture;
+import net.skhu.domain.Locker;
 import net.skhu.domain.Rent;
 import net.skhu.domain.User;
 import net.skhu.model.Pagination;
+import net.skhu.repository.AssignRepository;
 import net.skhu.repository.BookRepository;
 import net.skhu.repository.DefectRepository;
 import net.skhu.repository.DepartmentRepository;
 import net.skhu.repository.DocumentRepository;
 import net.skhu.repository.LectureRepository;
+import net.skhu.repository.LockerRepository;
 import net.skhu.repository.RentRepository;
 import net.skhu.repository.UserRepository;
 
@@ -157,6 +162,8 @@ public class RBController {
 	@Autowired DocumentRepository documentRepository;
 	@Autowired DepartmentRepository departmentRepository;
 	@Autowired DefectRepository defectRepository;
+	@Autowired LockerRepository lockerRepository;
+	@Autowired AssignRepository assignRepository;
 
 	@Autowired JpaContext jpaContext;
 
@@ -382,4 +389,127 @@ public class RBController {
 		return departmentRepository.findAll();
 	}
 
+	/*	LockerAssignment	*/
+
+	@RequestMapping("img")
+	public String img() {
+		return "imgtest";
+	}
+
+	@RequestMapping("halls")
+	public String halls(Model m) {
+		return "hall/halls";
+	}
+	
+	@RequestMapping("it6")
+	public String hall6(Model m, @RequestParam(value="hid", required = false, defaultValue = "0") int hid) {
+		System.out.println("hall 6/hid:\t"+hid);
+		m.addAttribute("hid",hid);
+		return "hall/IT6/floors";
+	}
+	
+	@RequestMapping(value="it6/f1", method=RequestMethod.GET)
+	public String it6F1(@RequestParam(value="fid", required = false, defaultValue = "0") int fid,
+			@RequestParam(value="hid", required = false, defaultValue = "0") int hid, Model m) {
+		System.out.println("it6/f1/G");
+		System.out.println("hid: "+hid);
+		System.out.println("fid: "+fid);
+		if(logInUser!=null)m.addAttribute("loginuser",logInUser);
+		m.addAttribute("hid",hid);
+		m.addAttribute("fid",fid);
+		
+		m.addAttribute("locker", new Locker());
+		
+		return "hall/IT6/floor1";
+	}
+	
+	@RequestMapping(value="it6/f1", method=RequestMethod.POST)
+	public String it6F1L(
+			@RequestParam(value="lid", required = false, defaultValue = "0") int lid,
+			@RequestParam(value="fid", required = false, defaultValue = "0") int fid,
+			@RequestParam(value="hid", required = false, defaultValue = "0") int hid,
+			@RequestParam(value="lnum", required = false, defaultValue = "0") int lnum, 
+			
+			@RequestParam(value="apply", required = false, defaultValue = "false") boolean apply,
+			@RequestParam(value="clnum", required = false, defaultValue = "0") int clnum,
+			@RequestParam(value="clcolumn", required = false, defaultValue = "0") int clcolumn,
+			@RequestParam(value="clrow", required = false, defaultValue = "0") int clrow, 
+			Model m, Locker locker, RedirectAttributes rdm) {
+		if(logInUser!=null)m.addAttribute("loginuser",logInUser);
+		System.out.println("it6/f1/P");
+		
+		if(apply) {
+			System.out.println("locker assign//");
+			System.out.println("clnum:\t"+clnum);
+			locker.setLnum(clnum%1000);
+			locker.setLcolumn(clnum/100000);
+			locker.setLrow(clnum%100000/1000);
+			String sid=""+hid+fid+lid+clnum;
+			locker.setId(Integer.parseInt(sid));
+			System.out.println("applyed locker:\t"+locker);
+			System.out.println("save locker...");
+			lockerRepository.save(locker);
+			System.out.println("OK");
+			
+			System.out.println("save assignment...\n");
+			System.out.println("check user's assign");
+			List<Assign> pAssign=assignRepository.findByUid(logInUser.getId());
+			if(pAssign==null) System.out.println("not exist");
+			else {
+				System.out.println("exist");
+				for(Assign a:pAssign)
+					assignRepository.delete(a);
+				System.out.println("delete existing assign");
+			}
+			Assign assign=new Assign();
+			AssignPK assignPK=new AssignPK();
+			assignPK.setLocker(locker);
+			assignPK.setUser(logInUser);
+			assign.setPKset_User_Locker(assignPK);
+			assignRepository.save(assign);
+			System.out.println("OK");
+			
+			rdm.addFlashAttribute("assign", true);
+			
+//			return "redirect:/it6/f1";
+			return "redirect:/front";
+			
+		}
+		else System.out.println("not applied");
+		
+		System.out.println("hid:\t"+hid);
+		System.out.println("fid:\t"+fid);
+		System.out.println("lid:\t"+lid);
+		System.out.println("lnum:\t"+lnum);
+		System.out.println("column/lxid:\t"+lnum/100000);
+		System.out.println("row/lyid:\t"+lnum%100000/1000);
+		
+		String alid="";
+		if(lnum==0)System.out.println("\tno alid");
+		else {
+			alid=""+hid+fid+lid+lnum;
+			System.out.println("\tAssignLockerId:\t"+alid);
+		}
+		
+//		System.out.println(m.getAttribute("locker"));
+		
+		m.addAttribute("lid",lid);
+		m.addAttribute("clnum", lnum);
+		m.addAttribute("lnum", lnum%1000);
+		m.addAttribute("lyid", lnum%100000/1000);
+		m.addAttribute("lxid", lnum/100000);
+		m.addAttribute("fid",fid);
+		if(lnum!=0)	m.addAttribute("alid",alid);
+		
+		System.out.println("locker:\t"+locker);
+		
+		return "hall/IT6/floor1-"+fid;
+	}
+	
+	@RequestMapping("imgtest")
+	public String imgT(@RequestParam(value="fid", required = false, defaultValue = "0") int fid, Model m) {
+		System.out.println("fid: "+fid);
+		return "hall/IT6/front";
+	}
+	
 }
