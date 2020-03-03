@@ -14,6 +14,11 @@
         	   alert("교재 대여 신청이 완료되었습니다.");
            }
         </script>
+<script type="text/javascript">
+if(${assign}) {
+	   alert("사물함 배정 신청이 완료되었습니다");
+}
+</script>
 <title>Test_0101_0212</title>
 <style>
 
@@ -135,13 +140,13 @@
 <body style="background:#668">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
-	<p id="pd0"  onclick="location.href='front'">성공회대학교 교재대여시스템</p>
+	<p id="pd0"  onclick="location.href='/front'">성공회대학교 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
-	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
+	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 	</div>
 	<div id="div00">
-	<p id="pd1" onclick="location.href='booksl'">교재 대여</p>
-	<p id="pd1">안</p>
+	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
+	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
 	<p id="pd1">만</p>
 	<p id="pd1">듬</p>
 	</div>
@@ -203,7 +208,7 @@
 	<table id="tb00">
 	<tbody>
 	<tr>
-	<td id="box11">test table</td>
+	<td id="box11"><a href="/it6/f1">6관</a></td>
 	</tr>
 	</tbody>
 	</table>
