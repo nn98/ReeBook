@@ -99,7 +99,7 @@ h3{
 				<tbody>
 					<tr>
 						<td>ID</td>
-						<td><input name="id" type="number" id="input0"></td>
+						<td><input name="id" type="number" id="input0" value=0></td>
 					</tr>
 					<tr>
 						<td>PW</td>
