@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
@@ -76,18 +76,6 @@
 	overflow:hidden;
 }
 
-#t0{
-	font-size: 10pt;
-	background:#ccc;
-	padding: 3px 10px 3px 10px;
-	color:fff;
-	float:right;
-}
-
-#tb00{
-	margin: 10px auto 0px auto;
-}
-
 #pd1{
 	background: #334;
 	text-align:center;
@@ -104,6 +92,18 @@
 
 #pd1:hover{
 	border-bottom:5px solid #99b;
+}
+
+#t0{
+	font-size: 10pt;
+	background:#ccc;
+	padding: 3px 10px 3px 10px;
+	color:fff;
+	float:right;
+}
+
+#tb00{
+	margin: 10px auto 0px auto;
 }
 
 #divd{
@@ -220,6 +220,17 @@
 	margin: 2px;
 }
 
+#albtn{
+	font-size: 9pt;
+	font-family: 휴먼모음T;
+	text-align: center;
+	color: #fff;
+	width:37px;
+	height:45px;
+	background: #444;
+	margin: 2px;
+}
+
 #p_hint{
 	font-size: 8pt;
 	font-family: 함초롬바탕;
@@ -236,12 +247,19 @@
 	height: auto;
 }
 
+#sup_skhu{
+	font-family: 함초롬바탕, serif;
+	font-size: 9pt;
+	margin: 0px;
+	color: #fc0;
+}
+
 </style>
 </head>
 <body style="background:#668">
 <form:form modelAttribute="locker" method="post">
 	<div id="divd">
-	<p id="pd0"  onclick="location.href='/front'">성공회대학교 교재대여시스템</p>
+	<p id="pd0"  onclick="location.href='/front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
 	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 	</div>
@@ -286,16 +304,16 @@
 				<tbody>
 					<tr>
 						<td id="td0">사물함 번호</td>
-						<td id="td0">${ lnum }</td>
+						<td id="td0">${ lnum==0?"":lnum }</td>
 						
 					</tr>
 					<tr>
 						<td id="td0">행</td>
-						<td id="td0">${ lxid }</td>
+						<td id="td0">${ lxid==0?"":lxid }</td>
 					</tr>
 					<tr>
 						<td id="td0">열</td>
-						<td id="td0">${ lyid }</td>
+						<td id="td0">${ lyid==0?"":lyid }</td>
 					</tr>
 				</tbody>
 			</table>
@@ -304,10 +322,24 @@
 			</div>
 		</div>
 		<div id="div2">
-		<% int i=1,j,c=1; %>
+		<c:set var="hid" value="${ hid }"/>
+		<c:set var="fid" value="${ fid }"/>
+		<c:set var="lid" value="${ lid }"/>
+		<c:set var="llist" value="${ llist }"/>
+		<% 
+			int i=1,j,c=1;
+			String meta=""+pageContext.getAttribute("hid")+pageContext.getAttribute("fid")+pageContext.getAttribute("lid");
+			List<Integer>llist=(List)pageContext.getAttribute("llist");
+		%>
+		<!-- <p><%= meta %></p> -->
+		<!-- <p><%= llist %></p> -->
 		<% for(;i<5;i++) { %>
 			<% for(j=1;j<21;j++) { %>
-				<button id="lbtn" type="submit" name="lnum" value=<%= i*100000+j*1000+c %>><%= c++ %></button>
+				<% 
+					String confirm=meta+(i*100000+j*1000+c); 
+					boolean C=llist.contains(Integer.parseInt(confirm));
+				%>
+				<button id=<%= C?"albtn":"lbtn" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
 			<% } %>
 			<br/>
 		<% } %>
