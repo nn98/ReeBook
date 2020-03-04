@@ -20,11 +20,12 @@
 <style>
 #div0 {
 	padding: 5px 20px 25px 20px;
-	width: 400px;
+	width: 500px;
 	height: auto;
 	overflow:hidden;
-	margin: 80px auto auto auto;
-	background: #888;
+	margin: 40px auto auto auto;
+	padding: 10px 10px 50px 10px;
+	background: #4c586f;
 }
 
 #div1 {
@@ -33,10 +34,10 @@
 	float: left;
 }
 
-#div2 {
+#div2-p {
 	margin-top: 20px;
 	padding: 10px;
-	background: #777;
+	background: #99b;
 	width: auto;
 	height: auto;
 	overflow:hidden;
@@ -61,45 +62,52 @@ td {
 	font-family: Times New Roman;
 	margin: 2px;
 	border: 1px solid #fff;
-	padding: 10px; background : #555;
-	color: #fff;
-	background: #555;
+	padding: 12px 17px 12px 17px;
+	color: #50311b;
+	background: #dde2e3;
 }
 
 #button0 {
-	margin-right: 38px;
+	margin-right: 100px;
 	width:auto;
-	border: 10px solid #777;
+	border: 10px solid #4c586f;
 	float:right;
+	padding: 2px 10px 2px 10px;
 }
 
 #button1 {
 	width:auto;
-	border: 10px solid #777;
+	border: 10px solid #4c586f;
 	float:right;
+	padding: 2px 10px 2px 10px;
 }
 
 h3{
-	border: 2px solid #fff;
 	padding: 20px 10px 20px 10px;
-	background: #555;
-	color: #fff;
+	color: #fdf2f3;
 	font-family: 함초롬바탕, serif;
 	text-align: center;
 }
 
+#sup_skhu{
+	font-family: 함초롬바탕, serif;
+	font-size: 10pt;
+	margin: 0px;
+	color: #fc0;
+}
+
 </style>
 </head>
-<body style="background: #333;">
+<body style="background: #ebeced;">
 	<form:form method="post" modelAttribute="user" action="login">
 		<div id="div0">
-		<h3>성공회대학교 교재대여시스템</h3>
+		<h3><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
 			<div id="div2">
-			<table style="margin:20px auto 0px auto; border: 5px solid #999; width:auto; ">
+			<table style="margin:20px auto 0px auto; border: 3px solid #33333b; width:auto; ">
 				<tbody>
 					<tr>
 						<td>ID</td>
-						<td><input name="id" type="number" id="input0" value=0></td>
+						<td><input name="id" type="number" id="input0"></td>
 					</tr>
 					<tr>
 						<td>PW</td>
