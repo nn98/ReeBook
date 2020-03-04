@@ -135,12 +135,19 @@ if(${assign}) {
 	padding-right: 20px;
 }
 
+#sup_skhu{
+	font-family: 함초롬바탕, serif;
+	font-size: 9pt;
+	margin: 0px;
+	color: #fc0;
+}
+
 </style>
 </head>
 <body style="background:#668">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
-	<p id="pd0"  onclick="location.href='/front'">성공회대학교 교재대여시스템</p>
+	<p id="pd0"  onclick="location.href='/front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
 	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 	</div>
