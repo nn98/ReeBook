@@ -16,7 +16,9 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Serif+KR&display=swap');
+
 #h10 {
+	color:#fff;
 	font-family: 함초롬바탕;
 	margin-left: 50px;
 	margin-bottom: 20px;
@@ -100,15 +102,52 @@
 	color: #fff;
 	padding-right: 20px;
 }
-	
+
+#div00{
+	background: #668;
+	width:100%;
+	overflow:hidden;
+}
+
+#pd1{
+	background: #334;
+	text-align:center;
+	width:24.7%;
+	font-family: 함초롬바탕;
+	float:left;
+	color: #ccc;
+	padding: 5px 5px 13px 5px;
+	font-size: 14pt;
+	margin-left:0.3%;
+	cursor: pointer;
+	border-bottom:5px solid #668;
+}
+
+#pd1:hover{
+	border-bottom:5px solid #99b;
+}
+
+#sup_skhu{
+	font-family: 함초롬바탕, serif;
+	font-size: 9pt;
+	margin: 0px;
+	color: #fc0;
+}
+
 </style>
 </head>
-<body>
+<body style="background:#668">
 	<form:form modelAttribute="loginuser">
 			<div id="divd">
-	<p id="pd0"  onclick="location.href='front'">성공회대학교 교재대여시스템</p>
+	<p id="pd0"  onclick="location.href='front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
 	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
+	</div>
+	<div id="div00">
+	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
+	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
+	<p id="pd1">만</p>
+	<p id="pd1">듬</p>
 	</div>
 		<div class="container">
 			<h1 id="h10">교재 목록</h1>
