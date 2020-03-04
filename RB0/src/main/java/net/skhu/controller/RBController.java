@@ -503,6 +503,13 @@ public class RBController {
 		
 		System.out.println("locker:\t"+locker);
 		
+		System.out.println("check assigned locker...");
+		List<Integer> llist=assignRepository.findExistId();
+		System.out.println("done, list:\t"+llist);
+		
+		m.addAttribute("llist",llist);
+		m.addAttribute("hid",hid);
+		
 		return "hall/IT6/floor1-"+fid;
 	}
 	
