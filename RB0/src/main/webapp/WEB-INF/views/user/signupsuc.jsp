@@ -80,7 +80,7 @@
 		<br />
 		<br />
 		<form:form method="post" modelAttribute="user">
-		<h4 id="h40">로그인 정보</h3>
+		<h4 id="h40">회원가입</h3>
 		<table>
 		<thead>
 		<tr>
