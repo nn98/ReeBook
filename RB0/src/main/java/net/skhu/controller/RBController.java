@@ -2,6 +2,7 @@ package net.skhu.controller;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -222,9 +223,14 @@ public class RBController {
 			@RequestParam(value="user_hp", required = false, defaultValue = "D")String hp,
 			@RequestParam(value="user_grade", required = false, defaultValue = "0")int grade,
 			@RequestParam(value="user_depart", required = false, defaultValue = "0")int dId,
-			@RequestParam(value="user_agree", required = false, defaultValue = "false")boolean agree) 
-					throws Exception{
-
+			@RequestParam(value="user_agree", required = false, defaultValue = "false")boolean agree,
+			@RequestParam(value="login", required=false, defaultValue="false")boolean login
+			)throws Exception{
+		System.out.println("SignUpP");
+		if(login) {
+			model.addAttribute("deptList", departmentRepository.findAll());
+			return "user/signup";
+		}
 		Department department=departmentRepository.getOne(dId);
 		boolean pwc=pw.equals(pc);
 
@@ -297,8 +303,16 @@ public class RBController {
 		user.setDepartment(departmentRepository.getOne(dId));
 		System.out.println("SucP:\t"+user);
 		if(c) {
-			userRepository.save(user);
-			return "login";
+			System.out.println(user);
+			System.out.println(userRepository.findById(user.getId()));
+			System.out.println(Optional.empty());
+			if(userRepository.findById(user.getId()).equals(Optional.empty())) {
+				userRepository.save(user);
+				rm.addFlashAttribute("signup",true);
+			} else {
+				rm.addFlashAttribute("signup",false);
+			}
+			return "redirect:login";
 		}
 		else {
 			System.out.println("sent "+user+"to RD signup");
