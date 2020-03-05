@@ -75,12 +75,17 @@ https: //coding-factory.tistory.com /187-->
 #hr_bottom{
 	boder: 10px solid #555;
 }
+
+#h3_title{
+	font-family: 함초롬바탕;
+	color: #555;
+}
 </style>
 </head>
 <body style="background:#eee">
 	<div class="container">
 		<br />
-		<h3 style="color: #777">학생 등록</h3>
+		<h3 id="h3_title">학생 등록</h3>
 		<br />
 		<form:form method="post" modelAttribute="user">
 			<!-- <div  class="form-group" style="background-color:#ccc;padding:20;"ccf> -->
