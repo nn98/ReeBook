@@ -12,15 +12,19 @@
  <script type="text/javascript">
            if(${fail})
         	   alert("로그인 정보가 일치하지 않습니다.");
+        </script>
+ <script type="text/javascript">
+           if(${signup})
+        	   alert("회원가입에 성공했습니다.\n등록된 아이디로 로그인하세요.");
            else
-        	   alert("로그인 시작");
+        	   alert("회원가입에 실패했습니다.\n등록된 아이디인지 확인하세요.");
         </script>
 <title >Insert title here</title>
 <title>Insert title here</title>
 <style>
 #div0 {
 	padding: 5px 20px 25px 20px;
-	width: 500px;
+	width: 470px;
 	height: auto;
 	overflow:hidden;
 	margin: 40px auto auto auto;
@@ -55,16 +59,14 @@
 }
 
 tr {
-	border: 1px dotted #bbb;
 }
 
 td {
 	font-family: Times New Roman;
 	margin: 2px;
-	border: 1px solid #fff;
-	padding: 12px 17px 12px 17px;
-	color: #50311b;
-	background: #dde2e3;
+	padding: 12px 5px 12px 10px;
+	color: #fff;
+	background: #4c586f;
 }
 
 #button0 {
@@ -103,7 +105,7 @@ h3{
 		<div id="div0">
 		<h3><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
 			<div id="div2">
-			<table style="margin:20px auto 0px auto; border: 3px solid #33333b; width:auto; ">
+			<table style="margin:20px auto 0px auto; width:auto; ">
 				<tbody>
 					<tr>
 						<td>ID</td>
@@ -116,7 +118,7 @@ h3{
 				</tbody>
 			</table>
 			<button type="submit" id="button0">LogIn</button>
-			<button type="submit" id="button1" formaction="signup" formmethod="get">SignUp</button>
+			<button type="submit" id="button1" formaction="signup" name="login" value="true">SignUp</button>
 			</div>
 		</div>
 	</form:form>
