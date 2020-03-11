@@ -156,8 +156,8 @@ if(${assign}) {
 	<div id="div00">
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
-	<p id="pd1">만</p>
-	<p id="pd1">듬</p>
+	<p id="pd1">여</p>
+	<p id="pd1">백</p>
 	</div>
 	<table id="tb_id">
 		<colgroup>
