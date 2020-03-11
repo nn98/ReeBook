@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
@@ -76,6 +76,18 @@
 	overflow:hidden;
 }
 
+#t0{
+	font-size: 10pt;
+	background:#ccc;
+	padding: 3px 10px 3px 10px;
+	color:fff;
+	float:right;
+}
+
+#tb00{
+	margin: 10px auto 0px auto;
+}
+
 #pd1{
 	background: #334;
 	text-align:center;
@@ -92,18 +104,6 @@
 
 #pd1:hover{
 	border-bottom:5px solid #99b;
-}
-
-#t0{
-	font-size: 10pt;
-	background:#ccc;
-	padding: 3px 10px 3px 10px;
-	color:fff;
-	float:right;
-}
-
-#tb00{
-	margin: 10px auto 0px auto;
 }
 
 #divd{
@@ -142,7 +142,6 @@
 	margin-left: 1%;
 	height: 100%;
 	background:#ccf;
-	text-align: center;
 }
 
 #img0 {
@@ -181,15 +180,6 @@
 	color:#fff;
 }
 
-#td1{
-	text-align:center;
-	font-size: 8pt;
-	font-family: 함초롬바탕;
-	padding:5px;
-	border-bottom: 1px dotted #fff;
-	color:#fff;
-}
-
 #p0{
 	font-size: 8pt;
 	font-family: 함초롬바탕;
@@ -219,53 +209,18 @@
 	background: #bbb;
 	margin: 2px;
 }
-
-#albtn{
-	font-size: 9pt;
-	font-family: 휴먼모음T;
-	text-align: center;
-	color: #fff;
-	width:37px;
-	height:45px;
-	background: #444;
-	margin: 2px;
-}
-
-#p_hint{
-	font-size: 8pt;
-	font-family: 함초롬바탕;
-	text-align: center;
-	color: #fff;	
-}
-
-#btn_apply{
-	font-size: 9pt;
-	font-family: 함초롬바탕;
-	text-align: center;
-	color: #777;
-	width:90%;
-	height: auto;
-}
-
-#sup_skhu{
-	font-family: 함초롬바탕, serif;
-	font-size: 9pt;
-	margin: 0px;
-	color: #fc0;
-}
-
 </style>
 </head>
 <body style="background:#668">
-<form:form modelAttribute="locker" method="post">
+<form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
-	<p id="pd0"  onclick="location.href='/front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
+	<p id="pd0"  onclick="location.href='front'">성공회대학교 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
-	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
+	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
 	</div>
 	<div id="div00">
-	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
-	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
+	<p id="pd1" onclick="location.href='booksl'">교재 대여</p>
+	<p id="pd1" onclick="location.href='halls'">사물함 신청</p>
 	<p id="pd1">만</p>
 	<p id="pd1">듬</p>
 	</div>
@@ -274,72 +229,53 @@
 			<div id="div1">
 			<h3 id="btn0"><sup id="h00">${ fid }층</sup>미디어센터측 사물함</h3>
 			<p id="p0">학생 정보</p>
-			<input name="fid" value=${ fid } type="hidden">
-			<input name="lid" value=${ lid } type="hidden">
+			<input name=fid value=${ fid } type="hidden">
 			<table id="tb0">
 				<tbody>
 					<tr>
 						<td id="td0">학번</td>
-						<td id="td0">${ loginuser.id }</td>
+						<td id="td0">${ user.id }201732009</td>
 					</tr>
 					<tr>
 						<td id="td0">이름</td>
-						<td id="td0">${ loginuser.name }</td>
+						<td id="td0">${ user.name }</td>
 					</tr>
 					<tr>
 						<td id="td0">소속</td>
-						<td id="td1">${ loginuser.department.name }</td>
+						<td id="td0">${ user.department.id }</td>
 					</tr>
 					<tr>
-						<td id="td0">사물함</td>
-						<td id="td0">${ alid }</td>
+						<td id="td0">사물함 번호</td>
+						<td id="td0">${ user.locker.id }</td>
 					</tr>
 				</tbody>
 			</table>
 			<p id="p0">사물함 정보</p>
-			<input name="clnum" type="hidden" value=${ clnum }>
-			<input name="clcolumn" type="hidden" value=${ lxid }>
-			<input name="clrow" type="hidden" value=${ lyid }>
 			<table id="tb0">
 				<tbody>
 					<tr>
 						<td id="td0">사물함 번호</td>
-						<td id="td0">${ lnum==0?"":lnum }</td>
-						
+						<td id="td0">${ lid }</td>
 					</tr>
 					<tr>
 						<td id="td0">행</td>
-						<td id="td0">${ lxid==0?"":lxid }</td>
+						<td id="td0">${ lxid }</td>
 					</tr>
 					<tr>
 						<td id="td0">열</td>
-						<td id="td0">${ lyid==0?"":lyid }</td>
+						<td id="td0">${ lyid }</td>
 					</tr>
 				</tbody>
 			</table>
-			<button id="btn_apply" type="submit" name="apply" value="true">사물함 배정신청</button>
-			<!-- <p id="p_hint">관/층/사물함/번호<br/>0/00/000</p> -->
+			<p>층/사물함/번호</p>
+			<p>0/00/000</p>
 			</div>
 		</div>
 		<div id="div2">
-		<c:set var="hid" value="${ hid }"/>
-		<c:set var="fid" value="${ fid }"/>
-		<c:set var="lid" value="${ lid }"/>
-		<c:set var="llist" value="${ llist }"/>
-		<% 
-			int i=1,j,c=1;
-			String meta=""+pageContext.getAttribute("hid")+pageContext.getAttribute("fid")+pageContext.getAttribute("lid");
-			Object o=pageContext.getAttribute("llist");
-			List<Integer>llist=new ArrayList();
-			if(o!=null)llist=(List)o;
-		%>
+		<% int i=1,j,c=1; %>
 		<% for(;i<5;i++) { %>
 			<% for(j=1;j<21;j++) { %>
-				<% 
-					String confirm=meta+(i*100000+j*1000+c); 
-					boolean C=llist.contains(Integer.parseInt(confirm));
-				%>
-				<button id=<%= C?"albtn":"lbtn" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
+				<button id="lbtn" type="submit" name="lid" value=<%= i*10000+j*100+c %>><%= c++ %></button>
 			<% } %>
 			<br/>
 		<% } %>

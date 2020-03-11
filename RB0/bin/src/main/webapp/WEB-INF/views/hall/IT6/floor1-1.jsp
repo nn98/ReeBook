@@ -329,10 +329,10 @@
 		<% 
 			int i=1,j,c=1;
 			String meta=""+pageContext.getAttribute("hid")+pageContext.getAttribute("fid")+pageContext.getAttribute("lid");
-			Object o=pageContext.getAttribute("llist");
-			List<Integer>llist=new ArrayList();
-			if(o!=null)llist=(List)o;
+			List<Integer>llist=(List)pageContext.getAttribute("llist");
 		%>
+		<!-- <p><%= meta %></p> -->
+		<!-- <p><%= llist %></p> -->
 		<% for(;i<5;i++) { %>
 			<% for(j=1;j<21;j++) { %>
 				<% 

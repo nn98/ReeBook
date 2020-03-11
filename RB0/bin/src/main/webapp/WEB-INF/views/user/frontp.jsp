@@ -4,10 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
  rel="stylesheet" media="screen">
- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <script type="text/javascript">
@@ -15,11 +14,6 @@
         	   alert("교재 대여 신청이 완료되었습니다.");
            }
         </script>
-<script type="text/javascript">
-if(${assign}) {
-	   alert("사물함 배정 신청이 완료되었습니다");
-}
-</script>
 <title>Test_0101_0212</title>
 <style>
 
@@ -64,7 +58,7 @@ if(${assign}) {
 }
 
 #tb_id {
-	margin: 20px auto 0px auto;
+	margin: 0px auto 0px auto;
 	border: 5px solid #888;
 }
 
@@ -74,6 +68,27 @@ if(${assign}) {
 
 #hr_bottom {
 	boder: 10px solid #555;
+}
+
+#divd{
+	background: #445;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	overflow:hidden;
+}
+
+#div00{
+	background: #445;
+	width:100%;
+	overflow:hidden;
+}
+
+#pd{
+	font-family: 함초롬바탕;
+	float:right;
+	color: #fff;
+	padding-right: 20px;
 }
 
 #t0{
@@ -88,77 +103,41 @@ if(${assign}) {
 	margin: 10px auto 0px auto;
 }
 
-
-#pd{
-	font-family: 'Noto Serif KR';
-	float:right;
-	color: #fff;
-	padding-right: 20px;
-}
-
 #pd0{
 	margin-left:10px;
-	font-family: 'Noto Serif KR';
+	font-family: 함초롬바탕;
 	float:left;
 	color: #ccc;
 	font-size: 16pt;
-	cursor: pointer
 }
 
 #pd1{
-	background: #334;
 	text-align:center;
-	width:24.7%;
-	font-family: 'Noto Serif KR';
+	width:25%;
+	font-family: 함초롬바탕;
 	float:left;
 	color: #ccc;
-	padding: 5px 5px 13px 5px;
+	padding: 5px;
 	font-size: 14pt;
-	margin-left:0.3%;
-	cursor: pointer;
-	border-bottom:5px solid #668;
-}
-
-#pd1:hover{
-	border-bottom:5px solid #99b;
-}
-
-#div00{
-	background: #668;
-	width:100%;
-	overflow:hidden;
-}
-
-#divd{
-	background: #334;
-	width:100%;
-	height:auto;
-	padding: 10px;
-	overflow:hidden;
-}
-
-#sup_skhu{
-	font-family: 'Noto Serif KR';
-	font-size: 10pt;
-	margin: 0px;
-	color: #fc0;
+	border-right: 5px solid #aaa;
 }
 
 </style>
 </head>
-<body style="background:#668">
+<body>
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
-	<p id="pd0"  onclick="location.href='/front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
+	<p id="pd0">성공회대학교 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
-	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
+	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
 	</div>
 	<div id="div00">
-	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
-	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
-	<p id="pd1">만</p>
-	<p id="pd1">듬</p>
+	<p id="pd1">교재 대여</p>
 	</div>
+	<h1>css Test</h1>
+	<p>실행 테스트1</p>
+	<p>실행 테스트2</p>
+	<p>${ loginuser.name }</p>
 	<table id="tb_id">
 		<colgroup>
 		</colgroup>
@@ -217,7 +196,7 @@ if(${assign}) {
 	<table id="tb00">
 	<tbody>
 	<tr>
-	<td id="box11"><a href="/it6/f1">6관</a></td>
+	<td id="box11">test</td>
 	</tr>
 	</tbody>
 	</table>

@@ -19,7 +19,7 @@
 
 #h10 {
 	color:#fff;
-	font-family: serif;
+	font-family: «‘√ ∑“πŸ≈¡;
 	margin-left: 50px;
 	margin-bottom: 20px;
 	font-size:20pt;
@@ -46,27 +46,28 @@
 }
 
 #span0 {
-	font-family: «‘√ ∑“πŸ≈¡;
-	font-size: 11pt;
+	font-family: «‘√ ∑“πŸ≈¡, cursive;
+	font-size: 13pt;
 	padding-left:5px;
 	color: #fff;
 }
 
 #span1{
-	font-family: serif;
+	font-family: «‘√ ∑“πŸ≈¡, serif;
 	font-size: 15pt;
 	padding-left:5px;
 	color:#f00;
 }
 
 #span2{
-	font-size: 12pt;
+	font-family: «‘√ ∑“πŸ≈¡, serif;
+	font-size: 15pt;
 	padding: 0px 0px 0px 7px;
 	color:#fff;
 }
 
 #span3{
-	font-family: serif;
+	font-family: «‘√ ∑“πŸ≈¡, serif;
 	font-size: 11pt;
 }
 

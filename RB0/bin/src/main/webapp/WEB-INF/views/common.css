@@ -1,0 +1,37 @@
+@charset "EUC-KR";
+/*
+body { font-family: ±º∏≤√º; }
+thead th { background-color: #eee; }
+*/
+tr:hover td { background-color: #ffe; cursor: pointer; }
+input.form-control.w100 { width: 100px; }
+input.form-control.w200 { width: 200px; }
+input.form-control.w300 { width: 300px; }
+input.form-control.w400 { width: 400px; }
+select.form-control.w100 { width: 100px; }
+select.form-control.w200 { width: 200px; }
+select.form-control.w300 { width: 300px; }
+select.form-control.w400 { width: 400px; }
+.mt5 { margin-top: 5px; }
+.mb5 { margin-bottom: 5px; }
+.mr20 { margin-right: 20px; }
+.ml20 { margin-left: 20px; }
+/* past css */
+
+/*
+h1 {color:red;}
+
+#divd{
+	background: #444;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	overflow:hidden;
+}
+p.pd{
+	font-family: «‘√ ∑“πŸ≈¡;
+	float:right;
+	color: #fff;
+	padding-right: 20px;
+}
+*/

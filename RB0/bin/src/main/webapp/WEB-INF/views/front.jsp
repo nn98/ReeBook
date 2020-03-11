@@ -4,10 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
  rel="stylesheet" media="screen">
- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <script type="text/javascript">
@@ -76,6 +75,12 @@ if(${assign}) {
 	boder: 10px solid #555;
 }
 
+#div00{
+	background: #668;
+	width:100%;
+	overflow:hidden;
+}
+
 #t0{
 	font-size: 10pt;
 	background:#ccc;
@@ -88,28 +93,11 @@ if(${assign}) {
 	margin: 10px auto 0px auto;
 }
 
-
-#pd{
-	font-family: 'Noto Serif KR';
-	float:right;
-	color: #fff;
-	padding-right: 20px;
-}
-
-#pd0{
-	margin-left:10px;
-	font-family: 'Noto Serif KR';
-	float:left;
-	color: #ccc;
-	font-size: 16pt;
-	cursor: pointer
-}
-
 #pd1{
 	background: #334;
 	text-align:center;
 	width:24.7%;
-	font-family: 'Noto Serif KR';
+	font-family: 함초롬바탕;
 	float:left;
 	color: #ccc;
 	padding: 5px 5px 13px 5px;
@@ -123,12 +111,6 @@ if(${assign}) {
 	border-bottom:5px solid #99b;
 }
 
-#div00{
-	background: #668;
-	width:100%;
-	overflow:hidden;
-}
-
 #divd{
 	background: #334;
 	width:100%;
@@ -137,9 +119,25 @@ if(${assign}) {
 	overflow:hidden;
 }
 
+#pd0{
+	margin-left:10px;
+	font-family: 함초롬바탕;
+	float:left;
+	color: #ccc;
+	font-size: 16pt;
+	cursor: pointer
+}
+
+#pd{
+	font-family: 함초롬바탕;
+	float:right;
+	color: #fff;
+	padding-right: 20px;
+}
+
 #sup_skhu{
-	font-family: 'Noto Serif KR';
-	font-size: 10pt;
+	font-family: 함초롬바탕, serif;
+	font-size: 9pt;
 	margin: 0px;
 	color: #fc0;
 }

@@ -521,16 +521,21 @@ public class RBController {
 		List<Integer> llist=assignRepository.findExistId();
 		System.out.println("done, list:\t"+llist);
 		
-		m.addAttribute("llist",llist);
+		if(llist!=null)m.addAttribute("llist",llist);
 		m.addAttribute("hid",hid);
 		
-		return "hall/IT6/floor1-"+fid;
+		return "hall/IT6/floor1-"+lid;
 	}
 	
 	@RequestMapping("imgtest")
 	public String imgT(@RequestParam(value="fid", required = false, defaultValue = "0") int fid, Model m) {
 		System.out.println("fid: "+fid);
 		return "hall/IT6/front";
+	}
+	
+	@RequestMapping("def")
+	public String def(Model m) {
+		return "default";
 	}
 	
 }
