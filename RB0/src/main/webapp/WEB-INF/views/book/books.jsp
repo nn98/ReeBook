@@ -40,9 +40,21 @@
 	border: 2px solid #ccc;
 }
 
+#th1 {
+	background-color: #88c;
+	border: 2px solid #ccc;
+	text-align: center;
+}
+
 #td0 {
 	background-color: #aad;
 	border: 1px solid #ddd;
+}
+
+#td1 {
+	background-color: #aad;
+	border: 1px solid #ddd;
+	text-align: center;
 }
 
 #span0 {
@@ -159,7 +171,7 @@
 							<th id="th0"><span id="span2">제목</span></th>
 							<th id="th0"><span id="span2">저자</span></th>
 							<th id="th0"><span id="span2">출판사</span></th>
-							<th id="th0"><span id="span2">대여</span></th>
+							<th id="th1"><span id="span2">대여</span></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -170,7 +182,7 @@
 								<td id="td0"><span id="span0">${book.author}</span></td>
 								<td id="td0"><span id="span0">${book.publisher}</span></td>
 								<!-- <td id="td0"><span id="span0">${book.available}</span></td> -->
-								<td id="td0">
+								<td id="td1">
 									<% Book book=(Book)pageContext.getAttribute("book"); %> <% if(book.isAvailable()) {%>
 									<button id="button0" type="submit" name="bid"
 										value=${ book.id } formmethod="post" formaction="rent">
