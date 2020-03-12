@@ -27,7 +27,7 @@
 
 #table0 {
 	width: 90%;
-	border: 3px solid #444;
+	border: 3px solid #66b;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -36,37 +36,38 @@
 }
 
 #th0 {
-	background-color: #555;
-	border: 2px solid #aaa;
+	background-color: #88c;
+	border: 2px solid #ccc;
 }
 
 #td0 {
-	background-color: #888;
+	background-color: #aad;
 	border: 1px solid #ddd;
 }
 
 #span0 {
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	font-size: 11pt;
 	padding-left:5px;
 	color: #fff;
 }
 
 #span1{
-	font-family: serif;
-	font-size: 15pt;
+	font-family: 'Noto Serif KR';
+	font-size: 11pt;
 	padding-left:5px;
-	color:#f00;
+	color:#f55;
 }
 
 #span2{
+	font-family: 'Noto Serif KR';
 	font-size: 12pt;
 	padding: 0px 0px 0px 7px;
 	color:#fff;
 }
 
 #span3{
-	font-family: serif;
+	font-family: 'Noto Serif KR';
 	font-size: 11pt;
 }
 
@@ -78,41 +79,27 @@
 	margin-left:5px;
 }
 
-#divd{
-	background: #334;
-	width:100%;
-	height:auto;
-	padding: 10px;
-	overflow:hidden;
+#pd{
+	font-family: 'Noto Serif KR';
+	float:right;
+	color: #fff;
+	padding-right: 20px;
 }
 
 #pd0{
 	margin-left:10px;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:left;
 	color: #ccc;
 	font-size: 16pt;
 	cursor: pointer
 }
 
-#pd{
-	font-family: 함초롬바탕;
-	float:right;
-	color: #fff;
-	padding-right: 20px;
-}
-
-#div00{
-	background: #668;
-	width:100%;
-	overflow:hidden;
-}
-
 #pd1{
 	background: #334;
 	text-align:center;
 	width:24.7%;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:left;
 	color: #ccc;
 	padding: 5px 5px 13px 5px;
@@ -126,9 +113,23 @@
 	border-bottom:5px solid #99b;
 }
 
+#div00{
+	background: #668;
+	width:100%;
+	overflow:hidden;
+}
+
+#divd{
+	background: #334;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	overflow:hidden;
+}
+
 #sup_skhu{
-	font-family: 함초롬바탕, serif;
-	font-size: 9pt;
+	font-family: 'Noto Serif KR';
+	font-size: 10pt;
 	margin: 0px;
 	color: #fc0;
 }
@@ -136,17 +137,17 @@
 </style>
 </head>
 <body style="background:#668">
-	<form:form modelAttribute="loginuser">
-			<div id="divd">
-	<p id="pd0"  onclick="location.href='front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
+<form:form modelAttribute="loginuser" method="post">
+	<div id="divd">
+	<p id="pd0"  onclick="location.href='/front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
-	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
+	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 	</div>
 	<div id="div00">
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
-	<p id="pd1">만</p>
-	<p id="pd1">듬</p>
+	<p id="pd1">여</p>
+	<p id="pd1">백</p>
 	</div>
 		<div class="container">
 			<h1 id="h10">교재 목록</h1>
