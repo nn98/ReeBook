@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
  rel="stylesheet" media="screen">
+ <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
@@ -24,14 +25,24 @@
     margin-right:auto;
     margin-left:auto;
 	}
-  table {
+  #tb0 {
+  	margin-top: 20%;
+    width: 40%;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-collapse: collapse;
+ 	
+    margin-right:auto;
+    margin-left:auto;
+  }
+  #tb1 {
+  	margin-top:-5px;
     width: 40%;
     border: 1px solid #fff;
     border-collapse: collapse;
-  margin-top: 20%;
     margin-right:auto;
     margin-left:auto;
-    margin-bottom: 30%;
   }
   th {
   text-align: center;
@@ -66,9 +77,9 @@
   }
   #h40 {
   color:#fff;
-  font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
   border: 1px solid #fff; 
-  background:#888;
+  background:#555;
   width:80%;
   text-align: right;
   padding: 10px 30px 15px 10px;
@@ -89,7 +100,30 @@
 		<br />
 		<form:form method="post" modelAttribute="book" action="rents">
 		<h4 id="h40">대여 신청</h3>
-		<table>
+		
+		<table id="tb0">
+		<thead>
+		<tr>
+		<th colspan="2"><strong>학생 정보</strong></th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td id="td0"><strong>학번</strong></td>
+		<td><input type="hidden" name="bid" value=${book.id}>${loginuser.id}</td>
+		</tr>
+		<tr>
+		<td id="td0"><strong>이름</strong></td>
+		<td><input type="hidden" name="name" value=${book.author}>${loginuser.name}</td>
+		</tr>
+		<tr>
+		<td id="td0"><strong>소속</strong></td>
+		<td><input type="hidden" name="email" value=${book.publisher}>${loginuser.department.name}</td>
+		</tr>
+		</tbody>
+		</table>
+		
+		<table id="tb1">
 		<thead>
 		<tr>
 		<th colspan="2"><strong>교재 정보</strong></th>

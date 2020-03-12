@@ -83,25 +83,31 @@ public class RBController {
 		return "login";
 	}
 
+	@RequestMapping(value="/front", method=RequestMethod.GET)
+	public String frontG(Model model, RedirectAttributes rm) {
+		System.out.println("front:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
+		model.addAttribute("loginuser",logInUser);
+//		System.out.println("LogInUser:\t"+logInUser);
+		return "front";
+	}
+
 	@RequestMapping(value="/front", method=RequestMethod.POST)
-//	unUse?
-	public String frontP(Model model) {
-		User user=(User) model.getAttribute("user");
-		System.out.println("frontP:\t"+user);
+	public String frontP(Model model, RedirectAttributes rm) {
+		System.out.println("front:\tPost");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
 		return "front";
 	}
 	
-	@RequestMapping(value="/front", method=RequestMethod.GET)
-	public String frontG(Model model) {
-//		User user=(User) model.getAttribute("user");
-//		User receive suc, all action -> redirect?
-		System.out.println("frontG");
-		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
-		System.out.println("LogInUser:\t"+logInUser);
-		return "front";
-	}
-
 	@RequestMapping("/logout")
 	public String logOut() {
 		logInUser=null;
@@ -113,21 +119,39 @@ public class RBController {
 		return "";
 	}
 
-	@RequestMapping("rent")
-	public String rent(Model m) {
-		System.out.println("RentG:\t");
+	@RequestMapping(value="rent", method=RequestMethod.GET)
+	public String rent(Model m, RedirectAttributes rm) {
+		System.out.println("rent:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		return "rent/rent";
 	}
 
 	@RequestMapping(value="rent", method=RequestMethod.POST)
-	public String rentP(Model m, @RequestParam("bid") int bid) {
-		System.out.println("RentP:\tbid:\t"+bid);
+	public String rentP(Model m, @RequestParam("bid") int bid, RedirectAttributes rm) {
+		System.out.println("rent:\tPost\tbid:\t"+bid);
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		m.addAttribute("book",bookRepository.getOne(bid));
+		m.addAttribute("loginuser",logInUser);
 		return "rent/rent";
 	}
 	
 	@RequestMapping(value="rents", method=RequestMethod.POST)
-	public String rnetS(Model m, @RequestParam("bid") int bid) {
+	public String rnetS(Model m, @RequestParam("bid") int bid, RedirectAttributes rm) {
+		System.out.println("rents:\tPost");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
+		m.addAttribute("loginuser",logInUser);
 		Book book=bookRepository.getOne(bid);
 		System.out.println("RentS:\t"+book);
 		System.out.println("IsAvailable:\t"+book.isAvailable());
@@ -182,8 +206,28 @@ public class RBController {
 	}
 
 	@RequestMapping("booksl")
-	public String list(Pagination pagination, Model model) {
-		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
+	public String list(Pagination pagination, Model model, RedirectAttributes rm) {
+		System.out.println("booksl:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
+		List<Integer> bilist=rentRepository.findAllBookId();
+		List<Book> blist=bookRepository.findAll();
+		for(Book b:blist) {
+			if(bilist.contains(b.getId()))
+				b.setAvailable(false);
+			else
+				b.setAvailable(true);
+		}
+		bookRepository.saveAll(blist);
+		model.addAttribute("loginuser",logInUser);
+//		List<Rent> rlist=rentRepository.findAll();
+//		for(Rent r:rlist) {
+//			Book book=bookRepository.getOne(r.getBid());
+//			book.setAvailable(false);
+//		}
 		System.out.println("\tLogInUser:\t"+logInUser);
 		List<Book> list = bookRepository.findAll(pagination);
 		model.addAttribute("list", list);
@@ -365,7 +409,7 @@ public class RBController {
 	@RequestMapping(value="rentsj",produces="application/json",method=RequestMethod.GET)
 	@ResponseBody
 	public List<Rent> rentsJ(){
-		System.out.println(55);
+//		System.out.println(55);
 		return rentRepository.findAll();
 	}
 
@@ -411,12 +455,25 @@ public class RBController {
 	}
 
 	@RequestMapping("halls")
-	public String halls(Model m) {
+	public String halls(Model m, RedirectAttributes rm) {
+		System.out.println("halls:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		return "hall/halls";
 	}
 	
 	@RequestMapping("it6")
-	public String hall6(Model m, @RequestParam(value="hid", required = false, defaultValue = "0") int hid) {
+	public String hall6(@RequestParam(value="hid", required = false, defaultValue = "0") int hid, 
+			Model m, RedirectAttributes rm) {
+		System.out.println("it6:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		System.out.println("hall 6/hid:\t"+hid);
 		m.addAttribute("hid",hid);
 		return "hall/IT6/floors";
@@ -424,7 +481,13 @@ public class RBController {
 	
 	@RequestMapping(value="it6/f1", method=RequestMethod.GET)
 	public String it6F1(@RequestParam(value="fid", required = false, defaultValue = "0") int fid,
-			@RequestParam(value="hid", required = false, defaultValue = "0") int hid, Model m) {
+			@RequestParam(value="hid", required = false, defaultValue = "0") int hid, Model m, RedirectAttributes rm) {
+		System.out.println("it6-f1:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		System.out.println("it6/f1/G");
 		System.out.println("hid: "+hid);
 		System.out.println("fid: "+fid);
@@ -449,6 +512,12 @@ public class RBController {
 			@RequestParam(value="clcolumn", required = false, defaultValue = "0") int clcolumn,
 			@RequestParam(value="clrow", required = false, defaultValue = "0") int clrow, 
 			Model m, Locker locker, RedirectAttributes rdm) {
+		System.out.println("it6-f1:\tPost");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rdm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		if(logInUser!=null)m.addAttribute("loginuser",logInUser);
 		System.out.println("it6/f1/P");
 		
@@ -528,13 +597,21 @@ public class RBController {
 	}
 	
 	@RequestMapping("imgtest")
-	public String imgT(@RequestParam(value="fid", required = false, defaultValue = "0") int fid, Model m) {
+	public String imgT(@RequestParam(value="fid", required = false, defaultValue = "0") int fid, 
+			Model m, RedirectAttributes rm) {
+		System.out.println("it6:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		System.out.println("fid: "+fid);
 		return "hall/IT6/front";
 	}
 	
 	@RequestMapping("def")
 	public String def(Model m) {
+		m.addAttribute("loginuser",logInUser);
 		return "default";
 	}
 	
