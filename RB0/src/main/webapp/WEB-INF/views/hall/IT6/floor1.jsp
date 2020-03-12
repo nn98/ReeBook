@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
  rel="stylesheet" media="screen">
+ <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <script type="text/javascript">
@@ -92,7 +93,7 @@
 	background: #334;
 	text-align:center;
 	width:24.7%;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:left;
 	color: #ccc;
 	padding: 5px 5px 13px 5px;
@@ -116,7 +117,7 @@
 
 #pd0{
 	margin-left:10px;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:left;
 	color: #ccc;
 	font-size: 16pt;
@@ -124,7 +125,7 @@
 }
 
 #pd{
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:right;
 	color: #fff;
 	padding-right: 20px;
@@ -147,9 +148,57 @@
 	height:20%;
 }
 
+#pd{
+	font-family: 'Noto Serif KR';
+	float:right;
+	color: #fff;
+	padding-right: 20px;
+}
+
+#pd0{
+	margin-left:10px;
+	font-family: 'Noto Serif KR';
+	float:left;
+	color: #ccc;
+	font-size: 16pt;
+	cursor: pointer
+}
+
+#pd1{
+	background: #334;
+	text-align:center;
+	width:24.7%;
+	font-family: 'Noto Serif KR';
+	float:left;
+	color: #ccc;
+	padding: 5px 5px 13px 5px;
+	font-size: 14pt;
+	margin-left:0.3%;
+	cursor: pointer;
+	border-bottom:5px solid #668;
+}
+
+#pd1:hover{
+	border-bottom:5px solid #99b;
+}
+
+#div00{
+	background: #668;
+	width:100%;
+	overflow:hidden;
+}
+
+#divd{
+	background: #334;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	overflow:hidden;
+}
+
 #sup_skhu{
-	font-family: 함초롬바탕, serif;
-	font-size: 9pt;
+	font-family: 'Noto Serif KR';
+	font-size: 10pt;
 	margin: 0px;
 	color: #fc0;
 }
@@ -166,8 +215,8 @@
 	<div id="div00">
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
-	<p id="pd1">만</p>
-	<p id="pd1">듬</p>
+	<p id="pd1">여</p>
+	<p id="pd1">백</p>
 	</div>
 	<div id="div0">
 	<input type="hidden" name="hid" value=${ hid }>
