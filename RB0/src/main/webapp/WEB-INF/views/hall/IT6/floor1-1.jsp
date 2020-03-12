@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
  rel="stylesheet" media="screen">
+ <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <script type="text/javascript">
@@ -80,7 +81,7 @@
 	background: #334;
 	text-align:center;
 	width:24.7%;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:left;
 	color: #ccc;
 	padding: 5px 5px 13px 5px;
@@ -116,7 +117,7 @@
 
 #pd0{
 	margin-left:10px;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:left;
 	color: #ccc;
 	font-size: 16pt;
@@ -124,7 +125,7 @@
 }
 
 #pd{
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	float:right;
 	color: #fff;
 	padding-right: 20px;
@@ -155,7 +156,7 @@
 	width:180.5px;
 	padding: 10px 0px 10px 0px;
 	font-size: 11pt;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	text-align: center;
 	color: #fff;
 	margint: 0px auto 0px auto;
@@ -175,7 +176,7 @@
 #td0{
 	text-align:center;
 	font-size: 9pt;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	padding:5px;
 	border-bottom: 1px dotted #fff;
 	color:#fff;
@@ -184,7 +185,7 @@
 #td1{
 	text-align:center;
 	font-size: 8pt;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	padding:5px;
 	border-bottom: 1px dotted #fff;
 	color:#fff;
@@ -192,7 +193,7 @@
 
 #p0{
 	font-size: 8pt;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	text-align: center;
 	color: #fff;
 	margint: 0px auto 0px auto;
@@ -210,46 +211,106 @@
 }
 
 #lbtn{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 	font-size: 9pt;
 	font-family: 휴먼모음T;
 	text-align: center;
-	color: #fff;
+    color: #fff;
 	width:37px;
-	height:45px;
-	background: #bbb;
+	height:37px;
+    background: #66f;
 	margin: 2px;
 }
 
+#lbtn:hover{
+	background: #88f;
+}
+
 #albtn{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 	font-size: 9pt;
 	font-family: 휴먼모음T;
 	text-align: center;
-	color: #fff;
+	color: #f00;
 	width:37px;
-	height:45px;
-	background: #444;
+	height:37px;
+	background: #666;
 	margin: 2px;
 }
 
 #p_hint{
 	font-size: 8pt;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	text-align: center;
 	color: #fff;	
 }
 
 #btn_apply{
 	font-size: 9pt;
-	font-family: 함초롬바탕;
+	font-family: 'Noto Serif KR';
 	text-align: center;
 	color: #777;
 	width:90%;
 	height: auto;
 }
 
+#pd{
+	font-family: 'Noto Serif KR';
+	float:right;
+	color: #fff;
+	padding-right: 20px;
+}
+
+#pd0{
+	margin-left:10px;
+	font-family: 'Noto Serif KR';
+	float:left;
+	color: #ccc;
+	font-size: 16pt;
+	cursor: pointer
+}
+
+#pd1{
+	background: #334;
+	text-align:center;
+	width:24.7%;
+	font-family: 'Noto Serif KR';
+	float:left;
+	color: #ccc;
+	padding: 5px 5px 13px 5px;
+	font-size: 14pt;
+	margin-left:0.3%;
+	cursor: pointer;
+	border-bottom:5px solid #668;
+}
+
+#pd1:hover{
+	border-bottom:5px solid #99b;
+}
+
+#div00{
+	background: #668;
+	width:100%;
+	overflow:hidden;
+}
+
+#divd{
+	background: #334;
+	width:100%;
+	height:auto;
+	padding: 10px;
+	overflow:hidden;
+}
+
 #sup_skhu{
-	font-family: 함초롬바탕, serif;
-	font-size: 9pt;
+	font-family: 'Noto Serif KR';
+	font-size: 10pt;
 	margin: 0px;
 	color: #fc0;
 }
@@ -257,7 +318,7 @@
 </style>
 </head>
 <body style="background:#668">
-<form:form modelAttribute="locker" method="post">
+<form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
 	<p id="pd0"  onclick="location.href='/front'"><sup id=sup_skhu>성공회대학교</sup> 교재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
@@ -266,8 +327,8 @@
 	<div id="div00">
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
-	<p id="pd1">만</p>
-	<p id="pd1">듬</p>
+	<p id="pd1">여</p>
+	<p id="pd1">백</p>
 	</div>
 	<div id="div0">
 			<img id="img0" alt="error" src="/image/6-1f-1.png">
