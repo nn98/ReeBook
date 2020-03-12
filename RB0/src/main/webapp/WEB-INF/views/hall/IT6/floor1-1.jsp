@@ -221,12 +221,12 @@
     color: #fff;
 	width:37px;
 	height:37px;
-    background: #66f;
+    background: #99f;
 	margin: 2px;
 }
 
 #lbtn:hover{
-	background: #88f;
+	background: #77f;
 }
 
 #albtn{
