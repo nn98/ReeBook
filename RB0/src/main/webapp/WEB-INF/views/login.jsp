@@ -4,9 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
  rel="stylesheet" media="screen">
+ <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <script type="text/javascript">
@@ -18,6 +19,10 @@
         	   alert("회원가입에 성공했습니다.\n등록된 아이디로 로그인하세요.");
            else
         	   alert("회원가입에 실패했습니다.\n등록된 아이디인지 확인하세요.");
+        </script>
+ <script type="text/javascript">
+           if(${logout})
+        	   alert("로그인 세션이 종료되었습니다.\n다시 로그인해주세요");
         </script>
 <title >Insert title here</title>
 <title>Insert title here</title>
@@ -70,6 +75,8 @@ td {
 }
 
 #button0 {
+	font-family: 'Noto Serif KR';
+	font-size: 10pt;
 	margin-right: 100px;
 	width:auto;
 	border: 10px solid #4c586f;
@@ -78,6 +85,8 @@ td {
 }
 
 #button1 {
+	font-family: 'Noto Serif KR';
+	font-size: 10pt;
 	width:auto;
 	border: 10px solid #4c586f;
 	float:right;
@@ -103,16 +112,16 @@ h3{
 <body style="background: #ebeced;">
 	<form:form method="post" modelAttribute="user" action="login">
 		<div id="div0">
-		<h3><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
+		<h3 style="font-family: 'Noto Serif KR';"><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
 			<div id="div2">
 			<table style="margin:20px auto 0px auto; width:auto; ">
 				<tbody>
 					<tr>
-						<td>ID</td>
+						<td style="font-family: 'Noto Serif KR';">ID</td>
 						<td><input name="id" type="number" id="input0"></td>
 					</tr>
 					<tr>
-						<td>PW</td>
+						<td style="font-family: 'Noto Serif KR';">PW</td>
 						<td><input name="password" type="password" id="input0"></td>
 					</tr>
 				</tbody>
