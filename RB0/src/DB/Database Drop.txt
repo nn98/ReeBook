@@ -1,0 +1,9 @@
+drop table assign;
+drop table locker;
+drop table document;
+drop table rent;
+drop table lecture;
+drop table defect;
+drop table book;
+drop table user;
+drop table department;
