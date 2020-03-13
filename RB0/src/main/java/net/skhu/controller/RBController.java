@@ -462,6 +462,7 @@ public class RBController {
 			rm.addFlashAttribute("logout", true);
 			return "redirect:login";
 		}
+		m.addAttribute("loginuser",logInUser);
 		return "hall/halls";
 	}
 	
@@ -476,6 +477,7 @@ public class RBController {
 		}
 		System.out.println("hall 6/hid:\t"+hid);
 		m.addAttribute("hid",hid);
+		m.addAttribute("loginuser",logInUser);
 		return "hall/IT6/floors";
 	}
 	
@@ -491,7 +493,7 @@ public class RBController {
 		System.out.println("it6/f1/G");
 		System.out.println("hid: "+hid);
 		System.out.println("fid: "+fid);
-		if(logInUser!=null)m.addAttribute("loginuser",logInUser);
+		m.addAttribute("loginuser",logInUser);
 		m.addAttribute("hid",hid);
 		m.addAttribute("fid",fid);
 		
