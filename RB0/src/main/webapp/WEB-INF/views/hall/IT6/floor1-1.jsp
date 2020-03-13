@@ -15,7 +15,7 @@
         	   alert("교재 대여 신청이 완료되었습니다.");
            }
         </script>
-<title>Test_0101_0212</title>
+<title>성공회대학교 교재대여시스템</title>
 <style>
 
 /*https: //coding-factory.tistory.com /187*/
