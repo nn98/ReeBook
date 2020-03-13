@@ -47,11 +47,13 @@
 }
 
 #td0 {
+	padding:10px;
 	background-color: #aad;
 	border: 1px solid #ddd;
 }
 
 #td1 {
+	padding:10px;
 	background-color: #aad;
 	border: 1px solid #ddd;
 	text-align: center;
