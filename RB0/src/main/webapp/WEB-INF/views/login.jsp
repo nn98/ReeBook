@@ -24,8 +24,7 @@
            if(${logout})
         	   alert("로그인 세션이 종료되었습니다.\n다시 로그인해주세요");
         </script>
-<title >Insert title here</title>
-<title>Insert title here</title>
+<title>성공회대학교 교재대여시스템</title>
 <style>
 #div0 {
 	padding: 5px 20px 25px 20px;
