@@ -86,6 +86,7 @@ public class RBController {
 	@RequestMapping(value="/front", method=RequestMethod.GET)
 	public String frontG(Model model, RedirectAttributes rm) {
 		System.out.println("front:\tGet");
+		System.out.println("logInUser:\t"+logInUser);
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
@@ -554,6 +555,10 @@ public class RBController {
 			assignRepository.save(assign);
 			System.out.println("OK");
 			
+			System.out.println("save user...");
+			logInUser.setLocker(locker);
+			userRepository.save(logInUser);
+			
 			rdm.addFlashAttribute("assign", true);
 			
 //			return "redirect:/it6/f1";
@@ -584,7 +589,7 @@ public class RBController {
 		m.addAttribute("lyid", lnum%100000/1000);
 		m.addAttribute("lxid", lnum/100000);
 		m.addAttribute("fid",fid);
-		if(lnum!=0)	m.addAttribute("alid",alid);
+//		if(lnum!=0)	m.addAttribute("alid",alid);
 		
 		System.out.println("locker:\t"+locker);
 		
