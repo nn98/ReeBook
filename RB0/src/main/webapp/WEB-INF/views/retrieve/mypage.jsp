@@ -22,16 +22,18 @@
 	;
 
 #h10 {
-	color: #fff;
 	font-family: 'Noto Serif KR';
-	margin-left: 5px;
+	margin-left: 0px;
+	color: #ddd;
 	font-size: 14pt;
 	border: 0xp;
+	background: #334;
+	padding: 5px 11px 8px 11px;
 }
 
 #table0 {
 	width: 90%;
-	border: 3px solid #66b;
+	border: 3px solid #334;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -87,7 +89,8 @@
 
 #span3 {
 	font-family: 'Noto Serif KR';
-	font-size: 11pt;
+	font-size: 12pt;
+	color: #fff;
 }
 
 #pg0 {
@@ -114,15 +117,19 @@
 	cursor: pointer
 }
 
+#pd0:hover{
+	color: #fff;
+}
+
 #pd1 {
 	background: #334;
+	color: #ccc;
+	font-size: 14pt;
+	font-family: 'Noto Serif KR';
 	text-align: center;
 	width: 24.7%;
-	font-family: 'Noto Serif KR';
 	float: left;
-	color: #ccc;
 	padding: 5px 5px 13px 5px;
-	font-size: 14pt;
 	margin-left: 0.3%;
 	cursor: pointer;
 	border-bottom: 5px solid #668;
@@ -130,6 +137,7 @@
 
 #pd1:hover {
 	border-bottom: 5px solid #99b;
+	color: #fff;
 }
 
 #div00 {
@@ -181,15 +189,20 @@
 #tb00{
 	width: auto;
 	margin: 0px 0px 40px auto;
-	border: 3px solid #66b;
+	border: 3px solid #337;
 	float: left;
 }
 
 #tb01{
 	width: auto;
 	margin: 0px auto 40px 80px;
-	border: 3px solid #66b;
+	border: 3px solid #337;
 	float: left;
+}
+
+#btn0{
+	font-family: 'Noto Serif KR';
+	font-size: 10pt;
 }
 
 </style>
@@ -226,7 +239,7 @@
 					</tr>
 				</thead>
 				 -->
-				 <caption id="h10">사용자 정보</caption>
+				 <caption><span id="h10">사용자 정보</span></caption>
 				<tbody>
 						<tr>
 							<td id="td00"><span id="span00">ID</span></td>
@@ -255,7 +268,7 @@
 				</tbody>
 			</table>
 			<table id="tb01" class="table table-bordered">
-				 <caption id="h10">사용자 사물함 정보</caption>
+				 <caption><span id="h10">사용자 사물함 정보</span></caption>
 				<tbody>
 						<tr>
 							<td id="td0"><span id="span0">${ loginuser.locker.id }</span></td>
@@ -289,8 +302,8 @@
 			</table>
 			</div>
 			<div>
-			<h1 id="h10">교재 목록</h1>
 			<table id="table0" class="table table-bordered">
+				 <caption><span id="h10">교재 목록</span></caption>
 				<thead>
 					<tr id="tr0">
 						<th id="th0"><span id="span2">ID</span></th>
@@ -299,7 +312,7 @@
 						<th id="th0"><span id="span2">출판사</span></th>
 						<th id="th0"><span id="span2">대여일</span></th>
 						<th id="th0"><span id="span2">반납일</span></th>
-						<th id="th1"><span id="span2">반납</span></th>
+						<th id="th1"><span id="span3">반납</span></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -311,7 +324,7 @@
 							<td id="td0"><span id="span0">${rent.book.publisher}</span></td>
 							<td id="td0"><span id="span0">${rent.rentDate.toString().replace("00:00:00.0","")}</span></td>
 							<td id="td0"><span id="span0">${rent.returnDate.toString().replace("00:00:00.0","")}</span></td>
-							<td id="td1"><button type="button" formaction="return" value=${ rent.book.id }>반납</button></td>
+							<td id="td1"><button id="btn0" type="button" onclick="location.href='/return'"value=${ rent.book.id }>반납</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
