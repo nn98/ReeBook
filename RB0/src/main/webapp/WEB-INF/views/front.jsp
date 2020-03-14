@@ -27,7 +27,7 @@ if(${assign}) {
 
 #box0{
 	border: 1px dotted #fff;
-	background-color: #888;
+	background-color: #334;
 	padding: 5px 10px 5px 10px;
 }
 
@@ -37,7 +37,7 @@ if(${assign}) {
 }
 
 #box1{
-	background-color: #888;
+	background-color: #334;
 	padding: 5px 10px 5px 10px;
 }
 
@@ -65,7 +65,7 @@ if(${assign}) {
 
 #tb_id {
 	margin: 20px auto 0px auto;
-	border: 5px solid #888;
+	border: 5px solid #445;
 }
 
 #tr_id {
@@ -73,12 +73,12 @@ if(${assign}) {
 }
 
 #hr_bottom {
-	boder: 10px solid #555;
+	boder: 10px solid #334;
 }
 
 #t0{
 	font-size: 10pt;
-	background:#ccc;
+	background:#334;
 	padding: 3px 10px 3px 10px;
 	color:fff;
 	float:right;
