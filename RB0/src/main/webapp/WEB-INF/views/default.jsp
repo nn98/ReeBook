@@ -80,8 +80,8 @@
 	<div id="div00">
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
-	<p id="pd1">여</p>
-	<p id="pd1">백</p>
+	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
+	<p id="pd1">여백</p>
 	</div>
 </form:form>
 </body>
