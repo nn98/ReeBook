@@ -160,9 +160,9 @@ public class RBController {
 			bookRepository.save(book);
 			Rent rent=new Rent();
 			rent.setUser(logInUser);
-			rent.setUid(rent.getUser().getId());
+//			rent.setUid(rent.getUser().getId());
 			rent.setBook(book);
-			rent.setBid(rent.getBook().getId());
+//			rent.setBid(rent.getBook().getId());
 			System.out.println("rent date:\t"+new Date());
 			rent.setRentDate(new Date());
 			Calendar cal=Calendar.getInstance();
@@ -619,14 +619,31 @@ public class RBController {
 	}
 
 	@RequestMapping("def")
-	public String def(Model m) {
+	public String def(Model m, RedirectAttributes rm) {
+		System.out.println("Def:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		m.addAttribute("loginuser",logInUser);
 		return "default";
 	}
 
 	@RequestMapping("mypage")
-	public String mypage(Model m) {
+	public String mypage(Model m, RedirectAttributes rm) {
+		System.out.println("Mypage:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
 		m.addAttribute("loginuser",logInUser);
+		
+		List<Rent> rlist=rentRepository.findByUserId(logInUser.getId());
+		System.out.println("rentList by user"+logInUser+":\t"+rlist);
+		m.addAttribute("list",rlist);
+		
 		return "retrieve/mypage";
 	}
 	
