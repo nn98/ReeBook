@@ -216,7 +216,7 @@
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
-	<p id="pd1">백</p>
+	<p id="pd1"></p>
 	</div>
 	<div id="div0">
 	<input type="hidden" name="hid" value=${ hid }>
