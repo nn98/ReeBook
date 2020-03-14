@@ -162,7 +162,7 @@
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
-	<p id="pd1">백</p>
+	<p id="pd1"></p>
 	</div>
 		<div class="container">
 			<h1 id="h10">교재 목록</h1>
