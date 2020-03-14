@@ -16,6 +16,8 @@ public class Locker {
 	
 	int fid;
 	
+	int lid;
+	
 	int lnum;
 	
 	int lcolumn;
