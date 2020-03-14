@@ -123,12 +123,29 @@
 	cursor: pointer
 }
 
-#pd{
-	font-family: 함초롬바탕;
-	float:right;
+#pd0:hover{
 	color: #fff;
-	padding-right: 20px;
 }
+
+#pd1 {
+	background: #334;
+	color: #ccc;
+	font-size: 14pt;
+	font-family: 'Noto Serif KR';
+	text-align: center;
+	width: 24.7%;
+	float: left;
+	padding: 5px 5px 13px 5px;
+	margin-left: 0.3%;
+	cursor: pointer;
+	border-bottom: 5px solid #668;
+}
+
+#pd1:hover {
+	border-bottom: 5px solid #99b;
+	color: #fff;
+}
+
 #div0 {
 	width: 950px;
 	height: 430px;
