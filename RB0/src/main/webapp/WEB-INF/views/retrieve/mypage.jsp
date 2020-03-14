@@ -301,7 +301,7 @@
 				</tbody>
 			</table>
 			</div>
-			<div>
+			<div class="container">
 			<table id="table0" class="table table-bordered">
 				 <caption><span id="h10">교재 목록</span></caption>
 				<thead>
