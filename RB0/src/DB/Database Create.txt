@@ -19,6 +19,7 @@ create table locker(
 id int unsigned NOT NULL PRIMARY KEY,
 hid int unsigned,
 fid int unsigned,
+lid int unsigned,
 lnum int unsigned,
 lcolumn int unsigned,
 lrow int unsigned
