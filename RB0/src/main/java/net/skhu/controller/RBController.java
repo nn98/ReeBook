@@ -615,11 +615,17 @@ public class RBController {
 		System.out.println("fid: "+fid);
 		return "hall/IT6/front";
 	}
-	
+
 	@RequestMapping("def")
 	public String def(Model m) {
 		m.addAttribute("loginuser",logInUser);
 		return "default";
+	}
+
+	@RequestMapping("mypage")
+	public String mypage(Model m) {
+		m.addAttribute("loginuser",logInUser);
+		return "retrieve/mypage";
 	}
 	
 }
