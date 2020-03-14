@@ -558,6 +558,8 @@ public class RBController {
 			System.out.println("save user...");
 			logInUser.setLocker(locker);
 			userRepository.save(logInUser);
+			System.out.println("logUser:\t"+logInUser);
+			System.out.println("repUser:\t"+userRepository.getOne(logInUser.getId()));
 			
 			rdm.addFlashAttribute("assign", true);
 			
