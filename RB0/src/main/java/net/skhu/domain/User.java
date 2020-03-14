@@ -42,7 +42,7 @@ public class User {
 	Department department;
 	
 	@OneToOne
-	@JoinColumn(name="id")
+	@JoinColumn(name="lockerid")
 	Locker locker;
 	
 	boolean agree;
