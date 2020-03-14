@@ -328,7 +328,7 @@
 	<p id="pd1" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
-	<p id="pd1">백</p>
+	<p id="pd1"></p>
 	</div>
 	<div id="div0">
 			<img id="img0" alt="error" src="/image/6-1f-1.png">
