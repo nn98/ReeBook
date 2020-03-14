@@ -19,16 +19,18 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Serif+KR&display=swap');
 
 #h10 {
-	color:#fff;
-	font-family: serif;
-	margin-left: 50px;
-	margin-bottom: 20px;
-	font-size:20pt;
+	font-family: 'Noto Serif KR';
+	margin-left: 0px;
+	color: #ddd;
+	font-size: 14pt;
+	border: 0xp;
+	background: #334;
+	padding: 5px 15px 8px 15px;
 }
 
 #table0 {
 	width: 90%;
-	border: 3px solid #66b;
+	border: 3px solid #334;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -165,9 +167,9 @@
 	<p id="pd1"></p>
 	</div>
 		<div class="container">
-			<h1 id="h10">교재 목록</h1>
 			<form action="/">
 				<table id="table0" class="table table-bordered">
+				<caption><span id="h10">교재 목록</span></caption>
 					<thead>
 						<tr id="tr0">
 							<th id="th0"><span id="span2">ID</span></th>
