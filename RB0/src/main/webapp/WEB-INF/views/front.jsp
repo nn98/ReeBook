@@ -26,13 +26,13 @@ if(${assign}) {
 /*https: //coding-factory.tistory.com /187*/
 
 #box0{
-	border: 1px dotted #fff;
+	border: 1px dotted #888;
 	background-color: #334;
 	padding: 5px 10px 5px 10px;
 }
 
 #box11 {
-	background-color: #ddd;
+	background-color: #ccf;
 	padding: 20px;
 }
 
@@ -42,19 +42,19 @@ if(${assign}) {
 }
 
 #box2 {
-	background-color: #ccc;
+	background-color: #bbf;
 	padding: 5px 10px 5px 10px;
 }
 
 #box3 {
 	border: 1px solid;
-	background-color: #ddd;
+	background-color: #ccf;
 	padding: 5px 10px 5px 10px;
 }
 
 #box4 {
 	padding: 5px 10px 5px 10px;
-	border: 2px solid #fff;
+	border: 1px solid #fff;
 	background-color: #aaf;
 }
 
@@ -69,7 +69,7 @@ if(${assign}) {
 }
 
 #tr_id {
-	border: 1px dotted #bbb;
+	border: 1px dotted #888;
 }
 
 #hr_bottom {
@@ -147,6 +147,10 @@ if(${assign}) {
 	font-size: 10pt;
 	margin: 0px;
 	color: #fc0;
+}
+
+#sup_skhu:hover{
+	color: #fe0;
 }
 
 </style>
