@@ -23,10 +23,10 @@
 
 #h10 {
 	color: #fff;
-	font-family: serif;
-	margin-left: 50px;
-	margin-bottom: 20px;
-	font-size: 20pt;
+	font-family: 'Noto Serif KR';
+	margin-left: 5px;
+	font-size: 14pt;
+	border: 0xp;
 }
 
 #table0 {
@@ -52,9 +52,9 @@
 }
 
 #td0 {
-	padding: 10px;
+	padding: 10px 20px 10px 10px;
 	background-color: #aad;
-	border: 1px solid #ddd;
+	border: 1px solid #ddf;
 }
 
 #td1 {
@@ -156,33 +156,40 @@
 #td00{
 	padding: 10px;
 	background-color: #88c;
-	border: 2px solid #eee;
+	border-right: 1.5px solid #eee;
+	border-bottom: 0.5px solid #99d;
+}
+
+#td01{
+	padding: 10px;
+	background-color: #88c;
+	border-left: 1.5px solid #eee;
+	border-bottom: 0.5px solid #99d;
 }
 
 #span00 {
 	font-family: 'Noto Serif KR';
-	font-size: 11pt;
-	padding-left: 5px;
+	font-size: 12pt;
+	padding: 3px 12px 3px 8px;
 	color: #fff;
-	font-weight: bold;
 }
 
 #div01{
-	
+	float: top;
 }
 
 #tb00{
-	width: 40%;
+	width: auto;
 	margin: 0px 0px 40px auto;
 	border: 3px solid #66b;
 	float: left;
 }
 
 #tb01{
-	width: 40%;
-	margin: 0px auto 40px 0px;
+	width: auto;
+	margin: 0px auto 40px 80px;
 	border: 3px solid #66b;
-	float: right;
+	float: left;
 }
 
 </style>
@@ -207,7 +214,6 @@
 			<p id="pd1"></p>
 		</div>
 		<div class="container">
-			<h1 id="h10">사용자 정보</h1>
 			<table id="tb00"><!-- 
 				<thead>
 					<tr id="tr0">
@@ -220,6 +226,7 @@
 					</tr>
 				</thead>
 				 -->
+				 <caption id="h10">사용자 정보</caption>
 				<tbody>
 						<tr>
 							<td id="td00"><span id="span00">ID</span></td>
@@ -248,30 +255,35 @@
 				</tbody>
 			</table>
 			<table id="tb01" class="table table-bordered">
+				 <caption id="h10">사용자 사물함 정보</caption>
 				<tbody>
 						<tr>
-							<td id="td00"><span id="span00">ID</span></td>
 							<td id="td0"><span id="span0">${ loginuser.locker.id }</span></td>
+							<td id="td01"><span id="span00">ID</span></td>
 						</tr>
 						<tr>
-							<td id="td00"><span id="span00">학관</span></td>
-							<td id="td0"><span id="span0">ID</span></td>
+							<td id="td0"><span id="span0">${ loginuser.locker.hid }</span></td>
+							<td id="td01"><span id="span00">학관</span></td>
 						</tr>
 						<tr>
-							<td id="td00"><span id="span00">층</span></td>
-							<td id="td0"><span id="span0">ID</span></td>
+							<td id="td0"><span id="span0">${ loginuser.locker.fid }</span></td>
+							<td id="td01"><span id="span00">층</span></td>
 						</tr>
 						<tr>
-							<td id="td00"><span id="span00">사물함 번호</span></td>
-							<td id="td0"><span id="span0">ID</span></td>
+							<td id="td0"><span id="span0">${ loginuser.locker.lid }</span></td>
+							<td id="td01"><span id="span00">사물함 번호</span></td>
 						</tr>
 						<tr>
-							<td id="td00"><span id="span00">ID</span></td>
-							<td id="td0"><span id="span0">ID</span></td>
+							<td id="td0"><span id="span0">${ loginuser.locker.lcolumn }</span></td>
+							<td id="td01"><span id="span00">행</span></td>
 						</tr>
 						<tr>
-							<td id="td00"><span id="span00">ID</span></td>
-							<td id="td0"><span id="span0">ID</span></td>
+							<td id="td0"><span id="span0">${ loginuser.locker.lrow }</span></td>
+							<td id="td01"><span id="span00">열</span></td>
+						</tr>
+						<tr>
+							<td id="td0"><span id="span0">${ loginuser.locker.lnum }</span></td>
+							<td id="td01"><span id="span00">번 칸</span></td>
 						</tr>
 				</tbody>
 			</table>
@@ -285,19 +297,21 @@
 						<th id="th0"><span id="span2">제목</span></th>
 						<th id="th0"><span id="span2">저자</span></th>
 						<th id="th0"><span id="span2">출판사</span></th>
-						<th id="th1"><span id="span2">대여일</span></th>
-						<th id="th1"><span id="span2">반납일</span></th>
+						<th id="th0"><span id="span2">대여일</span></th>
+						<th id="th0"><span id="span2">반납일</span></th>
+						<th id="th1"><span id="span2">반납</span></th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="book" items="${ list }">
+					<c:forEach var="rent" items="${ list }">
 						<tr>
-							<td id="td0"><span id="span0">${book.id}</span></td>
-							<td id="td0"><span id="span0">${book.title}</span></td>
-							<td id="td0"><span id="span0">${book.author}</span></td>
-							<td id="td0"><span id="span0">${book.publisher}</span></td>
-							<td id="td0"><span id="span0">${book.rentdate}</span></td>
-							<td id="td0"><span id="span0">${book.returndate}</span></td>
+							<td id="td0"><span id="span0">${rent.book.id}</span></td>
+							<td id="td0"><span id="span0">${rent.book.title}</span></td>
+							<td id="td0"><span id="span0">${rent.book.author}</span></td>
+							<td id="td0"><span id="span0">${rent.book.publisher}</span></td>
+							<td id="td0"><span id="span0">${rent.rentDate.toString().replace("00:00:00.0","")}</span></td>
+							<td id="td0"><span id="span0">${rent.returnDate.toString().replace("00:00:00.0","")}</span></td>
+							<td id="td1"><button type="button" formaction="return" value=${ rent.book.id }>반납</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
