@@ -21,18 +21,18 @@ public class Rent {
 	int id;
 	
 	@OneToOne
-	@JoinColumn(name="id")
+	@JoinColumn(name="uid")
 	User user;
 	
-	@Column(name="uid")
-	int uid;
-	
+//	@Column(name="uid")
+//	int uid;
+//	
 	@OneToOne
-	@JoinColumn(name="id")
+	@JoinColumn(name="bid")
 	Book book;
 
-	@Column(name="bid")
-	int bid;
+//	@Column(name="bid")
+//	int bid;
 	
 //	private DateFormat format = new SimpleDateFormat("YYYY-MM-dd");
 	
