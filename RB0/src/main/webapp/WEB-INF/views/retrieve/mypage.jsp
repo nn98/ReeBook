@@ -66,6 +66,41 @@
 	text-align: center;
 }
 
+#td2 {
+	padding: 10px 20px 10px 10px;
+	background-color: #aad;
+	border-bottom: 1px solid #ddf;
+	font-size: 8pt;
+}
+
+#td3 {
+	padding: 10px 6px 10px 12px;
+	background-color: #aad;
+	border-bottom: 1px solid #ddf;
+	text-align: right;
+}
+
+#td00{
+	padding: 10px;
+	background-color: #88c;
+	border-right: 1.5px solid #eee;
+	border-bottom: 0.5px solid #99d;
+}
+
+#td01{
+	padding: 10px 10px 10px 6px;
+	background-color: #88c;
+	border-left: 2px solid #aad;
+	border-bottom: 0.5px solid #99d;
+}
+
+#span00 {
+	font-family: 'Noto Serif KR';
+	font-size: 12pt;
+	padding: 3px 12px 3px 8px;
+	color: #fff;
+}
+
 #span0 {
 	font-family: 'Noto Serif KR';
 	font-size: 11pt;
@@ -90,6 +125,12 @@
 #span3 {
 	font-family: 'Noto Serif KR';
 	font-size: 12pt;
+	color: #fff;
+}
+
+#span4 {
+	font-family: 'Noto Serif KR';
+	font-size: 9pt;
 	color: #fff;
 }
 
@@ -159,27 +200,6 @@
 	font-size: 10pt;
 	margin: 0px;
 	color: #fc0;
-}
-
-#td00{
-	padding: 10px;
-	background-color: #88c;
-	border-right: 1.5px solid #eee;
-	border-bottom: 0.5px solid #99d;
-}
-
-#td01{
-	padding: 10px;
-	background-color: #88c;
-	border-left: 1.5px solid #eee;
-	border-bottom: 0.5px solid #99d;
-}
-
-#span00 {
-	font-family: 'Noto Serif KR';
-	font-size: 12pt;
-	padding: 3px 12px 3px 8px;
-	color: #fff;
 }
 
 #div01{
@@ -271,31 +291,31 @@
 				 <caption><span id="h10">사용자 사물함 정보</span></caption>
 				<tbody>
 						<tr>
-							<td id="td0"><span id="span0">${ loginuser.locker.id }</span></td>
+							<td id="td3"><span id="span4">${ loginuser.locker.id }</span></td>
 							<td id="td01"><span id="span00">ID</span></td>
 						</tr>
 						<tr>
-							<td id="td0"><span id="span0">${ loginuser.locker.hid }</span></td>
-							<td id="td01"><span id="span00">학관</span></td>
+							<td id="td3"><span id="span0">${ loginuser.locker.hid }</span></td>
+							<td id="td01"><span id="span00">관</span></td>
 						</tr>
 						<tr>
-							<td id="td0"><span id="span0">${ loginuser.locker.fid }</span></td>
+							<td id="td3"><span id="span0">${ loginuser.locker.fid }</span></td>
 							<td id="td01"><span id="span00">층</span></td>
 						</tr>
 						<tr>
-							<td id="td0"><span id="span0">${ loginuser.locker.lid }</span></td>
-							<td id="td01"><span id="span00">사물함 번호</span></td>
+							<td id="td3"><span id="span0">${ loginuser.locker.lid }</span></td>
+							<td id="td01"><span id="span00">번 사물함</span></td>
 						</tr>
 						<tr>
-							<td id="td0"><span id="span0">${ loginuser.locker.lcolumn }</span></td>
+							<td id="td3"><span id="span0">${ loginuser.locker.lcolumn }</span></td>
 							<td id="td01"><span id="span00">행</span></td>
 						</tr>
 						<tr>
-							<td id="td0"><span id="span0">${ loginuser.locker.lrow }</span></td>
+							<td id="td3"><span id="span0">${ loginuser.locker.lrow }</span></td>
 							<td id="td01"><span id="span00">열</span></td>
 						</tr>
 						<tr>
-							<td id="td0"><span id="span0">${ loginuser.locker.lnum }</span></td>
+							<td id="td3"><span id="span0">${ loginuser.locker.lnum }</span></td>
 							<td id="td01"><span id="span00">번 칸</span></td>
 						</tr>
 				</tbody>
@@ -324,7 +344,7 @@
 							<td id="td0"><span id="span0">${rent.book.publisher}</span></td>
 							<td id="td0"><span id="span0">${rent.rentDate.toString().replace("00:00:00.0","")}</span></td>
 							<td id="td0"><span id="span0">${rent.returnDate.toString().replace("00:00:00.0","")}</span></td>
-							<td id="td1"><button id="btn0" type="button" onclick="location.href='/return'"value=${ rent.book.id }>반납</button></td>
+							<td id="td1"><button id="btn0" name="return" type="button" onclick="location.href='/return'"value=${ rent.book.id }>반납</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
