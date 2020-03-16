@@ -285,6 +285,10 @@
 							<td id="td00"><span id="span00">소속</span></td>
 							<td id="td0"><span id="span0">${ loginuser.department.name }</span></td>
 						</tr>
+						<tr>
+							<td id="td00"><span id="span00">정보 수정</span></td>
+							<td id="td0"><button id="btn0" name="return" type="button" onclick="location.href='/signup'">신청</button></td>
+						</tr>
 				</tbody>
 			</table>
 			<table id="tb01" class="table table-bordered">
@@ -318,7 +322,10 @@
 							<td id="td3"><span id="span0">${ loginuser.locker.lnum }</span></td>
 							<td id="td01"><span id="span00">번 칸</span></td>
 						</tr>
-						<tr></tr>
+						<tr>
+							<td id="td3"><span id="span4">사물함 변경</span></td>
+							<td id="td01" style="padding-left: 15px;"><button id="btn0" name="return" type="button" onclick="location.href='/halls'">신청</button></td>
+						</tr>
 				</tbody>
 			</table>
 			</div>
