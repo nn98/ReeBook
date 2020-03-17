@@ -18,7 +18,7 @@
            else
         	   alert("교재 대여 오류 발생");
         </script>
-<title>성공회대학교 교재대여시스템</title>
+<title>성공회대학교 기자재대여시스템</title>
 <style>
 	#div0{
 		background:#222;
@@ -143,7 +143,7 @@
 		<td><input type="hidden" name="email" value=${book.publisher}>${book.publisher}</td>
 		</tr>
 		<tr>
-		<td id="td1" colspan="2">위의 정보로 교재 대여를 신청합니다</td>
+		<td id="td1" colspan="2">해당 교재를 반납합니다</td>
 		</tr>
 		<tr>
 		<td id="td0"><strong>확인</strong></td>
