@@ -331,7 +331,7 @@
 			</div>
 			<div class="container">
 			<table id="table0" class="table table-bordered">
-				 <caption><span id="h10">교재 목록</span></caption>
+				 <caption><span id="h10">대여 교재 목록</span></caption>
 				<thead>
 					<tr id="tr0">
 						<th id="th0"><span id="span2">ID</span></th>
@@ -352,7 +352,7 @@
 							<td id="td0"><span id="span0">${rent.book.publisher}</span></td>
 							<td id="td0"><span id="span0">${rent.rentDate.toString().replace("00:00:00.0","")}</span></td>
 							<td id="td0"><span id="span0">${rent.returnDate.toString().replace("00:00:00.0","")}</span></td>
-							<td id="td1"><button id="btn0" name="return" type="button" onclick="location.href='/return'"value=${ rent.id }>반납</button></td>
+							<td id="td1"><button id="btn0" name="return" type="submit" onclick="location.href='/return'"value=${ rent.id }>반납</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
