@@ -31,6 +31,10 @@
 	padding: 5px 11px 8px 11px;
 }
 
+#h10:hover{
+	color: #fff;
+}
+
 #table0 {
 	width: 90%;
 	border: 3px solid #334;
