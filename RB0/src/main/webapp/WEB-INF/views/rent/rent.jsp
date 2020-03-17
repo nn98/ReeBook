@@ -27,7 +27,7 @@
 	}
   #tb0 {
   	margin-top: 20%;
-    width: 40%;
+    width: 45%;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
@@ -38,7 +38,7 @@
   }
   #tb1 {
   	margin-top:-5px;
-    width: 40%;
+    width: 45%;
     border: 1px solid #fff;
     border-collapse: collapse;
     margin-right:auto;
@@ -58,7 +58,7 @@
   	background:#888;
     border-bottom: 1px dotted #444444;
     border-right: 1px solid #aaa;
-    padding: 10px;
+    padding: 10px 5px 10px 5px;
   }
   #td0 {
   text-align:right;
@@ -66,7 +66,7 @@
   	background:#888;
     border-bottom: 1px dotted #444444;
     border-right: 1px solid #aaa;
-  	padding: 10px 30px 10px 0px;
+  	padding: 10px 20px 10px 0px;
   }
   #td1 {
   	border: 1px solid #fff;
@@ -132,7 +132,7 @@
 		<tbody>
 		<tr>
 		<td id="td0"><strong>제목</strong></td>
-		<td><input type="hidden" name="bid" value=${book.id}>${book.title}</td>
+		<td style="font-size: 9pt"><input type="hidden" name="bid" value=${book.id}>${book.title}</td>
 		</tr>
 		<tr>
 		<td id="td0"><strong>저자</strong></td>
