@@ -352,7 +352,7 @@
 							<td id="td0"><span id="span0">${rent.book.publisher}</span></td>
 							<td id="td0"><span id="span0">${rent.rentDate.toString().replace("00:00:00.0","")}</span></td>
 							<td id="td0"><span id="span0">${rent.returnDate.toString().replace("00:00:00.0","")}</span></td>
-							<td id="td1"><button id="btn0" name="return" type="button" onclick="location.href='/return'"value=${ rent.book.id }>¹Ý³³</button></td>
+							<td id="td1"><button id="btn0" name="return" type="button" onclick="location.href='/return'"value=${ rent.id }>¹Ý³³</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
