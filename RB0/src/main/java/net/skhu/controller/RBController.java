@@ -647,4 +647,13 @@ public class RBController {
 		return "retrieve/mypage";
 	}
 	
+	@RequestMapping("return")
+	public String returnB(@RequestParam("return")int rid, Model m) {
+		Rent rent=rentRepository.getOne(rid);
+		System.out.println("Return:\tGet");
+		m.addAttribute("rent", rent);
+		System.out.println(rent);
+		return "rent/return";
+	}
+	
 }
