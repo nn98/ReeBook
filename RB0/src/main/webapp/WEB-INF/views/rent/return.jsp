@@ -143,8 +143,16 @@
 		<td><input type="hidden" name="email" value=${book.publisher}>${book.publisher}</td>
 		</tr>
 		<tr>
-		<td>
+		<td style="background: #777">
+		대여일
 		</td>
+		<td>${ rent.rentDate.toString().replace("00:00:00.0","") }</td>
+		</tr>
+		<tr>
+		<td style="background: #777">
+		반납 예정일
+		</td>
+		<td>${ rent.returnDate.toString().replace("00:00:00.0","") }</td>
 		</tr>
 		<tr>
 		<td id="td1" colspan="2">해당 교재를 반납합니다</td>
