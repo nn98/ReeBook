@@ -117,20 +117,27 @@
 
 #span2 {
 	font-family: 'Noto Serif KR';
-	font-size: 12pt;
+	font-size: 10pt;
 	padding: 0px 0px 0px 7px;
 	color: #fff;
 }
 
 #span3 {
 	font-family: 'Noto Serif KR';
-	font-size: 12pt;
+	font-size: 10pt;
 	color: #fff;
 }
 
 #span4 {
 	font-family: 'Noto Serif KR';
 	font-size: 9pt;
+	color: #fff;
+}
+
+#span5 {
+	font-family: 'Noto Serif KR';
+	font-size: 10pt;
+	padding-left: 3px;
 	color: #fff;
 }
 
@@ -346,13 +353,14 @@
 				<tbody>
 					<c:forEach var="rent" items="${ list }">
 						<tr>
-							<td id="td0"><span id="span0">${rent.book.id}</span></td>
-							<td id="td0"><span id="span0">${rent.book.title}</span></td>
-							<td id="td0"><span id="span0">${rent.book.author}</span></td>
-							<td id="td0"><span id="span0">${rent.book.publisher}</span></td>
-							<td id="td0"><span id="span0">${rent.rentDate.toString().replace("00:00:00.0","")}</span></td>
-							<td id="td0"><span id="span0">${rent.returnDate.toString().replace("00:00:00.0","")}</span></td>
-							<td id="td1"><button id="btn0" name="return" type="submit" onclick="location.href='/return'"value=${ rent.id }>¹Ý³³</button></td>
+							<td id="td0"><span id="span5">${rent.book.id}</span></td>
+							<td id="td0"><span id="span5">${rent.book.title}</span></td>
+							<td id="td0"><span id="span5">${rent.book.author}</span></td>
+							<td id="td0"><span id="span5">${rent.book.publisher}</span></td>
+							<td id="td0"><span id="span5">${rent.rentDate.toString().replace("00:00:00.0","")}</span></td>
+							<td id="td0"><span id="span5">${rent.returnDate.toString().replace("00:00:00.0","")}</span></td>
+							<td id="td1"><button id="btn0" name="return" type="submit" onclick="location.href='/return'"value=${ rent.id }
+							formmethod="get" formaction="/return" style="font-size:9pt">¹Ý³³</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
