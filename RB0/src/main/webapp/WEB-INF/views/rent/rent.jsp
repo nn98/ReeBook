@@ -18,7 +18,7 @@
            else
         	   alert("교재 대여 오류 발생");
         </script>
-<title>성공회대학교 교재대여시스템</title>
+<title>성공회대학교 기자재대여시스템</title>
 <style>
 	#div0{
 		background:#222;
