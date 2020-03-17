@@ -665,6 +665,7 @@ public class RBController {
 			System.out.println("return");
 			Rent rent=rentRepository.getOne(rid);
 			rentRepository.delete(rent);
+			return "redirect:mypage";
 		}
 		return "front";
 	}
