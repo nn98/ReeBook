@@ -98,7 +98,7 @@
 	<div class="container" id="div0">
 		<br />
 		<br />
-		<form:form method="post" modelAttribute="book" action="rents">
+		<form:form method="post" modelAttribute="book">
 		<h4 id="h40">대여 신청</h3>
 		
 		<table id="tb0">
@@ -110,15 +110,15 @@
 		<tbody>
 		<tr>
 		<td id="td0"><strong>학번</strong></td>
-		<td><input type="hidden" name="bid" value=${book.id}>${loginuser.id}</td>
+		<td><input type="hidden" name="bid" value=${rent.book.id}>${loginuser.id}</td>
 		</tr>
 		<tr>
 		<td id="td0"><strong>이름</strong></td>
-		<td><input type="hidden" name="name" value=${book.author}>${loginuser.name}</td>
+		<td><input type="hidden" name="name" value=${rent.book.author}>${loginuser.name}</td>
 		</tr>
 		<tr>
 		<td id="td0"><strong>소속</strong></td>
-		<td><input type="hidden" name="email" value=${book.publisher}>${loginuser.department.name}</td>
+		<td><input type="hidden" name="email" value=${rent.book.publisher}>${loginuser.department.name}</td>
 		</tr>
 		</tbody>
 		</table>
@@ -132,25 +132,25 @@
 		<tbody>
 		<tr>
 		<td id="td0"><strong>제목</strong></td>
-		<td style="font-size: 9pt"><input type="hidden" name="bid" value=${book.id}>${book.title}</td>
+		<td style="font-size: 9pt"><input type="hidden" name="bid" value=${rent.book.id}>${rent.book.title}</td>
 		</tr>
 		<tr>
 		<td id="td0"><strong>저자</strong></td>
-		<td><input type="hidden" name="name" value=${book.author}>${book.author}</td>
+		<td><input type="hidden" name="name" value=${rent.book.author}>${rent.book.author}</td>
 		</tr>
 		<tr>
 		<td id="td0"><strong>출판사</strong></td>
-		<td><input type="hidden" name="email" value=${book.publisher}>${book.publisher}</td>
+		<td><input type="hidden" name="email" value=${rent.book.publisher}>${rent.book.publisher}</td>
 		</tr>
 		<tr>
-		<td style="background: #777">
-		대여일
+		<td id="td0" style="background: #666; border-top: 1px dashed #fff;">
+		<strong>대여일</strong>
 		</td>
-		<td>${ rent.rentDate.toString().replace("00:00:00.0","") }</td>
+		<td style="border-top: 1px dashed #fff;">${ rent.rentDate.toString().replace("00:00:00.0","") }</td>
 		</tr>
 		<tr>
-		<td style="background: #777">
-		반납 예정일
+		<td id="td0" style="background: #666;">
+		<strong>반납 예정일</strong>
 		</td>
 		<td>${ rent.returnDate.toString().replace("00:00:00.0","") }</td>
 		</tr>
@@ -160,8 +160,8 @@
 		<tr>
 		<td id="td0"><strong>확인</strong></td>
 		<td>
-		<button type="submit" name="confirm" value="1" formmethod="post" style="color:#777">예</button>
-		<button type="submit" name="confirm" value="0" formmethod="post" style="color:#777">아니오</button>
+		<button type="submit" name="confirm" value="true" formmethod="post" style="color:#777">예</button>
+		<button type="submit" name="confirm" value="false" formmethod="post" style="color:#777">아니오</button>
 		</td>
 		</tr>
 		</tbody>
