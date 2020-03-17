@@ -646,14 +646,27 @@ public class RBController {
 		
 		return "retrieve/mypage";
 	}
-	
+
 	@RequestMapping("return")
-	public String returnB(@RequestParam("return")int rid, Model m) {
+	public String returnG(@RequestParam("return")int rid, Model m) {
 		Rent rent=rentRepository.getOne(rid);
 		System.out.println("Return:\tGet");
 		m.addAttribute("rent", rent);
+		m.addAttribute("loginuser",logInUser);
 		System.out.println(rent);
 		return "rent/return";
+	}
+
+	@RequestMapping(value="return",method=RequestMethod.POST)
+	public String returnP(@RequestParam("confirm")boolean confirm, 
+			@RequestParam("return")int rid, Model m) {
+		System.out.println("Return:\tPost");
+		if(confirm) {
+			System.out.println("return");
+			Rent rent=rentRepository.getOne(rid);
+			rentRepository.delete(rent);
+		}
+		return "front";
 	}
 	
 }
