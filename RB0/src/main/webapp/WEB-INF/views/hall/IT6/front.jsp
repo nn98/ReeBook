@@ -14,7 +14,7 @@
         	   alert("교재 대여 신청이 완료되었습니다.");
            }
         </script>
-<title>성공회대학교 교재대여시스템</title>
+<title>성공회대학교 기자재대여시스템</title>
 <style>
 
 /*https: //coding-factory.tistory.com /187*/
@@ -231,7 +231,7 @@
 <body style="background:#668">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
-	<p id="pd0"  onclick="location.href='front'">성공회대학교 교재대여시스템</p>
+	<p id="pd0"  onclick="location.href='front'">성공회대학교 기자재대여시스템</p>
 	<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
 	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="logout">Log Out</button></p>
 	</div>
