@@ -136,16 +136,22 @@
 	overflow:visible;
 	margin: 0px auto 0px auto;
 }
+#div1{
+	width:19%;
+	margin-left:1%;
+	float:right;
+	height:430px;
+	overflow:visible;
+}
 #img0{
 	width:80%;
 	height:auto;
 	overflow:hidden;
 }
 #btn0{
-	width:19%;
-	margin-left:1%;
 	float:right;
-	height:20%;
+	height:15%;
+	text-align: left;
 }
 
 #pd{
@@ -208,6 +214,13 @@
 	color: #fc0;
 }
 
+#span00{
+	color: #fff;
+	font-size: 6pt;
+	background: #ccf;
+	padding: 2px 8px 2px 8px;
+}
+
 </style>
 </head>
 <body style="background:#668">
@@ -226,7 +239,15 @@
 	<div id="div0">
 	<input type="hidden" name="hid" value=${ hid }>
 <img id="img0" alt="error" src="/image/6-1f.png">
-<button id="btn0" type="submit" name="lid" value=1 formmethod="post">${ fid }층 미디어센터측 사물함</button>
+<div id="div1">
+<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+</div>
 </div>
 </form:form>
 </body>
