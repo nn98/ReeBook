@@ -26,7 +26,7 @@
 	float:left;
 	color: #ccc;
 	font-size: 16pt;
-	cursor: pointer
+	cursor: pointer;
 }
 
 #pd0:hover{
@@ -79,6 +79,18 @@ a{
 	color: #fff;
 }
 
+#div01{
+	background-image: url("/image/campus.png");
+	width: 1097px;
+	height: 775px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#div01:hover{
+	background-image: url("/image/campus-6.png");
+}
+
 </style>
 </head>
 <body style="background:#668">
@@ -94,6 +106,7 @@ a{
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
 	<p id="pd1"></p>
 	</div>
+	<div id="div01" onclick="location.href='/it6?hid=6'"></div>
 <a href="it6?hid=6">6관</a>
 </form:form>
 </body>
