@@ -85,10 +85,20 @@ a{
 	height: 775px;
 	overflow: hidden;
 	cursor: pointer;
+	border: 5px solid #334;
 }
 
 #div01:hover{
 	background-image: url("/image/campus-6.png");
+}
+
+#h100{
+	font-family: 'Noto Serif KR';
+	font-size: 20pt;
+	text-align: center;
+	background: #ccfb;
+	color: #fff;
+	padding: 15px 0px 15px 0px;
 }
 
 </style>
@@ -106,7 +116,9 @@ a{
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
 	<p id="pd1"></p>
 	</div>
-	<div id="div01" onclick="location.href='/it6?hid=6'"></div>
+	<div id="div01" onclick="location.href='/it6?hid=6'">
+	<h1 id="h100">성공회대학교 캠퍼스</h1>
+	</div>
 <a href="it6?hid=6">6관</a>
 </form:form>
 </body>
