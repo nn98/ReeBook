@@ -86,6 +86,7 @@ a{
 	overflow: hidden;
 	cursor: pointer;
 	border: 5px solid #334;
+	margin-top: 10px;
 }
 
 #div01:hover{
