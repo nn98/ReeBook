@@ -141,7 +141,7 @@
 	width: 24.7%;
 	float: left;
 	padding: 5px 5px 13px 5px;
-	margin-left: 0.3%;
+	margin-right: 0.3%;
 	cursor: pointer;
 	border-bottom: 5px solid #668;
 }
