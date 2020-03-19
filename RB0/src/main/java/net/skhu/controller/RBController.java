@@ -509,7 +509,6 @@ public class RBController {
 			@RequestParam(value="fid", required = false, defaultValue = "0") int fid,
 			@RequestParam(value="hid", required = false, defaultValue = "0") int hid,
 			@RequestParam(value="lnum", required = false, defaultValue = "0") int lnum, 
-			
 			@RequestParam(value="apply", required = false, defaultValue = "false") boolean apply,
 			@RequestParam(value="clnum", required = false, defaultValue = "0") int clnum,
 			@RequestParam(value="clcolumn", required = false, defaultValue = "0") int clcolumn,
