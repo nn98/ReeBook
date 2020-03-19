@@ -36,10 +36,10 @@
 }
 
 #table0 {
-	width: 90%;
 	border: 3px solid #334;
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
 }
 
 #tr0 {
@@ -89,6 +89,8 @@
 	background-color: #88c;
 	border-right: 1.5px solid #eee;
 	border-bottom: 0.5px solid #99d;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #td01{
@@ -96,6 +98,8 @@
 	background-color: #88c;
 	border-left: 2px solid #aad;
 	border-bottom: 0.5px solid #99d;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #span00 {
@@ -140,7 +144,7 @@
 
 #span5 {
 	font-family: 'Noto Serif KR';
-	font-size: 10pt;
+	font-size: 11pt;
 	padding-left: 3px;
 	color: #fff;
 }
@@ -340,7 +344,7 @@
 				</tbody>
 			</table>
 			</div>
-			<div class="container">
+			<div class="container" style="width: 95%;">
 			<table id="table0" class="table table-bordered">
 				 <caption><span id="h10">대여 교재 목록</span></caption>
 				<thead>
