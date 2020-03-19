@@ -77,24 +77,6 @@
 	overflow:hidden;
 }
 
-#pd1{
-	background: #334;
-	text-align:center;
-	width:24.7%;
-	font-family: 'Noto Serif KR';
-	float:left;
-	color: #ccc;
-	padding: 5px 5px 13px 5px;
-	font-size: 14pt;
-	margin-left:0.3%;
-	cursor: pointer;
-	border-bottom:5px solid #668;
-}
-
-#pd1:hover{
-	border-bottom:5px solid #99b;
-}
-
 #t0{
 	font-size: 10pt;
 	background:#ccc;
@@ -280,23 +262,22 @@
 	color: #fff;
 }
 
-#pd1 {
+#pd1{
 	background: #334;
-	color: #ccc;
-	font-size: 14pt;
+	text-align:center;
+	width:24.7%;
 	font-family: 'Noto Serif KR';
-	text-align: center;
-	width: 24.7%;
-	float: left;
+	float:left;
+	color: #ccc;
 	padding: 5px 5px 13px 5px;
-	margin-right: 0.3%;
+	font-size: 14pt;
+	margin-left:0.3%;
 	cursor: pointer;
-	border-bottom: 5px solid #668;
+	border-bottom:5px solid #668;
 }
 
-#pd1:hover {
-	border-bottom: 5px solid #99b;
-	color: #fff;
+#pd1:hover{
+	border-bottom:5px solid #99b;
 }
 
 #div00{
