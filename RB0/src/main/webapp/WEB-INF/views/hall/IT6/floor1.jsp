@@ -138,7 +138,7 @@
 }
 #div1{
 	width:19%;
-	margin-left:1%;
+	margin-left: 1%;
 	float:right;
 	height:430px;
 	overflow:visible;
@@ -152,6 +152,11 @@
 	float:right;
 	height:15%;
 	text-align: left;
+	width: 100%;
+}
+#btn0:hover{
+	background: #bbf;
+	color: #fff;
 }
 
 #pd{
@@ -241,12 +246,12 @@
 <img id="img0" alt="error" src="/image/6-1f.png">
 <div id="div1">
 <button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
-<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
-<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
-<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
-<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
-<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
-<button id="btn0" type="submit" name="lid" value=1 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=2 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=3 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=4 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=5 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=6 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
+<button id="btn0" type="submit" name="lid" value=7 formmethod="post"><span id="span00">1번 사물함</span><br/>${ fid }층 미디어센터측 사물함</button>
 </div>
 </div>
 </form:form>
