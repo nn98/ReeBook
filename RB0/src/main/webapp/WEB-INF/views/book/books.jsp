@@ -29,7 +29,6 @@
 }
 
 #table0 {
-	width: 90%;
 	border: 3px solid #334;
 	margin-left: auto;
 	margin-right: auto;
@@ -158,7 +157,7 @@
 
 </style>
 </head>
-<body style="background:#668">
+<body style="background:#668;">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
 	<p id="pd0"  onclick="location.href='/front'"><sup id=sup_skhu>성공회대학교</sup> 기자재대여시스템</p>
@@ -171,7 +170,7 @@
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
 	<p id="pd1"></p>
 	</div>
-		<div class="container">
+		<div class="container" style="width: 85%;">
 			<form action="/">
 				<table id="table0" class="table table-bordered">
 				<caption><span id="h10">교재 목록</span></caption>
