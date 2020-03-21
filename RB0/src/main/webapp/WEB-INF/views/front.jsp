@@ -28,7 +28,7 @@ if(${assign}) {
 #box0{
 	border: 1px dotted #888;
 	background-color: #334;
-	padding: 5px 10px 5px 10px;
+	padding: 10px 20px 10px 20px;
 }
 
 #box11 {
@@ -38,24 +38,24 @@ if(${assign}) {
 
 #box1{
 	background-color: #334;
-	padding: 5px 10px 5px 10px;
+	padding: 10px 15px 10px 15px;
 }
 
 #box2 {
 	background-color: #bbf;
-	padding: 5px 10px 5px 10px;
+	padding: 10px 15px 10px 15px;
 }
 
 #box3 {
 	border: 1px solid;
 	background-color: #ccf;
-	padding: 5px 10px 5px 10px;
+	padding: 10px 15px 10px 15px;
 }
 
 #box4 {
-	padding: 5px 10px 5px 10px;
 	border: 1px solid #fff;
 	background-color: #aaf;
+	padding: 10px 15px 10px 15px;
 }
 
 #a0{
@@ -115,10 +115,10 @@ if(${assign}) {
 	font-size: 14pt;
 	font-family: 'Noto Serif KR';
 	text-align: center;
-	width: 24.7%;
+	width: 24.6%;
 	float: left;
 	padding: 5px 5px 13px 5px;
-	margin-right: 0.3%;
+	margin-right: 0.4%;
 	cursor: pointer;
 	border-bottom: 5px solid #668;
 }
@@ -129,7 +129,7 @@ if(${assign}) {
 }
 
 #div00{
-	background: #668;
+	background: #222;
 	width:100%;
 	overflow:hidden;
 }
@@ -155,7 +155,7 @@ if(${assign}) {
 
 </style>
 </head>
-<body style="background:#668">
+<body style="background:#222">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
 	<p id="pd0"  onclick="location.href='/front'"><sup id="sup_skhu" onclick="location.href='www.skhu.ac.kr'">성공회대학교</sup> 기자재대여시스템</p>
