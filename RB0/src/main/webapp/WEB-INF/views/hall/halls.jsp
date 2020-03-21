@@ -39,10 +39,10 @@
 	font-size: 14pt;
 	font-family: 'Noto Serif KR';
 	text-align: center;
-	width: 24.7%;
+	width: 24.9%;
 	float: left;
 	padding: 5px 5px 13px 5px;
-	margin-right: 0.3%;
+	margin-right: 0.1%;
 	cursor: pointer;
 	border-bottom: 5px solid #668;
 }
@@ -83,10 +83,10 @@ a{
 	background-image: url("/image/campus.png");
 	width: 1097px;
 	height: 775px;
-	overflow: hidden;
+	overflow: visible;
 	cursor: pointer;
 	border: 5px solid #334;
-	margin-top: 10px;
+	margin: 10px auto 0px auto;
 }
 
 #div01:hover{
@@ -120,7 +120,7 @@ a{
 	<div id="div01" onclick="location.href='/it6?hid=6'">
 	<h1 id="h100">성공회대학교 캠퍼스</h1>
 	</div>
-<a href="it6?hid=6">6관</a>
+	<a href="it6?hid=6" style="float: bottom">6관</a>
 </form:form>
 </body>
 </html>
