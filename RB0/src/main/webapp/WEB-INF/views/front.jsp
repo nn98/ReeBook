@@ -115,10 +115,10 @@ if(${assign}) {
 	font-size: 14pt;
 	font-family: 'Noto Serif KR';
 	text-align: center;
-	width: 24.6%;
+	width: 24.8%;
 	float: left;
 	padding: 5px 5px 13px 5px;
-	margin-right: 0.4%;
+	margin-right: 0.2%;
 	cursor: pointer;
 	border-bottom: 5px solid #668;
 }
@@ -129,7 +129,7 @@ if(${assign}) {
 }
 
 #div00{
-	background: #222;
+	background: #668;
 	width:100%;
 	overflow:hidden;
 }
@@ -155,7 +155,7 @@ if(${assign}) {
 
 </style>
 </head>
-<body style="background:#222">
+<body style="background:#668">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="divd">
 	<p id="pd0"  onclick="location.href='/front'"><sup id="sup_skhu" onclick="location.href='www.skhu.ac.kr'">성공회대학교</sup> 기자재대여시스템</p>
