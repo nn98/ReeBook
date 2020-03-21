@@ -351,16 +351,16 @@
 				<tbody>
 					<tr>
 						<td id="td0">사물함 번호</td>
-						<td id="td0">${ lnum==0?"":lnum }</td>
+						<td id="td0">${ lnum==0?loginuser.locker.lnum:lnum }</td>
 						
 					</tr>
 					<tr>
 						<td id="td0">행</td>
-						<td id="td0">${ lxid==0?"":lxid }</td>
+						<td id="td0">${ lxid==0?loginuser.locker.lrow:lxid }</td>
 					</tr>
 					<tr>
 						<td id="td0">열</td>
-						<td id="td0">${ lyid==0?"":lyid }</td>
+						<td id="td0">${ lyid==0?loginuser.locker.lcolumn:lyid }</td>
 					</tr>
 				</tbody>
 			</table>
