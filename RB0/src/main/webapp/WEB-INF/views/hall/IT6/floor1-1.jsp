@@ -265,13 +265,13 @@
 #pd1{
 	background: #334;
 	text-align:center;
-	width:24.7%;
-	font-family: 'Noto Serif KR';
-	float:left;
-	color: #ccc;
+	width: 24.9%;
+	float: left;
 	padding: 5px 5px 13px 5px;
+	margin-right: 0.1%;
+	font-family: 'Noto Serif KR';
+	color: #ccc;
 	font-size: 14pt;
-	margin-left:0.3%;
 	cursor: pointer;
 	border-bottom:5px solid #668;
 }
