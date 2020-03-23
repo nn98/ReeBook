@@ -138,7 +138,7 @@
 
 #span4 {
 	font-family: 'Noto Serif KR';
-	font-size: 9pt;
+	font-size: 10pt;
 	color: #fff;
 }
 
@@ -335,11 +335,14 @@
 						</tr>
 						<tr>
 							<td id="td3"><span id="span0">${ loginuser.locker.lnum }</span></td>
-							<td id="td01"><span id="span00">번 칸</span></td>
+							<td id="td01" style="border-bottom: 1px solid #bbd;"><span id="span00">번 칸</span></td>
 						</tr>
 						<tr>
-							<td id="td3"><span id="span4">사물함 변경</span></td>
-							<td id="td01" style="padding-left: 15px;"><button id="btn0" name="return" type="button" onclick="location.href='/halls'">신청</button></td>
+							<td id="td01" colspan="2" style="text-align: center;">
+							<span id="span4" style="padding-right: 10px">사물함 변경</span>
+							<button id="btn0" name="return" type="button" onclick="location.href='/halls'">신청</button>
+							</td>
+							
 						</tr>
 				</tbody>
 			</table>
