@@ -76,7 +76,7 @@ td {
 #button0 {
 	font-family: 'Noto Serif KR';
 	font-size: 10pt;
-	margin-right: 100px;
+	margin-right: 110px;
 	width:auto;
 	border: 10px solid #334;
 	float:right;
