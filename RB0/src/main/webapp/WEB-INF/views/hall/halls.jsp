@@ -97,7 +97,7 @@ a{
 	font-family: 'Noto Serif KR';
 	font-size: 20pt;
 	text-align: center;
-	background: #ccfb;
+	background: #668c;
 	color: #fff;
 	padding: 15px 0px 15px 0px;
 }
