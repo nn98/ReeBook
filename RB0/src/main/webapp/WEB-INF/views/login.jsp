@@ -33,7 +33,7 @@
 	overflow:hidden;
 	margin: 40px auto auto auto;
 	padding: 10px 10px 50px 10px;
-	background: #4c586f;
+	background: #334;
 }
 
 #div1 {
@@ -70,7 +70,7 @@ td {
 	margin: 2px;
 	padding: 12px 5px 12px 10px;
 	color: #fff;
-	background: #4c586f;
+	background: #334;
 }
 
 #button0 {
@@ -78,7 +78,7 @@ td {
 	font-size: 10pt;
 	margin-right: 100px;
 	width:auto;
-	border: 10px solid #4c586f;
+	border: 10px solid #334;
 	float:right;
 	padding: 2px 10px 2px 10px;
 }
@@ -87,7 +87,7 @@ td {
 	font-family: 'Noto Serif KR';
 	font-size: 10pt;
 	width:auto;
-	border: 10px solid #4c586f;
+	border: 10px solid #334;
 	float:right;
 	padding: 2px 10px 2px 10px;
 }
@@ -108,7 +108,7 @@ h3{
 
 </style>
 </head>
-<body style="background: #ebeced;">
+<body style="background: #668;">
 	<form:form method="post" modelAttribute="user" action="login">
 		<div id="div0">
 		<h3 style="font-family: 'Noto Serif KR';"><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
