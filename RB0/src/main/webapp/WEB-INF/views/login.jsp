@@ -30,16 +30,60 @@
 	padding: 5px 20px 25px 20px;
 	width: 470px;
 	height: auto;
-	overflow:hidden;
+	overflow: visible;
 	margin: 40px auto auto auto;
 	padding: 10px 10px 50px 10px;
 	background: #334;
+}
+
+#div01{
+	background: #334;
+	margin: 30px 0px 0px 0px;
+	padding: 10px 0px 100px 0px;
 }
 
 #div1 {
 	padding: 10px; float : left;
 	background: #888;
 	float: left;
+}
+
+#div02{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+	background: #445;
+	padding: 20px;
+	overflow: visible;
+}
+
+#div03{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+	background: #667;
+	text-align: center;
+	padding: 10px;
+	float: left;
+}
+
+#div04{
+	background: #556;
+	text-align: center;
+	padding: 5px;
+}
+
+#div05{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+	background: #556;
+	text-align: center;
+	padding: 10px;
+	float: right;
+}
+
+#p01{
+	color: #fff;
 }
 
 #div2-p {
@@ -110,6 +154,7 @@ h3{
 </head>
 <body style="background: #668;">
 	<form:form method="post" modelAttribute="user" action="login">
+	<div id="div01">
 		<div id="div0">
 		<h3 style="font-family: 'Noto Serif KR';"><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
 			<div id="div2">
@@ -128,7 +173,16 @@ h3{
 			<button type="submit" id="button0">LogIn</button>
 			<button type="submit" id="button1" formaction="signup" name="login" value="true">SignUp</button>
 			</div>
+			<br />
+			<br />
+			<br />
+			<div id="div02">
+			<div id="div03"><span id="p01">성공회대학교<br>과제제출시스템</span></div>
+			<div id="div04"><span id="p01">성공회대학교<br>홈페이지</span></div>
+			<div id="div05"><span id="p01">성공회대학교<br>소프트웨어공학과</span></div>
+			</div>
 		</div>
+	</div>
 	</form:form>
 </body>
 </html>
