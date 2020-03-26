@@ -39,7 +39,7 @@ import net.skhu.repository.LockerRepository;
 import net.skhu.repository.RentRepository;
 import net.skhu.repository.UserRepository;
 
-//으아ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ아당러ㅑㅐㄴㄷㄱ
+//�쇱�������������������������밸�с�����담�룔��
 
 @Controller
 //@RequestMapping("rb")
@@ -667,6 +667,18 @@ public class RBController {
 			return "redirect:mypage";
 		}
 		return "front";
+	}
+	
+	@RequestMapping("frontp")
+	public String frontPast(Model m, RedirectAttributes rm) {
+		System.out.println("FrontP:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
+		m.addAttribute("loginuser",logInUser);
+		return "front-p";
 	}
 	
 }
