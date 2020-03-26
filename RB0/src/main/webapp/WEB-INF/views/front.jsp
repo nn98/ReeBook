@@ -34,6 +34,7 @@ if(${assign}) {
 #box11 {
 	background-color: #ccf;
 	padding: 20px;
+	border-right: 2px solid #fff;
 }
 
 #box1{
@@ -273,7 +274,7 @@ if(${assign}) {
 			<p id="p01" onclick="location.href='http://www.skhu.ac.kr'">성공회대학교 홈페이지</p>
 			<div id="div02">
 			<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
-	<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
+			<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 			</div>
 	
 	</div>
@@ -345,6 +346,7 @@ if(${assign}) {
 	<tbody>
 	<tr>
 	<td id="box11"><a href="/it6/f1">6관</a></td>
+	<td id="box11"><a href="/frontp">기존</a></td>
 	</tr>
 	</tbody>
 	</table>
