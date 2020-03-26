@@ -27,19 +27,23 @@
 <title>성공회대학교 기자재대여시스템</title>
 <style>
 #div0 {
-	padding: 5px 20px 25px 20px;
-	width: 470px;
+	width: 550px;
 	height: auto;
-	overflow: visible;
-	margin: 40px auto auto auto;
-	padding: 10px 10px 50px 10px;
-	background: #334;
+	overflow: hidden;
+	float: right;
+	padding: 0px 0px 50px 10px;
+	background: #2225;
+    border-left: 5px solid #1129;
+    border-bottom-left-radius: 200px;
 }
 
 #div01{
-	background: #334;
-	margin: 30px 0px 0px 0px;
+	background: #223;
+	margin: 0px 0px 0px 0px;
 	padding: 10px 0px 100px 0px;
+	height: 900px;
+	width: 100%;
+	border-bottom: 5px #ccf solid;
 }
 
 #div1 {
@@ -82,8 +86,45 @@
 	float: right;
 }
 
+
+#div06{
+	float: right;
+    display: flex;
+    flex-direction: row;
+    border-left: 5px solid #fff7;
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+	background: #3337;
+	padding: 0px 0px 10px 100px;
+}
+
 #p01{
+	font-family: 'Noto Serif KR';
+	font-size: 9pt;
+	background: #446c;
+    border-bottom-left-radius: 40px;
+    padding: 5px 10px 5px 50px;
 	color: #fff;
+	float: right;
+}
+#p01:hover{
+	cursor: pointer;
+	background: #557c;
+}
+
+#p02{
+	font-family: 'Noto Serif KR';
+	font-size: 9pt;
+	background: #446c;
+	text-align: center;
+	margin-left: 5px;
+    padding: 5px 30px 5px 30px;
+	color: #fff;
+	float: right;
+}
+#p02:hover{
+	cursor: pointer;
+	background: #557c;
 }
 
 #div2-p {
@@ -120,20 +161,19 @@ td {
 #button0 {
 	font-family: 'Noto Serif KR';
 	font-size: 10pt;
-	margin-right: 110px;
 	width:auto;
-	border: 10px solid #334;
-	float:right;
 	padding: 2px 10px 2px 10px;
+	color: #000;
+	margin-left: 20px;
 }
 
 #button1 {
 	font-family: 'Noto Serif KR';
 	font-size: 10pt;
 	width:auto;
-	border: 10px solid #334;
-	float:right;
 	padding: 2px 10px 2px 10px;
+	color: #000;
+	float: right;
 }
 
 h3{
@@ -150,36 +190,48 @@ h3{
 	color: #fc0;
 }
 
+td{
+	background: #2232;
+ padding: 15px;
+}
+
+#td00{
+	padding: 10px 25px 10px 10px;
+}
 </style>
 </head>
-<body style="background: #668;">
+<body style="background: #334; margin: 0; overflow: hidden; height:1080px;">
+	<div id="div06">
+		<div id="div07">
+			<p id="p02" onclick="location.href='http://sw.skhu.ac.kr'">성공회대학교 소프트웨어공학과</p>
+			<p id="p02" onclick="location.href='http://report.skhu.net'">성공회대학교 과제제출시스템</p>
+			<p id="p01" onclick="location.href='http://www.skhu.ac.kr'">성공회대학교 홈페이지</p>
+		</div>
+	</div>
 	<form:form method="post" modelAttribute="user" action="login">
 	<div id="div01">
 		<div id="div0">
-		<h3 style="font-family: 'Noto Serif KR';"><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
+		<h3 style="font-family: 'Noto Serif KR'; padding-left: 100px"><sup id="sup_skhu">성공회대학교</sup> 기자재대여시스템</h3>
 			<div id="div2">
-			<table style="margin:20px auto 0px auto; width:auto; ">
+			<table style="margin:0px 70px 60px auto; width:auto; ">
 				<tbody>
 					<tr>
 						<td style="font-family: 'Noto Serif KR';">ID</td>
-						<td><input name="id" type="number" id="input0"></td>
+						<td id="td00"><input name="id" type="number" id="input0"></td>
 					</tr>
 					<tr>
 						<td style="font-family: 'Noto Serif KR';">PW</td>
-						<td><input name="password" type="password" id="input0"></td>
+						<td id="td00"><input name="password" type="password" id="input0"></td>
+					</tr>
+					<tr>
+					<td></td>
+					<td id="td00">
+					<button type="submit" id="button0">LogIn</button>
+					<button type="submit" id="button1" formaction="signup" name="login" value="true">SignUp</button>
+					</td>
 					</tr>
 				</tbody>
 			</table>
-			<button type="submit" id="button0">LogIn</button>
-			<button type="submit" id="button1" formaction="signup" name="login" value="true">SignUp</button>
-			</div>
-			<br />
-			<br />
-			<br />
-			<div id="div02">
-			<div id="div03"><span id="p01">성공회대학교<br>과제제출시스템</span></div>
-			<div id="div04"><span id="p01">성공회대학교<br>홈페이지</span></div>
-			<div id="div05"><span id="p01">성공회대학교<br>소프트웨어공학과</span></div>
 			</div>
 		</div>
 	</div>
