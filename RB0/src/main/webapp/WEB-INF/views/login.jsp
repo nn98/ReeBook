@@ -26,6 +26,7 @@
         </script>
 <title>성공회대학교 기자재대여시스템</title>
 <style>
+
 #div0 {
 	width: 550px;
 	height: auto;
@@ -39,11 +40,11 @@
 
 #div01{
 	background: #223;
-	margin: 0px 0px 0px 0px;
-	padding: 10px 0px 100px 0px;
 	height: 900px;
 	width: 100%;
 	border-bottom: 5px #ccf solid;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 100px 0px;
 }
 
 #div1 {
@@ -86,13 +87,13 @@
 	float: right;
 }
 
-
 #div06{
 	float: right;
     display: flex;
+    height: 45px;
     flex-direction: row;
     border-left: 5px solid #fff7;
-    border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 100px;
     overflow: hidden;
 	background: #3337;
 	padding: 0px 0px 10px 100px;
@@ -100,31 +101,34 @@
 
 #p01{
 	font-family: 'Noto Serif KR';
-	font-size: 9pt;
-	background: #446c;
-    border-bottom-left-radius: 40px;
-    padding: 5px 10px 5px 50px;
-	color: #fff;
+	font-size: 7pt;
+	background: #557c;
+	border-left: 2px solid #ccf;
+    border-bottom-left-radius: 60px;
+    padding: 5px 10px 5px 25px;
+	color: #ddd;
 	float: right;
 }
 #p01:hover{
 	cursor: pointer;
-	background: #557c;
+	background: #336c;
+	color: #fff;
 }
 
 #p02{
 	font-family: 'Noto Serif KR';
-	font-size: 9pt;
-	background: #446c;
+	font-size: 7pt;
+	background: #557c;
 	text-align: center;
-	margin-left: 5px;
-    padding: 5px 30px 5px 30px;
-	color: #fff;
+	margin-left: 4px;
+    padding: 5px 25px 5px 25px;
+	color: #ddd;
 	float: right;
 }
 #p02:hover{
 	cursor: pointer;
-	background: #557c;
+	background: #336c;
+	color: #fff;
 }
 
 #div2-p {
@@ -200,9 +204,9 @@ td{
 }
 </style>
 </head>
-<body style="background: #334; margin: 0; overflow: hidden; height:1080px;">
+<body style="background: #446; margin: 0; overflow: hidden; height:1080px;">
 	<div id="div06">
-		<div id="div07">
+		<div>
 			<p id="p02" onclick="location.href='http://sw.skhu.ac.kr'">성공회대학교 소프트웨어공학과</p>
 			<p id="p02" onclick="location.href='http://report.skhu.net'">성공회대학교 과제제출시스템</p>
 			<p id="p01" onclick="location.href='http://www.skhu.ac.kr'">성공회대학교 홈페이지</p>
