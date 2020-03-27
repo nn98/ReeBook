@@ -266,6 +266,7 @@ if(${assign}) {
 </head>
 <body style="background: #446; margin: 0; overflow: hidden; height:1080px;">
 <form:form modelAttribute="loginuser" method="post">
+	<div id="div00"></div>
 	<div id="div01">
 		<div>
 		<p id="pd0"  onclick="location.href='/front'"><sup id="sup_skhu" onclick="location.href='www.skhu.ac.kr'">성공회대학교</sup> 기자재대여시스템</p>
