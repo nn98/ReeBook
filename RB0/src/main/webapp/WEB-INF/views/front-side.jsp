@@ -28,35 +28,35 @@ if(${assign}) {
 #box0{
 	border: 1px dotted #888;
 	background-color: #334;
-	padding: 10px 20px 10px 20px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box11 {
 	background-color: #ccf;
-	padding: 20px;
+	padding: 10px;
 	border-right: 2px solid #fff;
 }
 
 #box1{
 	background-color: #334;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box2 {
 	background-color: #bbf;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box3 {
 	border: 1px solid;
 	background-color: #ccf;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box4 {
 	border: 1px solid #fff;
 	background-color: #aaf;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #a0{
@@ -66,8 +66,8 @@ if(${assign}) {
 
 #tb_id{
 	position: absolute;
-	top: 150px;
-	right: 50px;
+	top: 200px;
+	right: 40px;
 	z-index: 1;
 	border: 2px solid #668;
 }
@@ -126,7 +126,7 @@ if(${assign}) {
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 2;
 	float: right;
 	background: #2247;
 	width:91.5%;
@@ -140,7 +140,7 @@ if(${assign}) {
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 3;
 	float: right;
 	width: 90%;
 	height: 65px;
@@ -262,6 +262,29 @@ if(${assign}) {
 	color: #fff;
 }
 
+	#divs00{
+		position: absolute;
+		top: 10px;
+		left: 0px;
+		z-index: 0;
+		float: left;
+		background: #2287;
+	    border-right: 3px solid #fff7;
+    	border-bottom-right-radius: 25px;
+    	border-top-right-radius: 25px;
+	}
+	#divs00:hover{
+		background: #3358;
+	    border-right: 3px solid #fffb;
+		cursor: pointer;
+	}
+	#ps00{
+		font-family: 'Noto Serif KR';
+		color: #ccc;
+		font-size: 8pt;
+		padding: 5px 15px 5px 10px;
+		
+	}
 		.sidenav {
 			height:100%;
 			width: 0;
@@ -270,14 +293,13 @@ if(${assign}) {
 			top: 0;
 			left: 0;
 			background-color: rgb(0,154,200);
+			background: #04b5;
 			overflow-x: hidden;
 			transition:0.5s ease-in-out;
-			padding-top: 60px;
+			padding-top: 160px;
 		}
 		.sidenav a {
-			padding: 8px 8px 8px 32px;
 			text-decoration: none;
-			font-size: 25px;
 			color: #fff;
 			display: block;
 			transition: 0.2s ease-in-out;
@@ -285,9 +307,14 @@ if(${assign}) {
 		.sidenav a:hover, .offcanvas a:focus {
 			color: #000;
 		}
+		#as00{
+			font-family: 'Noto Serif KR';
+			padding: 8px 8px 8px 32px;
+			
+		}
 		.closebtn {
 			position: absolute;
-			top: 0;
+			top: 100px;
 			right: 25px;
 			font-size: 36px !important;
 			margin-left: 50px;
@@ -339,6 +366,8 @@ if(${assign}) {
 	<p id="pd1">.</p>
 		</div>
 	<div id="divd">
+	</div>
+	<div id="mysidenav" class="sidenav">
 	<table id="tb_id">
 		<colgroup>
 		</colgroup>
@@ -402,20 +431,23 @@ if(${assign}) {
 	</tr>
 	</tbody>
 	</table>
+		<a id="as00" href="#" class="closebtn" onclick='closeNav()'>x</a>
+		<a id="as00" href="#">About</a>
+		<a id="as00" href="#">Services</a>
+		<a id="as00" href="#">Clients</a>
+		<a id="as00" href="#">Contact</a>
+		<a id="as00" href="#">Portfolio</a>
 	</div>
-	<div id="mysidenav" class="sidenav">
-		<a href="#" class="closebtn" onclick='closeNav()'>x</a>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
-		<a href="#">Portfolio</a>
-	</div>
+	<% boolean open=false; %>
 	<span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span>
-
+	<div id="divs00" onclick='openNav()'>
+	<p id="ps00">-<p/>-</p>
+	</div>
 	<script>
 		function openNav() {
-			document.getElementById('mysidenav').style.width = '250px';
+			if(open) closeNav();
+			document.getElementById('mysidenav').style.width = '80%';
+			open=!open;
 		}
 		function closeNav() {
 			document.getElementById('mysidenav').style.width = '0';
