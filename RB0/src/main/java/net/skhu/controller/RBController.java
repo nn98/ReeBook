@@ -668,7 +668,7 @@ public class RBController {
 		}
 		return "front";
 	}
-	
+
 	@RequestMapping("frontp")
 	public String frontPast(Model m, RedirectAttributes rm) {
 		System.out.println("FrontP:\tGet");
@@ -679,6 +679,18 @@ public class RBController {
 		}
 		m.addAttribute("loginuser",logInUser);
 		return "front-p";
+	}
+
+	@RequestMapping("fronts")
+	public String frontSide(Model m, RedirectAttributes rm) {
+		System.out.println("FrontS:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
+		m.addAttribute("loginuser",logInUser);
+		return "front-side";
 	}
 	
 }
