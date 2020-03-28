@@ -383,4 +383,9 @@ html/jsp layout
   - table caption
   - https://www.codingfactory.net/11002
 
+0327
+- html/jsp
+  - side navigation 
+  - https://webruden.tistory.com/94
+
 
