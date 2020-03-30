@@ -277,7 +277,6 @@ if(${assign}) {
 			<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
 			<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 			</div>
-	
 	</div>
 	
 		</div>
