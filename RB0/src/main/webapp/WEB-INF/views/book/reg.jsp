@@ -278,7 +278,6 @@ if(${assign}) {
 			<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 			</div>
 	</div>
-	
 		</div>
 		<div id="div03">
 		<p id="pd00" onclick="location.href='/booksl'">교재 대여</p>
