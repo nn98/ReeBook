@@ -265,8 +265,11 @@ if(${assign}) {
 </style>
 </head>
 <body style="background: #446; margin: 0; overflow: hidden; height:1080px;">
+
 <form:form modelAttribute="loginuser" method="post">
+
 	<div id="div00"></div>
+	
 	<div id="div01">
 		<div>
 		<p id="pd0"  onclick="location.href='/front'"><sup id="sup_skhu" onclick="location.href='www.skhu.ac.kr'">성공회대학교</sup> 기자재대여시스템</p>
@@ -277,18 +280,17 @@ if(${assign}) {
 			<p id="pd">ID: ${ loginuser.id } 이름: ${ loginuser.name } &nbsp; &nbsp;
 			<button type="submit" formmethod="post"  style="color:#aaf; margin-top:5px" name="logOut" formaction="/logout">Log Out</button></p>
 			</div>
-	
+		</div>
 	</div>
 	
-		</div>
-		<div id="div03">
+	<div id="div03">
 		<p id="pd00" onclick="location.href='/booksl'">교재 대여</p>
-	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
-	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
-	<p id="pd1">.</p>
-		</div>
-	<div id="divd">
+		<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
+		<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
+		<p id="pd1">.</p>
 	</div>
+	
+	<div id="divd"></div>
 	
 </form:form>
 </body>
