@@ -287,7 +287,6 @@ if(${assign}) {
 		</div>
 	<div id="divd">
 	</div>
-	
 </form:form>
 </body>
 </html>
