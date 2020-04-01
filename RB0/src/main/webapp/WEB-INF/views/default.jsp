@@ -264,7 +264,7 @@ if(${assign}) {
 
 </style>
 </head>
-<body style="background: #446; margin: 0; overflow: hidden; height:1080px;">
+<body style="background: #446; overflow: hidden; height:1080px;">
 
 <form:form modelAttribute="loginuser" method="post">
 
