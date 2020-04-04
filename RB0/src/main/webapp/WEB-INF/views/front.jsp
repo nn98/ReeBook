@@ -349,6 +349,7 @@ if(${assign}) {
 	<td id="box11"><a href="/it6/f1">6관</a></td>
 	<td id="box11"><a href="/frontp">기존</a></td>
 	<td id="box11"><a href="/fronts">사이드</a></td>
+	<td id="box11"><a href="/def">기본 페이지</a></td>
 	</tr>
 	</tbody>
 	</table>
