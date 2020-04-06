@@ -108,7 +108,8 @@ if(${assign}) {
 #divd{
 	height: 850px;
 	background: #223;
-	border-bottom: 5px #ccf solid;
+	border-bottom: 4px #ccf solid;
+	border-bottom-left-radius: 200px;
 }
 
 #sup_skhu{
@@ -263,37 +264,41 @@ if(${assign}) {
 }
 
 	#divs00{
+		color: #fff;
+		width: 40px;
+		height: 30px;
 		position: absolute;
-		top: 10px;
+		top: 0px;
 		left: 0px;
 		z-index: 0;
 		float: left;
-		background: #2287;
+		background: #ccf6;
 	    border-right: 3px solid #fff7;
     	border-bottom-right-radius: 25px;
-    	border-top-right-radius: 25px;
+		transition:0.4s ease-in-out;
 	}
 	#divs00:hover{
 		background: #3358;
-	    border-right: 3px solid #fffb;
+	    border-right: 2px solid #fffc;
 		cursor: pointer;
+		transition:0.4s ease-in-out;
 	}
 	#ps00{
 		font-family: 'Noto Serif KR';
-		color: #ccc;
+		color: #fff;
 		font-size: 8pt;
-		padding: 5px 15px 5px 10px;
+    	padding: 15px 0px 15px 10px;
 		
 	}
 		.sidenav {
 			height:100%;
 			width: 0;
 			position: fixed;
-			z-index:5;
+			z-index:0;
 			top: 0;
 			left: 0;
 			background-color: rgb(0,154,200);
-			background: #04b5;
+			background: #ccfc;
 			overflow-x: hidden;
 			transition:0.5s ease-in-out;
 			padding-top: 160px;
@@ -375,25 +380,30 @@ if(${assign}) {
 	</div>
 	<div id="mysidenav" class="sidenav">
 		<a id="as01" href="#" class="closebtn" onclick='closeNav()'>x</a>
-		<a id="as00" href="#">About</a>
-		<a id="as00" href="#">Services</a>
-		<a id="as00" href="#">Clients</a>
+		<a id="as00" href="/booksl">Books</a>
+		<a id="as00" href="/halls">Lockers</a>
+		<a id="as00" href="/mypage">Mypage</a>
 		<a id="as00" href="#">Contact</a>
 		<a id="as00" href="#">Portfolio</a>
 	</div>
 	<% boolean open=false; %>
 	<span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span>
+	
 	<div id="divs00" onclick='openNav()'>
-	<p id="ps00">-<p/>-</p>
+		<span id="ps00">
+	 		▽
+		</span>
 	</div>
 	<script>
 		function openNav() {
 			if(open) closeNav();
+			document.getElementById('divs00').style.visibility = 'hidden';
 			document.getElementById('mysidenav').style.width = '25%';
 			open=!open;
 		}
 		function closeNav() {
 			document.getElementById('mysidenav').style.width = '0';
+			document.getElementById('divs00').style.visibility = 'visible';
 		}
 	</script>
 	
@@ -452,14 +462,18 @@ if(${assign}) {
 			</tr>
 		</tbody>
 	</table>
+	
 	<table id="tb00">
 	<tbody>
 	<tr>
 	<td id="box11"><a href="/it6/f1">6관</a></td>
 	<td id="box11"><a href="/frontp">기존</a></td>
+	<td id="box11"><a href="/fronts">사이드</a></td>
+	<td id="box11"><a href="/def">기본 페이지</a></td>
 	</tr>
 	</tbody>
 	</table>
+	
 </form:form>
 </body>
 </html>
