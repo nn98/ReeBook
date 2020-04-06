@@ -289,7 +289,7 @@ if(${assign}) {
 			height:100%;
 			width: 0;
 			position: fixed;
-			z-index:1;
+			z-index:5;
 			top: 0;
 			left: 0;
 			background-color: rgb(0,154,200);
@@ -308,6 +308,12 @@ if(${assign}) {
 			color: #000;
 		}
 		#as00{
+			font-family: 'Noto Serif KR';
+			padding: 8px 8px 8px 32px;
+			
+		}
+		#as01{
+			font-size: 5pt;
 			font-family: 'Noto Serif KR';
 			padding: 8px 8px 8px 32px;
 			
@@ -368,6 +374,29 @@ if(${assign}) {
 	<div id="divd">
 	</div>
 	<div id="mysidenav" class="sidenav">
+		<a id="as01" href="#" class="closebtn" onclick='closeNav()'>x</a>
+		<a id="as00" href="#">About</a>
+		<a id="as00" href="#">Services</a>
+		<a id="as00" href="#">Clients</a>
+		<a id="as00" href="#">Contact</a>
+		<a id="as00" href="#">Portfolio</a>
+	</div>
+	<% boolean open=false; %>
+	<span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span>
+	<div id="divs00" onclick='openNav()'>
+	<p id="ps00">-<p/>-</p>
+	</div>
+	<script>
+		function openNav() {
+			if(open) closeNav();
+			document.getElementById('mysidenav').style.width = '25%';
+			open=!open;
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+	</script>
+	
 	<table id="tb_id">
 		<colgroup>
 		</colgroup>
@@ -431,29 +460,6 @@ if(${assign}) {
 	</tr>
 	</tbody>
 	</table>
-		<a id="as00" href="#" class="closebtn" onclick='closeNav()'>x</a>
-		<a id="as00" href="#">About</a>
-		<a id="as00" href="#">Services</a>
-		<a id="as00" href="#">Clients</a>
-		<a id="as00" href="#">Contact</a>
-		<a id="as00" href="#">Portfolio</a>
-	</div>
-	<% boolean open=false; %>
-	<span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span>
-	<div id="divs00" onclick='openNav()'>
-	<p id="ps00">-<p/>-</p>
-	</div>
-	<script>
-		function openNav() {
-			if(open) closeNav();
-			document.getElementById('mysidenav').style.width = '80%';
-			open=!open;
-		}
-		function closeNav() {
-			document.getElementById('mysidenav').style.width = '0';
-		}
-	</script>
-	
 </form:form>
 </body>
 </html>
