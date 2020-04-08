@@ -352,8 +352,8 @@
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  color: #f00;
-  background-color: #666;
+  color: #f88;
+  background-color: #1df28c;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -437,6 +437,14 @@
 		<c:set var="fid" value="${ fid }"/>
 		<c:set var="lid" value="${ lid }"/>
 		<c:set var="llist" value="${ llist }"/>
+		
+		<!-- button up -->
+		<script>
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+		</script>
+		
 		<% 
 			int i=1,j,c=1;
 			String meta=""+pageContext.getAttribute("hid")+pageContext.getAttribute("fid")+pageContext.getAttribute("lid");
@@ -450,7 +458,7 @@
 					String confirm=meta+(i*100000+j*1000+c); 
 					boolean C=llist.contains(Integer.parseInt(confirm));
 				%>
-				<button class=<%= C?"abutton":"button" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
+				<button class=<%= C?"abutton":"button" %> onclick='select' type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
 			<% } %>
 			<br/>
 		<% } %>
