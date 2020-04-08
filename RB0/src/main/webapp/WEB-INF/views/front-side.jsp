@@ -109,7 +109,7 @@ if(${assign}) {
 	height: 850px;
 	background: #223;
 	border-bottom: 4px #ccf solid;
-	border-bottom-left-radius: 200px;
+	border-bottom-left-radius: 250px;
 }
 
 #sup_skhu{
