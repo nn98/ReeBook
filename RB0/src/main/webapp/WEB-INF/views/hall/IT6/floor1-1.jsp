@@ -440,8 +440,8 @@
 		
 		<!-- button up -->
 		<script>
-		function closeNav() {
-			document.getElementById('mysidenav').style.width = '0';
+		function select(id) {
+			console.log('selected.');
 		}
 		</script>
 		
