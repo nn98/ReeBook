@@ -458,7 +458,7 @@
 					String confirm=meta+(i*100000+j*1000+c); 
 					boolean C=llist.contains(Integer.parseInt(confirm));
 				%>
-				<button class=<%= C?"abutton":"button" %> onclick='select' type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
+				<button class=<%= C?"abutton":"button" %> onclick='select(<%= c %>)' type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
 			<% } %>
 			<br/>
 		<% } %>
