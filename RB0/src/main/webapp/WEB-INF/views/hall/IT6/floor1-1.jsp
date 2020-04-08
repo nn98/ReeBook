@@ -184,48 +184,6 @@
 	margin: 0px 10px 0px 10px;
 }
 
-#div2{
-	width: 950px;
-	height: auto;
-	overflow: visible;
-	margin: 0px auto 0px auto;
-	padding: 10px 0px 10px 25px;
-}
-
-#lbtn{
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-	font-size: 9pt;
-	font-family: 휴먼모음T;
-	text-align: center;
-    color: #fff;
-	width:37px;
-	height:37px;
-    background: #99f;
-	margin: 2px;
-}
-
-#lbtn:hover{
-	background: #77f;
-}
-
-#albtn{
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-	font-size: 9pt;
-	font-family: 휴먼모음T;
-	text-align: center;
-	color: #f00;
-	width:37px;
-	height:37px;
-	background: #666;
-	margin: 2px;
-}
-
 #p_hint{
 	font-size: 8pt;
 	font-family: 'Noto Serif KR';
@@ -301,102 +259,111 @@
 	color: #fc0;
 }
 
+#div2{
+	width: 950px;
+	height: auto;
+	overflow: visible;
+	margin: 0px auto 0px auto;
+	padding: 10px 0px 20px 15px;
+  	align-items: center;
+ 	justify-content: center;
+ 	background: #fff;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    margin-top: 20px;
+}
+
+#lbtn{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+	text-align: center;
+    color: #fff;
+	width:37px;
+	height:37px;
+	font-size: 9pt;
+	font-family: 휴먼모음T;
+    background: #99f;
+	margin: 2px;
+}
+
+#lbtn:hover{
+	background: #77f;
+}
+
+#albtn{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+	font-size: 9pt;
+	font-family: 휴먼모음T;
+	text-align: center;
+	color: #f00;
+	width:37px;
+	height:37px;
+	background: #666;
+	margin: 2px;
+}
+
 /*외부 버튼 리소스 http://rwdb.kr/interactionbutton*/
 
-#div2  {
-        background: #ececec;
-        padding: 40px 0;
-        font-family: 'Lato', sans-serif;
-        color: #444;
-        text-align: center
-    }
-    .button-wrapper {
-        display: inline-block;
-        margin: 20px 5px;
-        padding: 40px;
-    }
-    .dark-button,
-    .dark-button-2 {
-        background: #333;
-    }
-    .button {
-        background: #fff;
-        border: none;
-        padding: 2px;
-        cursor: pointer;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        transition: all .35s ease-in-out .35s;
-        margin: 0 auto;
-        width: 150px;
-        text-align: center;
-    }
-    .dark-button .button,
-    .dark-button .button span {
-        background: #36B4C7;
-        color: #fff;
-    }
-    .dark-button .button:after,
-    .dark-button .button:before,
-    .dark-button .button:hover span {
-        background: #fff;
-        color: #444;
-    } 
-    .dark-button-2 .button,
-    .dark-button-2 .button span {
-        background: #333;
-        color: #fff;
-    }
-    .dark-button-2 .button:after,
-    .dark-button-2 .button:before,
-    .dark-button-2 .button:hover span {
-        background: #fff;
-        color: #444;
-    } 
-    span {
-        display: block;
-        padding: 15px 30px;
-        background: #fff;
-        z-index: 100;
-        position: relative;
-        transition: all .35s ease-in-out .35s;
-    }
-    .button:hover span {
-        background: #36B4C7;
-        color: #fff;
-        transition: all .35s ease-in-out .35s;
-    }
-    .button:after {
-        bottom: -100%;
-        right: -100%;
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: #36B4C7;
-        transition: all .35s ease-in-out .5s;
-    }
-    .button:hover:after {
-        right: 0;
-        bottom: 0;
-        transition: all ease-in-out .35s;
-    }
-    .button:before {
-        top: -100%;
-        left: -100%;
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: #36B4C7;
-        transition: all .35s ease-in-out .5s;
-    }
-    .button:hover:before {
-        left: 0;
-        top: 0;
-        transition: all ease-in-out .35s;
-    }
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 38px;
+  height: 27px;
+	font-family: 'Noto Serif KR';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+	font-size: 9pt;
+	font-family: 'Noto Serif KR';
+	margin: 8px 2px 8px 2px;
+  }
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.abutton {
+  width: 38px;
+  height: 27px;
+	font-family: 'Noto Serif KR';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #f00;
+  background-color: #666;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+	font-size: 9pt;
+	font-family: 'Noto Serif KR';
+	margin: 8px 2px 8px 2px;
+  }
 
 </style>
 </head>
@@ -483,11 +450,12 @@
 					String confirm=meta+(i*100000+j*1000+c); 
 					boolean C=llist.contains(Integer.parseInt(confirm));
 				%>
-				<button id=<%= C?"albtn":"lbtn" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
+				<button class=<%= C?"abutton":"button" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
 			<% } %>
 			<br/>
 		<% } %>
 		</div>
+		
 </form:form>
 </body>
 </html>
