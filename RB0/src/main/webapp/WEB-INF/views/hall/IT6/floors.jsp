@@ -79,6 +79,64 @@ a{
 	color: #fff;
 }
 
+/* button up */
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 38px;
+  height: 27px;
+	font-family: 'Noto Serif KR';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+	font-size: 9pt;
+	font-family: 'Noto Serif KR';
+	margin: 8px 2px 8px 2px;
+  }
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY( -4px );
+}
+
+.abutton {
+  width: 38px;
+  height: 27px;
+	font-family: 'Noto Serif KR';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #f88;
+  background-color: #1df28c;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+	font-size: 9pt;
+	font-family: 'Noto Serif KR';
+	margin: 8px 2px 8px 2px;
+  }
+
 </style>
 </head>
 <body style="background:#668">
