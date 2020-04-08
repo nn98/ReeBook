@@ -388,4 +388,7 @@ html/jsp layout
   - side navigation 
   - https://webruden.tistory.com/94
 
-
+0408
+- html/jsp
+  - user button	http://rwdb.kr/interactionbutton/
+  - before <button id=<%= C?"albtn":"lbtn" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
