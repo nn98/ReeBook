@@ -301,6 +301,103 @@
 	color: #fc0;
 }
 
+/*외부 버튼 리소스 http://rwdb.kr/interactionbutton*/
+
+#div2  {
+        background: #ececec;
+        padding: 40px 0;
+        font-family: 'Lato', sans-serif;
+        color: #444;
+        text-align: center
+    }
+    .button-wrapper {
+        display: inline-block;
+        margin: 20px 5px;
+        padding: 40px;
+    }
+    .dark-button,
+    .dark-button-2 {
+        background: #333;
+    }
+    .button {
+        background: #fff;
+        border: none;
+        padding: 2px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        transition: all .35s ease-in-out .35s;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    }
+    .dark-button .button,
+    .dark-button .button span {
+        background: #36B4C7;
+        color: #fff;
+    }
+    .dark-button .button:after,
+    .dark-button .button:before,
+    .dark-button .button:hover span {
+        background: #fff;
+        color: #444;
+    } 
+    .dark-button-2 .button,
+    .dark-button-2 .button span {
+        background: #333;
+        color: #fff;
+    }
+    .dark-button-2 .button:after,
+    .dark-button-2 .button:before,
+    .dark-button-2 .button:hover span {
+        background: #fff;
+        color: #444;
+    } 
+    span {
+        display: block;
+        padding: 15px 30px;
+        background: #fff;
+        z-index: 100;
+        position: relative;
+        transition: all .35s ease-in-out .35s;
+    }
+    .button:hover span {
+        background: #36B4C7;
+        color: #fff;
+        transition: all .35s ease-in-out .35s;
+    }
+    .button:after {
+        bottom: -100%;
+        right: -100%;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #36B4C7;
+        transition: all .35s ease-in-out .5s;
+    }
+    .button:hover:after {
+        right: 0;
+        bottom: 0;
+        transition: all ease-in-out .35s;
+    }
+    .button:before {
+        top: -100%;
+        left: -100%;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #36B4C7;
+        transition: all .35s ease-in-out .5s;
+    }
+    .button:hover:before {
+        left: 0;
+        top: 0;
+        transition: all ease-in-out .35s;
+    }
+
 </style>
 </head>
 <body style="background:#668">
