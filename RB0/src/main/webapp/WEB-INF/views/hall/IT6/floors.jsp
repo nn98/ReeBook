@@ -151,6 +151,7 @@ a {
 }
 
 .nbutton {
+	font-family: 'Noto Serif KR';
 	background: #fff;
 	border: none;
 	padding: 2px;
@@ -208,7 +209,7 @@ span {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background: #36B4C7;
+	background: #2EE59D;
 	transition: all .35s ease-in-out .5s;
 }
 
@@ -258,12 +259,11 @@ span {
 		<a class="button" href="it6/f1?fid=1&hid=${ hid }">1층</a>
 		<a href="imgtest?fid=1" formmethod="post">wtf</a>
 		<button class="button"
-			onclick="location.href='it6/f1?fid=1&hid=${ hid }'">1st
-			Floor</button>
+			onclick="location.href='it6/f1?fid=1&hid=${ hid }'">1st	Floor</button>
 
 		<div class="light-nbutton nbutton-wrapper" onclick="location.href='it6/f1?fid=1&hid=${ hid }'">
 			<div class="nbutton">
-				<span> Buy Now </span>
+				<span> 1st	Floor </span>
 			</div>
 		</div>
 
