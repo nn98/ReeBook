@@ -270,6 +270,8 @@ span {
 	</form:form>
 </body>
 </html>
+
 <!-- 정렬함 -->
+<!-- 이전 버튼 -->
 <!-- onclick="location.href='/it6/f1?fid=1&hid=${ hid }'" -->
 <!-- <button class="button" formaction='it6/f1?fid=1&hid=${ hid }'>1st Floor</button> -->
