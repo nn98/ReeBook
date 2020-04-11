@@ -141,9 +141,7 @@ a {
 }
 
 .nbutton-wrapper {
-	display: inline-block;
-	margin: 20px 5px;
-	padding: 40px;
+	border-bottom: 1px solid #aaa;
 }
 
 .dark-nbutton, .dark-nbutton-2 {
@@ -235,6 +233,13 @@ span {
 	top: 0;
 	transition: all ease-in-out .35s;
 }
+
+/*floor button div*/
+.rightbtns{
+	float:right;
+	padding: 5px 20px 5px 5px;
+	background: #ccf;
+}
 </style>
 </head>
 <body style="background: #668">
@@ -261,6 +266,7 @@ span {
 		<button class="button"
 			onclick="location.href='it6/f1?fid=1&hid=${ hid }'">1st	Floor</button>
 
+	<div class="rightbtns">
 		<div class="light-nbutton nbutton-wrapper" onclick="location.href='it6/f1?fid=1&hid=${ hid }'">
 			<div class="nbutton">
 				<span> 1st	Floor </span>
@@ -284,7 +290,7 @@ span {
 				<span> 4th	Floor </span>
 			</div>
 		</div>
-
+	</div>
 	</form:form>
 </body>
 </html>
