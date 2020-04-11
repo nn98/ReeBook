@@ -64,11 +64,15 @@ if(${assign}) {
 	margin-right:auto;
 }
 
-#tb_id{
+/* 본문 영역 */
+#div_main{
 	position: absolute;
 	top: 150px;
 	right: 50px;
 	z-index: 1;
+}
+
+#tb_id{
 	border: 2px solid #668;
 }
 
@@ -89,10 +93,8 @@ if(${assign}) {
 }
 
 #tb00{
-	position: absolute;
-	top: 350px;
-	right: 50px;
-	z-index: 1;
+	float: right;
+	margin-top: 50px;
 }
 
 
@@ -288,6 +290,7 @@ if(${assign}) {
 	<p id="pd1">.</p>
 		</div>
 	<div id="divd">
+	<div id="div_main">
 	<table id="tb_id">
 		<colgroup>
 		</colgroup>
@@ -353,6 +356,7 @@ if(${assign}) {
 	</tr>
 	</tbody>
 	</table>
+	</div>
 	</div>
 	
 </form:form>
