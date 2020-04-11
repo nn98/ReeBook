@@ -267,6 +267,24 @@ span {
 			</div>
 		</div>
 
+		<div class="light-nbutton nbutton-wrapper" onclick="location.href='it6/f2fid=1&hid=${ hid }'">
+			<div class="nbutton">
+				<span> 2nd	Floor </span>
+			</div>
+		</div>
+
+		<div class="light-nbutton nbutton-wrapper" onclick="location.href='it6/f3?fid=1&hid=${ hid }'">
+			<div class="nbutton">
+				<span> 3rd	Floor </span>
+			</div>
+		</div>
+
+		<div class="light-nbutton nbutton-wrapper" onclick="location.href='it6/f4?fid=1&hid=${ hid }'">
+			<div class="nbutton">
+				<span> 4th	Floor </span>
+			</div>
+		</div>
+
 	</form:form>
 </body>
 </html>
