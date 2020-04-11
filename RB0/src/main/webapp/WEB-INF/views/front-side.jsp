@@ -64,11 +64,17 @@ if(${assign}) {
 	margin-right:auto;
 }
 
-#tb_id{
+/* 본문 영역 */
+#div_main{
 	position: absolute;
-	top: 200px;
-	right: 40px;
+	top: 150px;
+	right: 50px;
 	z-index: 1;
+}
+
+#tb_id{
+	font-size: 9pt;
+	font-family: 'Noto Serif KR';
 	border: 2px solid #668;
 }
 
@@ -89,12 +95,9 @@ if(${assign}) {
 }
 
 #tb00{
-	position: absolute;
-	top: 350px;
-	right: 50px;
-	z-index: 1;
+	float: right;
+	margin-top: 50px;
 }
-
 
 #pd{
 	font-family: 'Noto Serif KR';
@@ -108,8 +111,16 @@ if(${assign}) {
 #divd{
 	height: 850px;
 	background: #223;
-	border-bottom: 4px #ccf solid;
-	border-bottom-left-radius: 250px;
+	border-left: 0.5px #667 solid;
+	border-bottom: 4px #667 solid;
+	border-bottom-left-radius: 50px;
+}
+
+#dive{
+	height: 854px;
+	background: #ccf;
+	border-bottom: 2px #88f solid;
+	border-bottom-left-radius: 55px;
 }
 
 #sup_skhu{
@@ -130,10 +141,10 @@ if(${assign}) {
 	z-index: 2;
 	float: right;
 	background: #2247;
-	width:91.5%;
+	width:850px;
 	height: 65px;
 	overflow:hidden;
-    border-left: 5px solid #fff7;
+    border-left: 4px solid #fff7;
     border-bottom-left-radius: 250px;
 }
 
@@ -143,7 +154,7 @@ if(${assign}) {
 	right: 0;
 	z-index: 3;
 	float: right;
-	width: 90%;
+	width:842px;
 	height: 65px;
     flex-direction: row;
     border-left: 5px solid #fff7;
@@ -167,7 +178,7 @@ if(${assign}) {
 	right: 0;
 	z-index: 2;
 	float: right;
-	width: 75%;
+	width: 750px;
     flex-direction: row;
     border-left: 5px solid #fff7;
     border-bottom-left-radius: 150px;
@@ -207,6 +218,7 @@ if(${assign}) {
 }
 
 #pd00:hover {
+	background: #446c;
 	border-bottom: 1px solid #99b;
 	border-left: 5px solid #99b;
 	color: #fff;
@@ -227,6 +239,7 @@ if(${assign}) {
 }
 
 #pd1:hover {
+	background: #446c;
 	border-bottom: 1px solid #99b;
 	color: #fff;
 }
@@ -263,6 +276,7 @@ if(${assign}) {
 	color: #fff;
 }
 
+
 	#divs00{
 		color: #fff;
 		width: 40px;
@@ -297,8 +311,7 @@ if(${assign}) {
 			z-index:0;
 			top: 0;
 			left: 0;
-			background-color: rgb(0,154,200);
-			background: #ccfc;
+			background: #334c;
 			overflow-x: hidden;
 			transition:0.5s ease-in-out;
 			padding-top: 160px;
@@ -376,8 +389,11 @@ if(${assign}) {
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
 	<p id="pd1">.</p>
 		</div>
-	<div id="divd">
-	</div>
+		
+	
+	
+	<div id="dive"> <div id="divd">	</div> </div>
+	
 	<div id="mysidenav" class="sidenav">
 		<a id="as01" href="#" class="closebtn" onclick='closeNav()'>x</a>
 		<a id="as00" href="/booksl">Books</a>
@@ -387,7 +403,9 @@ if(${assign}) {
 		<a id="as00" href="#">Portfolio</a>
 	</div>
 	<% boolean open=false; %>
-	<span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span>
+	
+	<!-- 기존 open -->
+	<!-- <span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span> -->
 	
 	<div id="divs00" onclick='openNav()'>
 		<span id="ps00">
@@ -406,7 +424,7 @@ if(${assign}) {
 			document.getElementById('divs00').style.visibility = 'visible';
 		}
 	</script>
-	
+	<div id="div_main">
 	<table id="tb_id">
 		<colgroup>
 		</colgroup>
@@ -473,7 +491,7 @@ if(${assign}) {
 	</tr>
 	</tbody>
 	</table>
-	
+	</div>
 </form:form>
 </body>
 </html>
