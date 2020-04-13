@@ -1,0 +1,19 @@
+tth
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:background="#777"
+            android:layout_margin="5px"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+ttday
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+tttvday
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="월">
+
