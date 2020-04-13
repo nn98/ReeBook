@@ -16,9 +16,9 @@
            }
         </script>
 <script type="text/javascript">
-if(${assign}) {
-	   alert("사물함 배정 신청이 완료되었습니다");
-}
+			if(${assign}) {
+	   			alert("사물함 배정 신청이 완료되었습니다");
+			}
 </script>
 <title>성공회대학교 기자재대여시스템</title>
 <style>
