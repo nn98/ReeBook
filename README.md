@@ -1,5 +1,5 @@
 # ReeBook
-0115 개같이길어서 나중에 한번에 
+0115 길어서 나중에 한번에 
 2020학년도 1학기 교재대여사업
 
 Working History>
@@ -116,10 +116,9 @@ document table creation query update.
 
 
 /
-ㅅㅂ 문제 재발
+ 문제 재발
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: net.skhu.domain.Document column: id (should be mapped with insert="false" update="false")
 
-난 병신이다
 걍 JoinColumn 잘못씀
 
 +복합 PK Mapping 
