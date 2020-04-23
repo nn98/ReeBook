@@ -1,0 +1,11 @@
+
+#div01 {
+	width: 550px;
+	height: auto;
+	overflow: hidden;
+	float: right;
+	padding: 0px 0px 50px 10px;
+	background: #2225;
+    border-left: 5px solid #1129;
+    border-bottom-left-radius: 200px;
+}
