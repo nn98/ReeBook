@@ -1,0 +1,157 @@
+20/
+01/01
+rent table rent_date > rentDate
+	return_date > returnDate
+
+create table Docs(
+bid int unsigned,
+foreign key(bid) references book(id),
+lid int unsigned,
+foreign key(lid) references lecture(id),
+kind char(10)
+);
+
+>
+
+create table document(
+id int unsigned primary key,
+bid int unsigned,
+foreign key(bid) references book(id),
+lid int unsigned,
+foreign key(lid) references lecture(id),
+kind char(10)
+);
+
+>
+
+create table document(
+bid int unsigned,
+foreign key(bid) references book(id),
+lid int unsigned,
+foreign key(lid) references lecture(id),
+kind char(10),
+primary key(bid,lid)
+);
+
+drop table docs > drop table document
+
+
+>>
+굳이 강의고 뭐고 따질거 없이
+그냥 대여만 해도 상관없을거같은데
+
+>0110 남행열차
+alter table user add grade int unsigned;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc user;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| sn    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| name  | char(10)         | YES  |     | NULL    |                |
+| grade | int(10) unsigned | YES  |     | NULL    |                |
++-------+------------------+------+-----+---------+----------------+
+
+> depart
+create table department(
+id int unsigned primary key,
+name char(20)
+);
+
+insert into department values (1,'IT융합자율학부');
+insert into department values (2,'소프트웨어공학과');
+insert into department values (3,'글로컬IT학과');
+insert into department values (4,'정보통신학과');
+insert into department values (5,'컴퓨터공학과');
+
+alter table user add (departmentId int unsigned, 
+foreign key(departmentId) references department(id)
+);
+
+02/11
+- mysql password()함수 비대칭형. 암호화만 존재, 복호화 미존. => 암호화 결과 비교만 가능.
+- DB creation user table mod
+- DB creation quary mod 
+  - column name unification
+  - append data size
+- DB dummy data mod
+  - Specify column name
+- DB desc, select create
+
+- DB password test
+>insert into user(id, name, password, departmentid, grade) values (,'',password(),,);
+>insert into user(id, name, password, departmentid, grade) values (201732005,'김문수',PASSWORD('test'),2,3);
+>> fail. error with PASSWORD()??
+
+insert into user(id, name, password, departmentid, grade) values (201732005,'김문수',hex(aes_encrypt('test','bbibbi')),2,3);
+> success - https://blog.habonyphp.com/213
+
+- User Accept the Terms add
+  - https://freegians.tistory.com/entry/MySQL-BOOLEAN-TYPE-use-tip
+  - https://korea-developer.tistory.com/entry/MySQL-boolean-%EC%82%AC%EC%9A%A9
+- For JPA
+  - http://wonwoo.ml/index.php/post/995
+
+hex(aes_encrypt('test','bbibbi'));
+select hex(aes_encrypt('test','bbibbi'));
+
+0213
+user table update - add email, phone number
+
+> alter table add email email; 
+x
+
+alter table user add email varchar(320);
+o
+
+- https://dba.stackexchange.com/questions/37014/in-what-data-type-should-i-store-an-email-address-in-database
+
+alter table user add HP varchar(20);
+o
+
+- just phone numbers maximum length
+
+? didnt update user/agree
+agree tinyint(1)
+> agree char(1)
+o
+
+#3 rent 
+- book table update
+> alter table book add available char(1) default 'N';
+> alter table book modify available char(1) default 'Y';
+
+
+
+0221
+
+update book set available='Y' where id=?;
+delete from rent where bid=?;
+
+
+0304	! Locker00 >> RB0 project absorption
+add table locker >
+create table locker(
+id int unsigned NOT NULL PRIMARY KEY,
+hid int unsigned,
+fid int unsigned,
+lnum int unsigned,
+lcolumn int unsigned,
+lrow int unsigned
+);
+
+locker fin,
+assign add
+
+create table assign(
+uid int unsigned,
+foreign key(uid) references user(id),
+lid int unsigned,
+foreign key(lid) references locker(id)
+);
+
+
+
+
