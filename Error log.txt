@@ -129,3 +129,23 @@ Sol>https://mrrootable.tistory.com/75
 Github 연동
 Sol>https://all-record.tistory.com/163
 성공.
+
+0115
+css 	padding	https://coding-factory.tistory.com/187
+	border	https://www.codingfactory.net/10620
+		https://aboooks.tistory.com/77
+
+
+0304	JSTL err
+err:	<input name=fid value=${ fid } type="hidden" >
+sol:	<input name=fid type="hidden" value=${ fid } >
+
+JSTL이 오류가 발생하면? JSTL 변수가 없으면 뒷 태그가 적용되지 않음?
+ㄹㅇ이네
+
+<!-- <form:input path="lnum" type="hiddn" class="form-control" value=${ lnum }/> fail --> 뭔시벌 주석에서 에러가나
+
+
+
+
+
