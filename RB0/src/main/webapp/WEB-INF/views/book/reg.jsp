@@ -296,7 +296,11 @@ if(${assign}) {
 			<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
 			<p id="pd1">.</p>
 		</div>
-		<div id="divd"></div>
+		<div id="divd">
+			<table id="tbinput">
+				
+			</table>
+		</div>
 	</form:form>
 </body>
 </html>
