@@ -298,7 +298,24 @@ if(${assign}) {
 		</div>
 		<div id="divd">
 			<table id="tbinput">
-				
+				<tbody>
+					<tr>
+						<td>교재명</td>
+						<td><input type="submit" id="binput" name=""></td>
+					</tr>
+					<tr>
+						<td>교재명</td>
+						<td><input type="submit" id="binput" name=""></td>
+					</tr>
+					<tr>
+						<td>교재명</td>
+						<td><input type="submit" id="binput" name=""></td>
+					</tr>
+					<tr>
+						<td>교재명</td>
+						<td><input type="submit" id="binput" name=""></td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 	</form:form>
