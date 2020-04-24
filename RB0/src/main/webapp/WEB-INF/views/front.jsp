@@ -388,12 +388,10 @@
 		<p id="pd00" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
-	<% int ad=1; %>
-	<p id="pd1" onclick=<% ad++; %>><%= ad %></p>
-	<!-- <p id="pd1" onclick='admin()'>.</p> -->
+	<p id="pd1" onclick='admin()'>.</p>
 		</div>
-		
 		<script type="text/javascript">
+			var ad=0;
 			function admin(){
 				var 
 				if(ad>=5)
