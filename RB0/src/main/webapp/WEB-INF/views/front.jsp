@@ -383,13 +383,22 @@
 	</div>
 	
 		</div>
+		
+		<% int ad=0; %>
 		<div id="div03">
 		<p id="pd00" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
-	<p id="pd1">.</p>
+	<p id="pd1" onclick="function admin()">.</p>
 		</div>
 		
+		<script type="text/javascript">
+			function admin(){
+				if(ad>=5)
+					location.href="admin";
+				ad++;
+				}
+		</script>
 	
 	
 	<div id="dive"> <div id="divd">	</div> </div>
