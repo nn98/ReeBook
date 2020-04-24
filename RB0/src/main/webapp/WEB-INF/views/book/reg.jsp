@@ -270,6 +270,11 @@ if(${assign}) {
 	z-index: 1;
 }
 
+#tbinput{
+	border: 1px solid #fff;
+	padding: 5px;
+}
+
 </style>
 </head>
 <body
