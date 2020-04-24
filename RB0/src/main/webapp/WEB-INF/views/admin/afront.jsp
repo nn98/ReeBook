@@ -480,6 +480,16 @@
 				 -->
 			</tr>
 			<tr id="tr_id">
+				<td id="box1" class="dv_fieldheader" style="color: #fff">Oper</td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="book/reg">BookRegi</a></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
+			</tr>
+			<tr id="tr_id">
 				<td id="box1"></td>
 				<td id="box1"></td>
 				<td id="box1"></td>
