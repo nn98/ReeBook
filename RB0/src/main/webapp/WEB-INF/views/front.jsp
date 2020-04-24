@@ -393,10 +393,9 @@
 		<script type="text/javascript">
 			var ad=0;
 			function admin(){
-				var 
+				ad++;
 				if(ad>=5)
 					location.href="admin";
-				ad++;
 				}
 		</script>
 	
