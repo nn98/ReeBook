@@ -262,6 +262,14 @@ if(${assign}) {
 	background: #336c;
 	color: #fff;
 }
+
+#div_main{
+	position: absolute;
+	top: 150px;
+	right: 50px;
+	z-index: 1;
+}
+
 </style>
 </head>
 <body
@@ -296,24 +304,25 @@ if(${assign}) {
 			<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
 			<p id="pd1">.</p>
 		</div>
-		<div id="divd">
+		<div id="divd"></div>
+		<div id="div_main">
 			<table id="tbinput">
 				<tbody>
 					<tr>
 						<td>교재명</td>
-						<td><input type="submit" id="binput" name=""></td>
+						<td><input type="text" id="binput" name=""></td>
 					</tr>
 					<tr>
 						<td>교재명</td>
-						<td><input type="submit" id="binput" name=""></td>
+						<td><input type="text" id="binput" name=""></td>
 					</tr>
 					<tr>
 						<td>교재명</td>
-						<td><input type="submit" id="binput" name=""></td>
+						<td><input type="text" id="binput" name=""></td>
 					</tr>
 					<tr>
 						<td>교재명</td>
-						<td><input type="submit" id="binput" name=""></td>
+						<td><input type="text" id="binput" name=""></td>
 					</tr>
 				</tbody>
 			</table>
