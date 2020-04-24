@@ -435,6 +435,8 @@
 			document.getElementById('divs00').style.visibility = 'visible';
 		}
 	</script>
+	<!-- 
+	
 	<div id="div_main">
 	<table id="tb_id">
 		<colgroup>
@@ -469,15 +471,7 @@
 				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
 				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
 				<td id="box3" class="dv_fieldheader" style="color: #fff"></td>
-				<!-- 
-				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="usersj">User</a></td>
-				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="booksj">Book</a></td>
-				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="rentsj">Rent</a></td>
-				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="defectsj">Defect</a></td>
-				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="lecturesj">Lecture</a></td>
-				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="documentsj">Document</a></td>
-				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="departmentsj">Department</a></td>
-				 -->
+				
 			</tr>
 			<tr id="tr_id">
 				<td id="box1"></td>
@@ -503,6 +497,18 @@
 	</tbody>
 	</table>
 	</div>
+	
+	<!-- 
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="usersj">User</a></td>
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="booksj">Book</a></td>
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="rentsj">Rent</a></td>
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="defectsj">Defect</a></td>
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="lecturesj">Lecture</a></td>
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="documentsj">Document</a></td>
+				<td id="box2" class="dv_fieldheader" style="color: #fff"><a href="departmentsj">Department</a></td>
+				 -->
+	
+	 -->
 </form:form>
 </body>
 </html>
