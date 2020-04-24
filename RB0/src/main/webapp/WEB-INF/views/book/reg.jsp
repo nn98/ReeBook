@@ -434,6 +434,8 @@
 	<!-- 기존 open -->
 	<!-- <span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span> -->
 	
+	<!-- git test -->
+	
 	<div id="divs00" onclick='openNav()'>
 		<span id="ps00">
 	 		▽
@@ -456,19 +458,23 @@
 				<tbody>
 					<tr>
 						<td>교재명</td>
-						<td><input type="text" id="binput" name=""></td>
+						<td><input type="text" id="binput" name="name"></td>
 					</tr>
 					<tr>
-						<td>교재명</td>
-						<td><input type="text" id="binput" name=""></td>
+						<td>저자</td>
+						<td><input type="text" id="binput" name="author"></td>
 					</tr>
 					<tr>
-						<td>교재명</td>
-						<td><input type="text" id="binput" name=""></td>
+						<td>출판사</td>
+						<td><input type="text" id="binput" name="publisher"></td>
 					</tr>
 					<tr>
-						<td>교재명</td>
-						<td><input type="text" id="binput" name=""></td>
+						<td>교재 수</td>
+						<td><input type="text" id="binput" name="volume"></td>
+					</tr>
+					<tr>
+						<td>교재 등록</td>
+						<td><input type="submit" id="binput" name="bsub" value="등록"></td>
 					</tr>
 				</tbody>
 			</table>
