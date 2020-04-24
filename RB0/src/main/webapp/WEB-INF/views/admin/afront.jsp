@@ -308,10 +308,10 @@
 			height:100%;
 			width: 0;
 			position: fixed;
-			z-index:0;
+			z-index:3;
 			top: 0;
 			left: 0;
-			background: #222c;
+			background: #444c;
 			overflow-x: hidden;
 			transition:0.5s ease-in-out;
 			padding-top: 160px;
