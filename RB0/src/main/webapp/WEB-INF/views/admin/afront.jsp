@@ -27,35 +27,35 @@
 
 #box0{
 	border: 1px dotted #888;
-	background-color: #334;
+	background-color: #222;
 	padding: 5px 10px 5px 10px;
 }
 
 #box11 {
-	background-color: #ccf;
+	background-color: ##ffc;
 	padding: 10px;
 	border-right: 2px solid #fff;
 }
 
 #box1{
-	background-color: #334;
+	background-color: #444;
 	padding: 5px 10px 5px 10px;
 }
 
 #box2 {
-	background-color: #bbf;
+	padding: 5px;
 	padding: 5px 10px 5px 10px;
 }
 
 #box3 {
-	border: 1px solid;
-	background-color: #ccf;
+	border: 1px solid #444;
+	background-color: #224;
 	padding: 5px 10px 5px 10px;
 }
 
 #box4 {
 	border: 1px solid #fff;
-	background-color: #aaf;
+	background-color: #ccf;
 	padding: 5px 10px 5px 10px;
 }
 
@@ -83,12 +83,12 @@
 }
 
 #hr_bottom {
-	boder: 10px solid #334;
+	boder: 10px solid #222;
 }
 
 #t0{
 	font-size: 10pt;
-	background:#334;
+	background:#222;
 	padding: 3px 10px 3px 10px;
 	color:fff;
 	float:right;
@@ -104,13 +104,13 @@
 	float:right;
 	color: #fff;
 	padding: 0px 20px 5px 35px;
-	border-left: 2px #ccf solid;
+	border-left: 2px ##ffc solid;
 	border-bottom-left-radius: 30px;
 }
 
 #divd{
 	height: 850px;
-	background: #223;
+	background: #222;
 	border-left: 0.5px #667 solid;
 	border-bottom: 4px #667 solid;
 	border-bottom-left-radius: 50px;
@@ -118,7 +118,7 @@
 
 #dive{
 	height: 854px;
-	background: #ccf;
+	background: ##ffc;
 	border-bottom: 2px #88f solid;
 	border-bottom-left-radius: 55px;
 }
@@ -140,7 +140,7 @@
 	right: 0;
 	z-index: 2;
 	float: right;
-	background: #2247;
+	background: #222;
 	width:850px;
 	height: 65px;
 	overflow:hidden;
@@ -202,7 +202,7 @@
 }
 
 #pd00 {
-	background: #446;
+	background: #444;
 	color: #ccc;
 	font-size: 12pt;
 	font-family: 'Noto Serif KR';
@@ -218,14 +218,14 @@
 }
 
 #pd00:hover {
-	background: #446c;
+	background: #444c;
 	border-bottom: 1px solid #99b;
 	border-left: 5px solid #99b;
 	color: #fff;
 }
 
 #pd1 {
-	background: #446;
+	background: #444;
 	color: #ccc;
 	font-size: 12pt;
 	font-family: 'Noto Serif KR';
@@ -239,7 +239,7 @@
 }
 
 #pd1:hover {
-	background: #446c;
+	background: #444c;
 	border-bottom: 1px solid #99b;
 	color: #fff;
 }
@@ -248,7 +248,7 @@
 	font-family: 'Noto Serif KR';
 	font-size: 7pt;
 	background: #557c;
-	border-left: 2px solid #ccf;
+	border-left: 2px solid ##ffc;
     border-bottom-left-radius: 60px;
     padding: 5px 10px 5px 25px;
 	color: #ddd;
@@ -286,7 +286,7 @@
 		left: 0px;
 		z-index: 0;
 		float: left;
-		background: #ccf6;
+		background: ##ffc6;
 	    border-right: 3px solid #fff7;
     	border-bottom-right-radius: 25px;
 		transition:0.4s ease-in-out;
@@ -311,7 +311,7 @@
 			z-index:0;
 			top: 0;
 			left: 0;
-			background: #334c;
+			background: #222c;
 			overflow-x: hidden;
 			transition:0.5s ease-in-out;
 			padding-top: 160px;
@@ -366,7 +366,7 @@
 		}
 </style>
 </head>
-<body style="background: #446; margin: 0; overflow: hidden; height:1080px;">
+<body style="background: #444; margin: 0; overflow: hidden; height:1080px;">
 <form:form modelAttribute="loginuser" method="post">
 	<div id="div00"></div>
 	<div id="div01">
