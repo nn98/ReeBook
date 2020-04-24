@@ -16,9 +16,9 @@
            }
         </script>
 <script type="text/javascript">
-if(${assign}) {
-	   alert("사물함 배정 신청이 완료되었습니다");
-}
+			if(${assign}) {
+	   			alert("사물함 배정 신청이 완료되었습니다");
+			}
 </script>
 <title>성공회대학교 기자재대여시스템</title>
 <style>
@@ -28,35 +28,35 @@ if(${assign}) {
 #box0{
 	border: 1px dotted #888;
 	background-color: #334;
-	padding: 10px 20px 10px 20px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box11 {
 	background-color: #ccf;
-	padding: 20px;
+	padding: 10px;
 	border-right: 2px solid #fff;
 }
 
 #box1{
 	background-color: #334;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box2 {
 	background-color: #bbf;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box3 {
 	border: 1px solid;
 	background-color: #ccf;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #box4 {
 	border: 1px solid #fff;
 	background-color: #aaf;
-	padding: 10px 15px 10px 15px;
+	padding: 5px 10px 5px 10px;
 }
 
 #a0{
@@ -73,6 +73,8 @@ if(${assign}) {
 }
 
 #tb_id{
+	font-size: 9pt;
+	font-family: 'Noto Serif KR';
 	border: 2px solid #668;
 }
 
@@ -97,7 +99,6 @@ if(${assign}) {
 	margin-top: 50px;
 }
 
-
 #pd{
 	font-family: 'Noto Serif KR';
 	float:right;
@@ -110,7 +111,16 @@ if(${assign}) {
 #divd{
 	height: 850px;
 	background: #223;
-	border-bottom: 5px #ccf solid;
+	border-left: 0.5px #667 solid;
+	border-bottom: 4px #667 solid;
+	border-bottom-left-radius: 50px;
+}
+
+#dive{
+	height: 854px;
+	background: #ccf;
+	border-bottom: 2px #88f solid;
+	border-bottom-left-radius: 55px;
 }
 
 #sup_skhu{
@@ -128,13 +138,13 @@ if(${assign}) {
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 2;
 	float: right;
 	background: #2247;
-	width:91.5%;
+	width:850px;
 	height: 65px;
 	overflow:hidden;
-    border-left: 5px solid #fff7;
+    border-left: 4px solid #fff7;
     border-bottom-left-radius: 250px;
 }
 
@@ -142,9 +152,9 @@ if(${assign}) {
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 3;
 	float: right;
-	width: 90%;
+	width:842px;
 	height: 65px;
     flex-direction: row;
     border-left: 5px solid #fff7;
@@ -168,7 +178,7 @@ if(${assign}) {
 	right: 0;
 	z-index: 2;
 	float: right;
-	width: 75%;
+	width: 750px;
     flex-direction: row;
     border-left: 5px solid #fff7;
     border-bottom-left-radius: 150px;
@@ -208,6 +218,7 @@ if(${assign}) {
 }
 
 #pd00:hover {
+	background: #446c;
 	border-bottom: 1px solid #99b;
 	border-left: 5px solid #99b;
 	color: #fff;
@@ -228,6 +239,7 @@ if(${assign}) {
 }
 
 #pd1:hover {
+	background: #446c;
 	border-bottom: 1px solid #99b;
 	color: #fff;
 }
@@ -264,6 +276,94 @@ if(${assign}) {
 	color: #fff;
 }
 
+
+	#divs00{
+		color: #fff;
+		width: 40px;
+		height: 30px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 0;
+		float: left;
+		background: #ccf6;
+	    border-right: 3px solid #fff7;
+    	border-bottom-right-radius: 25px;
+		transition:0.4s ease-in-out;
+	}
+	#divs00:hover{
+		background: #3358;
+	    border-right: 2px solid #fffc;
+		cursor: pointer;
+		transition:0.4s ease-in-out;
+	}
+	#ps00{
+		font-family: 'Noto Serif KR';
+		color: #fff;
+		font-size: 8pt;
+    	padding: 15px 0px 15px 10px;
+		
+	}
+		.sidenav {
+			height:100%;
+			width: 0;
+			position: fixed;
+			z-index:0;
+			top: 0;
+			left: 0;
+			background: #334c;
+			overflow-x: hidden;
+			transition:0.5s ease-in-out;
+			padding-top: 160px;
+		}
+		.sidenav a {
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			transition: 0.2s ease-in-out;
+		}
+		.sidenav a:hover, .offcanvas a:focus {
+			color: #000;
+		}
+		#as00{
+			font-family: 'Noto Serif KR';
+			padding: 8px 8px 8px 32px;
+			
+		}
+		#as01{
+			font-size: 5pt;
+			font-family: 'Noto Serif KR';
+			padding: 8px 8px 8px 32px;
+			
+		}
+		.closebtn {
+			position: absolute;
+			top: 100px;
+			right: 25px;
+			font-size: 36px !important;
+			margin-left: 50px;
+		}
+		.openmenu:hover {
+			color:rgb(0,154,200);
+			transition:0.5s ease-in-out;
+		}
+		.openmenu {
+			font-size: 25px;
+			cursor:pointer;
+			transition:0.5s ease-in-out;
+		}
+		.openmenu > i {
+			font-size: 30px;
+		}
+		/* 미디어쿼리 적용 */
+		@media screen and (max-height:450px) {
+			.sidenav {
+				padding-top:15px;
+			}
+			.sidenav a {
+				font-size: 18px;
+			}
+		}
 </style>
 </head>
 <body style="background: #446; margin: 0; overflow: hidden; height:1080px;">
@@ -289,7 +389,41 @@ if(${assign}) {
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
 	<p id="pd1">.</p>
 		</div>
-	<div id="divd">
+		
+	
+	
+	<div id="dive"> <div id="divd">	</div> </div>
+	
+	<div id="mysidenav" class="sidenav">
+		<a id="as01" href="#" class="closebtn" onclick='closeNav()'>x</a>
+		<a id="as00" href="/booksl">Books</a>
+		<a id="as00" href="/halls">Lockers</a>
+		<a id="as00" href="/mypage">Mypage</a>
+		<a id="as00" href="#">Contact</a>
+		<a id="as00" href="#">Portfolio</a>
+	</div>
+	<% boolean open=false; %>
+	
+	<!-- 기존 open -->
+	<!-- <span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span> -->
+	
+	<div id="divs00" onclick='openNav()'>
+		<span id="ps00">
+	 		▽
+		</span>
+	</div>
+	<script>
+		function openNav() {
+			if(open) closeNav();
+			document.getElementById('divs00').style.visibility = 'hidden';
+			document.getElementById('mysidenav').style.width = '25%';
+			open=!open;
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+			document.getElementById('divs00').style.visibility = 'visible';
+		}
+	</script>
 	<div id="div_main">
 	<table id="tb_id">
 		<colgroup>
@@ -346,6 +480,7 @@ if(${assign}) {
 			</tr>
 		</tbody>
 	</table>
+	
 	<table id="tb00">
 	<tbody>
 	<tr>
@@ -357,8 +492,6 @@ if(${assign}) {
 	</tbody>
 	</table>
 	</div>
-	</div>
-	
 </form:form>
 </body>
 </html>
