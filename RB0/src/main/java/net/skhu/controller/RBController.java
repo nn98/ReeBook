@@ -693,4 +693,16 @@ public class RBController {
 		return "front-side";
 	}
 	
+	@RequestMapping("book/reg")
+	public String bookRegisterG(Model m, RedirectAttributes rm) {
+		System.out.println("B/Reg:\tGet");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
+		m.addAttribute("loginuser",logInUser);
+		return "book/reg";		
+	}
+	
 }
