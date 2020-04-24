@@ -388,6 +388,9 @@
 		<p id="pd00" onclick="location.href='/booksl'">교재 대여</p>
 	<p id="pd1" onclick="location.href='/halls'">사물함 신청</p>
 	<p id="pd1" onclick="location.href='/mypage'">마이페이지</p>
+	
+	<!-- 유저 권한을 DB에 저장해서 연결할까 했는데 좀더 js에 익숙해지려고 이짓함 -->
+	
 	<p id="pd1" onclick='admin()'>.</p>
 		</div>
 		<script type="text/javascript">
