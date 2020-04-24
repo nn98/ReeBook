@@ -392,3 +392,11 @@ html/jsp layout
 - html/jsp
   - user button	http://rwdb.kr/interactionbutton/
   - before <button id=<%= C?"albtn":"lbtn" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
+
+0424
+- javaScript
+  - var counter	https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_html&wr_id=91173
+
+0425
+- git
+  - 뭐지 레포바꾸면서 경로가 갈렸나
