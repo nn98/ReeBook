@@ -439,7 +439,7 @@
 	<!-- 기존 open -->
 	<!-- <span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span> -->
 	
-	<!-- where is issue 9? WTF ??? 왜 시발 지맘대로 closed됐어 -->
+	<!-- where is issue 9? WTF ??? 왜 시발 지맘대로 closed됐어 reopen? -->
 	
 	<div id="divs00" onclick='openNav()'>
 		<span id="ps00">
