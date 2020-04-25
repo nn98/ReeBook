@@ -12,11 +12,11 @@ insert into user(id, name, password, departmentid, grade) values (201732005,'김
 
 ---
 
-insert into book(title,author,publisher) values ('윤성우의 열혈 C 프로그래밍','윤성우','오렌지미디어');
-insert into book(title,author,publisher) values ('왕초보! 파이썬 배워 크롤러 DIY 하다!','서진수,최경우','더알음');
-insert into book(title,author,publisher) values ('명품JAVA Programming','황기태,김효수','생능출판사');
-insert into book(title,author,publisher) values ('자바로 배우는 쉬운 자료구조','이지영','한빛아카데미');
-insert into book(title,author,publisher) values ('Do it! 안드로이드 앱 프로그래밍','정재곤','이지스퍼블리싱');
+insert into book(title,author,publisher,volume,rented) values ('윤성우의 열혈 C 프로그래밍','윤성우','오렌지미디어',5,0);
+insert into book(title,author,publisher,volume,rented) values ('왕초보! 파이썬 배워 크롤러 DIY 하다!','서진수,최경우','더알음',5,0);
+insert into book(title,author,publisher,volume,rented) values ('명품JAVA Programming','황기태,김효수','생능출판사',5,0);
+insert into book(title,author,publisher,volume,rented) values ('자바로 배우는 쉬운 자료구조','이지영','한빛아카데미',5,0);
+insert into book(title,author,publisher,volume,rented) values ('Do it! 안드로이드 앱 프로그래밍','정재곤','이지스퍼블리싱',5,0);
 
 insert into department(id, name) values (1,'IT융합자율학부');
 insert into department(id, name) values (2,'소프트웨어공학과');
@@ -31,12 +31,6 @@ insert into user(id, name, departmentid, grade) values (201532009,'김우진',2,
 insert into user(id, name, departmentid, grade) values (201932009,'김수현',1,1);
 insert into user(id, name, password, departmentid, grade) values (201732005,'김문수','bbibbi',2,3);
 insert into user values (123,'관리자','te','testing@skhu.ac.kr','000-0000-0000',2,null,4,'Y');
-
-insert into rent(uid,bid,rentdate,returndate) values (201732009,1,date'2020/03/02',date'2020/06/25');
-insert into rent(uid,bid,rentdate,returndate) values (201732016,2,date'2020/03/03',date'2020/06/25');
-insert into rent(uid,bid,rentdate,returndate) values (201732001,3,date'2020/03/04',date'2020/06/25');
-insert into rent(uid,bid,rentdate,returndate) values (201532009,4,date'2020/03/05',date'2020/06/25');
-insert into rent(uid,bid,rentdate,returndate) values (201932009,5,date'2020/03/06',date'2020/06/25');
 
 insert into lecture(professor) value ('홍은지');
 insert into lecture(professor) value ('노은하');
@@ -66,5 +60,10 @@ insert into defect(bid, contents) values (5, '손상_표지');
 insert into defect(bid, contents) values (5, '손상_페이지');
 insert into defect(bid, contents) values (5, '필기_볼펜');
 
+insert into rent(uid,bid,rentdate,returndate) values (201732009,1,date'2020/03/02',date'2020/06/25');
+insert into rent(uid,bid,rentdate,returndate) values (201732016,2,date'2020/03/03',date'2020/06/25');
+insert into rent(uid,bid,rentdate,returndate) values (201732001,3,date'2020/03/04',date'2020/06/25');
+insert into rent(uid,bid,rentdate,returndate) values (201532009,4,date'2020/03/05',date'2020/06/25');
+insert into rent(uid,bid,rentdate,returndate) values (201932009,5,date'2020/03/06',date'2020/06/25');
 
-
+-- rent keep
