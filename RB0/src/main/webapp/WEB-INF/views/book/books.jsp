@@ -180,6 +180,7 @@
 							<th id="th0"><span id="span2">제목</span></th>
 							<th id="th0"><span id="span2">저자</span></th>
 							<th id="th0"><span id="span2">출판사</span></th>
+							<th id="th0"><span id="span2">교재 수</span></th>
 							<th id="th1"><span id="span2">대여</span></th>
 						</tr>
 					</thead>
@@ -190,6 +191,7 @@
 								<td id="td0"><span id="span0">${book.title}</span></td>
 								<td id="td0"><span id="span0">${book.author}</span></td>
 								<td id="td0"><span id="span0">${book.publisher}</span></td>
+								<td id="td0"><span id="span0">${book.rented}/${book.volume}</span></td>
 								<!-- <td id="td0"><span id="span0">${book.available}</span></td> -->
 								<td id="td1">
 									<% Book book=(Book)pageContext.getAttribute("book"); %> <% if(book.isAvailable()) {%>
