@@ -532,3 +532,15 @@ html/jsp layout
 - html/jsp
   - user button	http://rwdb.kr/interactionbutton/
   - before <button id=<%= C?"albtn":"lbtn" %> type="submit" name="lnum" value=<%= i*100000+j*1000+c %> <%= C?"disabled":"" %>><%= c++ %></button>
+
+0424
+- javaScript
+  - var counter	https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_html&wr_id=91173
+
+0425
+- git
+  - 뭐지 레포바꾸면서 경로가 갈렸나
+#1 관리자 페이지 생성/ 기존 페이지 레이아웃 변경/ 교재 리스트 레이아웃 변경/ 관리자 페이지 교재 등록 페이지 생성
+#3 교재 대여 내부 알고리즘 변경-대여 가능 여부 판별/ 교재 목록 조회 알고리즘 변경-대여 가능 여부
+#7 교재 정보 추가-교재 수, 대여 수/ 대여 가능 여부 판별
+#9 등록 페이지/ 등록 알고리즘/ 등록 알림	| ?? 이슈 목록에서 9번 사라짐 뭐여
