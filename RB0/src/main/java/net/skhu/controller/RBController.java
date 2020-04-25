@@ -90,7 +90,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		model.addAttribute("loginuser",logInUser);
 //		System.out.println("LogInUser:\t"+logInUser);
@@ -103,7 +103,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		if(logInUser!=null)model.addAttribute("loginuser",logInUser);
 		return "front";
@@ -126,7 +126,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		return "rent/rent";
 	}
@@ -137,7 +137,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("book",bookRepository.getOne(bid));
 		m.addAttribute("loginuser",logInUser);
@@ -150,7 +150,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		Book book=bookRepository.getOne(bid);
@@ -213,7 +213,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		List<Integer> bilist=rentRepository.findAllBookId();
 		List<Book> blist=bookRepository.findAll();
@@ -361,7 +361,7 @@ public class RBController {
 			} else {
 				rm.addFlashAttribute("signup",false);
 			}
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		else {
 			System.out.println("sent "+user+"to RD signup");
@@ -465,7 +465,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		return "hall/halls";
@@ -478,7 +478,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		System.out.println("hall 6/hid:\t"+hid);
 		m.addAttribute("hid",hid);
@@ -493,7 +493,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		System.out.println("it6/f1/G");
 		System.out.println("hid: "+hid);
@@ -522,7 +522,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rdm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		if(logInUser!=null)m.addAttribute("loginuser",logInUser);
 		System.out.println("it6/f1/P");
@@ -615,7 +615,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		System.out.println("fid: "+fid);
 		return "hall/IT6/front";
@@ -627,7 +627,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		return "default";
@@ -639,7 +639,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		
@@ -682,7 +682,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		return "front-p";
@@ -694,7 +694,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		return "front-side";
@@ -706,7 +706,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		return "book/reg";		
@@ -718,7 +718,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		System.out.println("Registered:\t"+book);
 		m.addAttribute("loginuser",logInUser);
@@ -731,7 +731,7 @@ public class RBController {
 		if(logInUser==null) {
 			System.out.println("LogOut");
 			rm.addFlashAttribute("logout", true);
-			return "redirect:login";
+			return "redirect:/login";
 		}
 		m.addAttribute("loginuser",logInUser);
 		return "admin/afront";
