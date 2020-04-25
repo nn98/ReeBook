@@ -439,7 +439,7 @@
 	<!-- 기존 open -->
 	<!-- <span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span> -->
 	
-	<!-- DB up1 -->
+	<!-- where is issue 9? WTF -->
 	
 	<div id="divs00" onclick='openNav()'>
 		<span id="ps00">
