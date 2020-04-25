@@ -712,6 +712,19 @@ public class RBController {
 		return "book/reg";		
 	}
 
+	@RequestMapping(value="book/reg",method=RequestMethod.POST)
+	public String bookRegisterP(Model m, RedirectAttributes rm, Book book) {
+		System.out.println("B/Reg:\tPost");
+		if(logInUser==null) {
+			System.out.println("LogOut");
+			rm.addFlashAttribute("logout", true);
+			return "redirect:login";
+		}
+		System.out.println("Registered:\t"+book);
+		m.addAttribute("loginuser",logInUser);
+		return "book/reg";		
+	}
+
 	@RequestMapping("admin")
 	public String adminG(Model m, RedirectAttributes rm) {
 		System.out.println("Admin:\tGet");
