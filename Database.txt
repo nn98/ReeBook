@@ -52,6 +52,9 @@ professor char(10)
 );
 	//id int(10) foreign key reference id from book
 
+alter table book add volume int unsigned;
+alter table book add rented int unsigned;
+
 ---
 
 drop table book;
