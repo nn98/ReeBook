@@ -458,7 +458,7 @@
 				<tbody>
 					<tr>
 						<td>교재명</td>
-						<td><input type="text" id="binput" name="name"></td>
+						<td><input type="text" id="binput" name="title"></td>
 					</tr>
 					<tr>
 						<td>저자</td>
