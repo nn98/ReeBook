@@ -23,6 +23,10 @@ public class Book {
 	
 	String publisher;
 	
+	int volume;
+	
+	int rented;
+	
 	boolean available;
 	
 }
