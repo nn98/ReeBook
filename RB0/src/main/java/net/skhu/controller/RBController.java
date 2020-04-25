@@ -223,6 +223,8 @@ public class RBController {
 					b.setAvailable(false);
 				else
 					b.setAvailable(true);
+			else
+				b.setAvailable(true);
 		}
 		bookRepository.saveAll(blist);
 		model.addAttribute("loginuser",logInUser);
