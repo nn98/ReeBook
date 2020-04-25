@@ -725,7 +725,7 @@ public class RBController {
 		bookRepository.save(book);
 		m.addAttribute("loginuser",logInUser);
 		rm.addFlashAttribute("register",true);
-		return "redirect:book/reg";
+		return "redirect:/book/reg";
 	}
 
 	@RequestMapping("admin")
