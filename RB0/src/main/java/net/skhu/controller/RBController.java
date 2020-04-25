@@ -219,9 +219,10 @@ public class RBController {
 		List<Book> blist=bookRepository.findAll();
 		for(Book b:blist) {
 			if(bilist.contains(b.getId()))
-				b.setAvailable(false);
-			else
-				b.setAvailable(true);
+				if(b.getVolume()==b.getRented())
+					b.setAvailable(false);
+				else
+					b.setAvailable(true);
 		}
 		bookRepository.saveAll(blist);
 		model.addAttribute("loginuser",logInUser);
