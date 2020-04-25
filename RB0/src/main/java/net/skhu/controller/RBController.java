@@ -721,8 +721,11 @@ public class RBController {
 			return "redirect:/login";
 		}
 		System.out.println("Registered:\t"+book);
+		book.setAvailable(true);
+		bookRepository.save(book);
 		m.addAttribute("loginuser",logInUser);
-		return "book/reg";		
+		rm.addFlashAttribute("register",true);
+		return "redirect:book/reg";
 	}
 
 	@RequestMapping("admin")
