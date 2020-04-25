@@ -55,6 +55,9 @@ professor char(10)
 alter table book add volume int unsigned;
 alter table book add rented int unsigned;
 
+add default
+- http://tcpschool.com/mysql/mysql_constraint_default
+
 ---
 
 drop table book;
