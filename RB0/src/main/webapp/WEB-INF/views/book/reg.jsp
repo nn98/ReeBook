@@ -475,7 +475,7 @@
 					</tr>
 					<tr>
 						<td>교재 수</td>
-						<td><input type="text" id="binput" name="volume"></td>
+						<td><input type="number" id="binput" name="volume"></td>
 					</tr>
 					<tr>
 						<td>교재 등록</td>
