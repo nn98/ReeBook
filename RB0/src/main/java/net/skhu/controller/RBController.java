@@ -157,7 +157,6 @@ public class RBController {
 		System.out.println("RentS:\t"+book);
 		System.out.println("IsAvailable:\t"+book.isAvailable());
 		if(book.isAvailable()) {
-			bookRepository.save(book);
 			Rent rent=new Rent();
 			rent.setUser(logInUser);
 //			rent.setUid(rent.getUser().getId());
@@ -171,7 +170,9 @@ public class RBController {
 			rent.setReturnDate(cal.getTime());
 			System.out.println("rent:\t"+rent);
 			rentRepository.save(rent);
-			book.setAvailable(false);
+//			book.setAvailable(false);
+			book.setRented(book.getRented()+1);
+			bookRepository.save(book);
 			m.addAttribute("rentS",true);
 			return "front";
 		}else {
