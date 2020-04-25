@@ -20,6 +20,11 @@
 	   			alert("사물함 배정 신청이 완료되었습니다");
 			}
 </script>
+<script type="text/javascript">
+			if(${register}) {
+	   			alert("교재 등록 완료");
+			}
+</script>
 <title>성공회대학교 기자재대여시스템</title>
 <style>
 
