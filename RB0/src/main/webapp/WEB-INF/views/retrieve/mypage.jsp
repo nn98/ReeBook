@@ -347,6 +347,7 @@
 				</tbody>
 			</table>
 			</div>
+			<!-- 반납을 바로하는게 아니라 반납대기상태로? -->
 			<div class="container" style="width: 95%;">
 			<table id="table0" class="table table-bordered">
 				 <caption><span id="h10">대여 교재 목록</span></caption>
