@@ -21,7 +21,6 @@ Solve > https://dogcowking.tistory.com/326
   
 <details><summary>Error?</summary>
 	
-	
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-01-01 08:09:50.334 ERROR 8968 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
 
@@ -80,7 +79,7 @@ Caused by: java.lang.ClassNotFoundException: Docs
 	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_221]
 	... 42 common frames omitted
 	
-	</details>
+</details>
 	  
 
 Docs Table Join Error
