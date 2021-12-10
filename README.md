@@ -19,7 +19,9 @@ Solve > https://dogcowking.tistory.com/326
 + 스프링부트로 실행한 상태에서 properties에 경로를 변경해줘서 발생하는 듯.
 
   
-[detail]  
+<details><summary>Error?</summary>
+	
+	
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-01-01 08:09:50.334 ERROR 8968 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
 
@@ -77,7 +79,8 @@ Caused by: java.lang.ClassNotFoundException: Docs
 	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.2.2.RELEASE.jar:2.2.2.RELEASE]
 	at java.lang.ClassLoader.loadClass(Unknown Source) ~[na:1.8.0_221]
 	... 42 common frames omitted
-	[/detail]
+	
+	</details>
 	  
 
 Docs Table Join Error
