@@ -1,0 +1,15 @@
+desc user;
+desc book;
+desc rent;
+desc defect;
+desc lecture;
+desc document;
+desc department;
+
+select * from user;
+select * from book;
+select * from rent;
+select * from defect;
+select * from lecture;
+select * from document;
+select * from department;

@@ -1,0 +1,22 @@
+0303
+
+	- Unknown column 'user0_.department_id' in 'field list'
+Caused:
+	@ManyToOne(cascade= {CascadeType.ALL})
+	@JoinColumn(name="departmentId")	<-- departmentId > department_id.
+	Department department;
+	
+Solve 1:
+	int departmentId;	// err
+	int departmentid;	// suc
+
+Solve:
+	@ManyToOne(cascade= {CascadeType.ALL})
+	@JoinColumn(name="departmentid")	<-- change
+	Department department;
+
+시벌 내가 이전프로젝트를 어케해놓은건지 문제없이 돌아가다가 옮겨서쓰니까 에러나네
+
+나중에 통합하면될덧
+
+지금할까
