@@ -1,0 +1,40 @@
+logs/
+*.log
+*.tmp
+
+# Java 산출물
+/target/
+!/target/.keep
+**/target/
+**/out/
+**/.out/
+**/.classpath
+**/.project
+
+# Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+**/.gradle/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/.cache/
+.mvn/timing.properties
+
+# IntelliJ
+.idea/
+*.iml
+
+# 산출물
+/public/build/
+/static/build/
+*.pptx
+*.docx
+*.pdf
+*.mp4
+*.mov
+*.zip
+*.7z
+*.tgz
+*.tar.gz
