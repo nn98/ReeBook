@@ -1,0 +1,6 @@
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://prod-host:3306/rb?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+    username: ${DB_USER}
+    password: ${DB_PASS}

@@ -74,3 +74,7 @@ build/
 /bin
 /.idea
 /.mvn/wrapper/*.jar
+
+application-local.yml
+.env
+*.local.yml

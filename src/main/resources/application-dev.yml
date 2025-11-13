@@ -1,0 +1,6 @@
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/rb?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+    username: ${DB_USER_DEV}
+    password: ${DB_PASS_DEV}
