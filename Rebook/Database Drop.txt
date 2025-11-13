@@ -1,7 +1,0 @@
-drop table document;
-drop table rent;
-drop table lecture;
-drop table defect;
-drop table book;
-drop table department;
-drop table user;
