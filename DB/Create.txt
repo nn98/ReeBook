@@ -1,0 +1,104 @@
+create database if not exists ree_book
+  default character set utf8mb4;
+
+use ree_book;
+
+create table department (
+  id bigint unsigned primary key,
+  name varchar(100) not null,
+  created_at datetime default current_timestamp,
+  updated_at datetime default current_timestamp on update current_timestamp
+);
+
+create table locker (
+  id bigint unsigned primary key,
+  hall_id bigint unsigned,
+  floor_no int unsigned,
+  line_no int unsigned,
+  col_no int unsigned,
+  row_no int unsigned,
+  created_at datetime default current_timestamp,
+  updated_at datetime default current_timestamp on update current_timestamp
+);
+
+create table users (
+  id bigint unsigned primary key,
+  name varchar(100) not null,
+  password_hash varchar(255),
+  email varchar(320),
+  phone varchar(20),
+  department_id bigint unsigned,
+  locker_id bigint unsigned,
+  grade tinyint unsigned,
+  agree enum('Y','N') default 'N',
+  created_at datetime default current_timestamp,
+  updated_at datetime default current_timestamp on update current_timestamp,
+  unique key uq_users_email (email),
+  constraint fk_users_department foreign key (department_id) references department(id),
+  constraint fk_users_locker foreign key (locker_id) references locker(id)
+);
+
+create index idx_users_department on users(department_id);
+create index idx_users_locker on users(locker_id);
+
+create table book (
+  id bigint unsigned primary key auto_increment,
+  title varchar(200) not null,
+  author varchar(200),
+  publisher varchar(200),
+  volume int unsigned default 0,
+  rented int unsigned default 0,
+  available enum('Y','N') default 'Y',
+  created_at datetime default current_timestamp,
+  updated_at datetime default current_timestamp on update current_timestamp
+);
+
+create table rent (
+  id bigint unsigned primary key auto_increment,
+  user_id bigint unsigned not null,
+  book_id bigint unsigned not null,
+  rent_date date not null,
+  return_date date,
+  created_at datetime default current_timestamp,
+  updated_at datetime default current_timestamp on update current_timestamp,
+  constraint fk_rent_user foreign key (user_id) references users(id),
+  constraint fk_rent_book foreign key (book_id) references book(id)
+);
+
+create index idx_rent_user on rent(user_id);
+create index idx_rent_book on rent(book_id);
+
+create table lecture (
+  id bigint unsigned primary key auto_increment,
+  professor varchar(100) not null,
+  created_at datetime default current_timestamp,
+  updated_at datetime default current_timestamp on update current_timestamp
+);
+
+create table document (
+  book_id bigint unsigned not null,
+  lecture_id bigint unsigned not null,
+  kind varchar(50),
+  primary key (book_id, lecture_id),
+  constraint fk_document_book foreign key (book_id) references book(id),
+  constraint fk_document_lecture foreign key (lecture_id) references lecture(id)
+);
+
+create index idx_document_lecture on document(lecture_id);
+
+create table defect (
+  id bigint unsigned primary key auto_increment,
+  book_id bigint unsigned not null,
+  contents varchar(100) not null,
+  created_at datetime default current_timestamp,
+  constraint fk_defect_book foreign key (book_id) references book(id)
+);
+
+create table assign (
+  user_id bigint unsigned not null,
+  locker_id bigint unsigned not null,
+  assigned_at datetime default current_timestamp,
+  primary key (user_id, locker_id),
+  constraint fk_assign_user foreign key (user_id) references users(id),
+  constraint fk_assign_locker foreign key (locker_id) references locker(id)
+);

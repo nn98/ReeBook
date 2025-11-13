@@ -1,0 +1,71 @@
+insert into department (id, name) values
+  (1, 'it융합자율학부'),
+  (2, '소프트웨어공학과'),
+  (3, '글로컬it학과'),
+  (4, '정보통신학과'),
+  (5, '컴퓨터공학과');
+
+insert into book (title, author, publisher, volume, rented, available) values
+  ('윤성우의 열혈 c 프로그래밍', '윤성우', '오렌지미디어', 5, 0, 'Y'),
+  ('왕초보! 파이썬 배워 크롤러 diy 하다!', '서진수, 최경우', '더알음', 5, 0, 'Y'),
+  ('명품 java programming', '황기태, 김효수', '생능출판사', 5, 0, 'Y'),
+  ('자바로 배우는 쉬운 자료구조', '이지영', '한빛아카데미', 5, 0, 'Y'),
+  ('do it! 안드로이드 앱 프로그래밍', '정재곤', '이지스퍼블리싱', 5, 0, 'Y');
+
+insert into locker (id, hall_id, floor_no, line_no, col_no, row_no) values
+  (1001, 6, 1, 1, 1, 1),
+  (1002, 6, 1, 1, 1, 2),
+  (1003, 6, 1, 1, 2, 1);
+
+insert into users (id, name, email, phone, department_id, grade, agree) values
+  (201732009, '김윤서', null, null, 2, 3, 'Y'),
+  (201732016, '박현렬', null, null, 2, 2, 'Y'),
+  (201732001, '자퇴생', null, null, 2, 1, 'N'),
+  (201532009, '김우진', null, null, 2, 3, 'Y'),
+  (201932009, '김수현', null, null, 1, 1, 'Y');
+
+insert into users (id, name, password_hash, email, phone, department_id, grade, agree) values
+  (123, '관리자', 'bbibbi', 'testing@skhu.ac.kr', '000-0000-0000', 2, 4, 'Y');
+
+update users set locker_id = 1001 where id = 201732009;
+
+insert into lecture (professor) values
+  ('홍은지'),
+  ('노은하'),
+  ('이승진'),
+  ('유상신'),
+  ('임형');
+
+insert into document (book_id, lecture_id, kind) values
+  (1, 1, '강의자료'),
+  (2, 2, '과제'),
+  (3, 3, '퀴즈'),
+  (4, 4, '시험'),
+  (5, 5, '기출');
+
+insert into defect (book_id, contents) values
+  (1, '손상_표지'),
+  (1, '손상_페이지'),
+  (1, '필기_볼펜'),
+  (2, '손상_표지'),
+  (2, '필기_연필'),
+  (2, '필기_볼펜'),
+  (3, '손상_표지'),
+  (3, '필기_볼펜'),
+  (3, '필기_형광펜'),
+  (4, '손상_표지'),
+  (4, '손상_페이지'),
+  (4, '필기_볼펜'),
+  (5, '손상_표지'),
+  (5, '손상_페이지'),
+  (5, '필기_볼펜');
+
+insert into rent (user_id, book_id, rent_date, return_date) values
+  (201732009, 1, date '2020-03-02', date '2020-06-25'),
+  (201732016, 2, date '2020-03-03', date '2020-06-25'),
+  (201732001, 3, date '2020-03-04', date '2020-06-25'),
+  (201532009, 4, date '2020-03-05', date '2020-06-25'),
+  (201932009, 5, date '2020-03-06', date '2020-06-25');
+
+insert into assign (user_id, locker_id) values
+  (201732009, 1001);

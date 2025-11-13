@@ -2,14 +2,13 @@ create database RB;
 
 use RB;
 
+---
+
 create table book(
 id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 title char(100),
-author char(50),
-publisher char(50),
-volume int unsigned,
-rented int unsigned,
-available char(1) default 'Y'
+author char(30),
+publisher char(30)
 );
 
 create table department(
@@ -17,34 +16,19 @@ id int unsigned primary key,
 name char(50)
 );
 
-create table locker(
-id int unsigned NOT NULL PRIMARY KEY,
-hid int unsigned,
-fid int unsigned,
-lid int unsigned,
-lnum int unsigned,
-lcolumn int unsigned,
-lrow int unsigned
-);
-
 create table user(
 id int unsigned NOT NULL PRIMARY KEY,
-name char(50),
+name char(30),
 password text,
-email varchar(320),
-hp varchar(20),
 departmentId int unsigned,
 foreign key(departmentId) references department(id),
-lockerId int unsigned,
-foreign key(lockerId) references locker(id),
-grade int unsigned,
-agree char(1)
+grade int unsigned
 );
 
 create table rent(
 id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 uid int unsigned,
-foreign key(uid) references user(id),
+foreign key(uid) references user(sn),
 bid int unsigned,
 foreign key(bid) references book(id),
 rentDate date,
@@ -53,7 +37,7 @@ returnDate date
 
 create table lecture(
 id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
-professor char(50)
+professor char(10)
 );
 
 create table document(
@@ -61,19 +45,6 @@ bid int unsigned,
 foreign key(bid) references book(id),
 lid int unsigned,
 foreign key(lid) references lecture(id),
-kind char(50),
+kind char(10),
 primary key(bid,lid)
-);
-
-create table defect(
-bid int unsigned,
-foreign key(bid) references book(id),
-contents char(50)
-);
-
-create table assign(
-uid int unsigned,
-foreign key(uid) references user(id),
-lid int unsigned,
-foreign key(lid) references locker(id)
 );
