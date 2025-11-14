@@ -1,7 +1,7 @@
 # Architecture
 
 ## 시스템 컨텍스트
-```
+```mermaid
 C4Context
 title ReeBook Context
 Person(student, "Student")
@@ -16,7 +16,7 @@ Rel(web, db, "JPA/Hibernate")
 ```
 
 ## 컨테이너
-```
+```mermaid
 C4Container
 title Containers
 Person(user, "User")
@@ -27,7 +27,7 @@ Rel(web, db, "JDBC/JPA")
 ```
 
 ## 레이어
-```
+```mermaid
 flowchart TB
 UI[JSP/Controller] --> SVC[Service]
 SVC --> REPO[Repository]
@@ -35,7 +35,7 @@ REPO --> DB[(MySQL)]
 ```
 
 ## 대여 시퀀스
-```
+```mermaid
 sequenceDiagram
 participant U as User
 participant C as Controller
@@ -54,7 +54,7 @@ C-->>U: 201
 ```
 
 ## 반납 시퀀스
-```
+```mermaid
 sequenceDiagram
 participant U as User
 participant C as Controller
