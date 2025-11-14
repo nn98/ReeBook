@@ -1,29 +1,63 @@
 package net.skhu.domain;
 
-import java.io.Serializable;
-
+import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+import javax.persistence.Table;
 
-import lombok.Data;
-
-@Data
 @Entity
-public class Document implements Serializable {
-	
+@Table(name = "document")
+public class Document {
+
 	@EmbeddedId
-	DocPK PKset_Book_Lecture;
-	
-//	@Id
-//	@ManyToOne
-//	@JoinColumn(name="id")
-//	Book book;
-//	
-//	@Id
-//	@ManyToOne
-//	@JoinColumn(name="id")
-//	Lecture lecture;
-	
-	String kind;
-	
+	private DocumentId id;
+
+	@MapsId("bookId")
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "book_id")
+	private Book book;
+
+	@MapsId("lectureId")
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "lecture_id")
+	private Lecture lecture;
+
+	@Column(name = "kind", length = 50)
+	private String kind;
+
+	public DocumentId getId() {
+		return id;
+	}
+
+	public Book getBook() {
+		return book;
+	}
+
+	public Lecture getLecture() {
+		return lecture;
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setId(DocumentId id) {
+		this.id = id;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
+	public void setLecture(Lecture lecture) {
+		this.lecture = lecture;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
 }

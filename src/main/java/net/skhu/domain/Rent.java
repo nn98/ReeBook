@@ -1,43 +1,75 @@
 package net.skhu.domain;
 
-import java.util.Date;
-
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-import lombok.Data;
-
-@Data
 @Entity
+@Table(name = "rent")
 public class Rent {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
-	
-	@OneToOne
-	@JoinColumn(name="uid")
-	User user;
-	
-//	@Column(name="uid")
-//	int uid;
-//	
-	@OneToOne
-	@JoinColumn(name="bid")
-	Book book;
+	private Long id;
 
-//	@Column(name="bid")
-//	int bid;
-	
-//	private DateFormat format = new SimpleDateFormat("YYYY-MM-dd");
-	
-	Date rentDate;
-	
-	Date returnDate;
-	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_id")
+	private User user;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "book_id")
+	private Book book;
+
+	@Column(name = "rent_date")
+	private LocalDate rentDate;
+
+	@Column(name = "return_date")
+	private LocalDate returnDate;
+
+	public Long getId() {
+		return id;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public Book getBook() {
+		return book;
+	}
+
+	public LocalDate getRentDate() {
+		return rentDate;
+	}
+
+	public LocalDate getReturnDate() {
+		return returnDate;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
+	public void setRentDate(LocalDate rentDate) {
+		this.rentDate = rentDate;
+	}
+
+	public void setReturnDate(LocalDate returnDate) {
+		this.returnDate = returnDate;
+	}
 }

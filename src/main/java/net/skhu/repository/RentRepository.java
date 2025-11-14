@@ -1,26 +1,12 @@
 package net.skhu.repository;
 
-import java.util.ArrayList;
 import java.util.List;
-
+import net.skhu.domain.Rent;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import net.skhu.domain.Rent;
+public interface RentRepository extends JpaRepository<Rent, Long> {
 
-public interface RentRepository extends JpaRepository<Rent, Integer> {
-	
-	default List<Integer> findAllBookId(){
-		List<Rent> rlist=this.findAll();
-		List<Integer> blist=new ArrayList();
-		for(Rent r:rlist) blist.add(r.getBook().getId());
-		return blist;
-	}
+	List<Rent> findByUser_Id(Long userId);
 
-	default List<Rent> findByUserId(int id){
-		List<Rent> re=new ArrayList();
-		for(Rent r:this.findAll())
-			if(r.getUser().getId()==id)
-				re.add(r);
-		return re;
-	}
+	List<Rent> findByBook_Id(Long bookId);
 }
